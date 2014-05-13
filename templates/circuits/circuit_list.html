@@ -1,0 +1,19 @@
+{% load i18n %}
+
+{% if circuits %}
+  <section data-columns="{{ CIRCUIT_COLUMN_SIZES }}" class="columns">
+  {% for circuit in circuits %}
+    {% include "circuits/circuit_list_item.html" %}
+  {% endfor %}
+  </section>
+{% else %}
+  <div class="alert alert-info">
+    {% if category %}
+    <p>{% trans "Sorry rat, still no " %}<strong>{{ category.name }}</strong>{% trans " routes in here." %}</p>
+    {% else %}
+    <p>{% trans "Sorry rat, still no routes in here." %}</p>
+    {% endif %}
+    {% comment %}Fix me - Replace here for the city name {% endcomment %}
+    <p class="call-to-action">{% blocktrans %} Why don't you <a data-toggle="modal" href="#circuit-new">create the first one</a>? {% endblocktrans %}</p>
+  </div>
+{% endif %}

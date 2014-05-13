@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "Register" %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="Worldrat account creation">
+{% endblock %}
+
+{% block content %}
+<h1 class="title">{% autoescape off %}{% trans "Register, because you're a <strong>worldrat</strong> and you know it." %}{% endautoescape %}</h1>
+
+{% comment %}
+<div class="sns-registration-form log-reg-form">
+<img src="{{ STATIC_URL }}/images/facebook-login.gif">
+<img src="{{ STATIC_URL }}/images/twitter-login.png">
+</div>
+{% endcomment %}
+
+<form class="log-reg-form" action="{% url registration_register %}" method="post">
+	{% csrf_token %}
+{{ form.first_name.errors }}
+<label>{% trans "Name" %}</label>
+{{ form.first_name }}
+{{ form.last_name.errors }}
+<label>{% trans "Lastname" %}</label>
+{{ form.last_name }}
+{{ form.email.errors }}
+<label for="email">{% trans "Email" %}</label>
+{% if closed_beta %}
+<input id="email" class="disabled" readonly="readonly" type="email" name="email" value="{{ invitation_instance.email }}" placeholder={% trans "john@doe.com" %}>
+{% else %}
+<input id="id_email" type="email" class="required" name="{{ form.email.name }}" value="{{ form.email.value|default:'' }}" maxlength="75" placeholder={% trans "john@doe.com" %}>
+{% endif %}
+{{ form.non_field_errors }}
+<label for="password1">{% trans "Password" %}</label>
+<input id="password1" type="password" name="password1">
+<label for="password2">{% trans "Retype your password" %}</label>
+<input id="password2" type="password" name="password2">
+<fieldset>
+<input class="btn btn-primary" type="submit" value="{% trans "Submit" %}">
+</fieldset>
+</form>
+{% endblock %}

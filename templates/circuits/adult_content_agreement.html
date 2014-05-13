@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "Adult content agreement" %}{% endblock %}
+
+{% block head %}
+<!-- <meta name="description" content="Worldrat registration"> -->
+{% endblock %}
+
+{% block content %}
+<h1 class="title">
+  {% trans "The route you are trying to watch has content marked as adults-only. Do you still want to continue?" %}
+</h1>
+
+
+<div class="row social-btns">
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url adult_content_agreement_agree circuit_id %}">
+	{% trans "Yes, take me there." %}</a></p>
+  </div>
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url home %}">
+	{% trans "No, take me back." %}</a></p>
+  </div>
+</div>
+
+
+{% endblock %}

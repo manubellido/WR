@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "Activity" %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="">
+{% endblock %}
+
+{% block content %}
+<div>
+<h1 class="title"> {%trans "Recent activity" %}</h1>
+<hr />
+<ol class="listing routes-list">
+{% load notif_data %}
+{% for notification in notifications %}
+{% include "circuits/circuit_list_item.html" %}
+{% endfor %}
+</ol>
+
+<button id="load-more" class="btn btn-primary"> {% trans "Show more" %}</button>
+</div><!-- .span9 -->
+{% endblock %}

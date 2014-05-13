@@ -1,0 +1,33 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta charset="utf-8" />
+  <title>Mailing Worldrat</title>
+</head>
+<body>	
+  <span style="border-collapse:separate;font-family:Helvetica;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;font-size:medium">
+    <div lang="en" style="min-width:800px;width:800px;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;background-image:url('{{ STATIC_PREFIX }}/mails/city_chicago.jpg');background-repeat:no-repeat!important;background-color:#f7f7f7;background-repeat:repeat repeat">
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+	{% include "mails/mail_header.html" %}
+	<tbody>
+	  <tr>
+	    <td style="border-collapse:collapse">
+	      <img width="0" height="0">
+	      <table cellspacing="0" cellpadding="0" border="0" align="center" width="700">
+		<tbody>
+		  <tr>
+		    <td align="center" style="border-collapse:collapse">
+		      <table cellspacing="0" cellpadding="0" border="0" align="center">
+			<tbody>
+			  <tr>
+			    <td style="border-collapse:collapse">
+			      <h1 style="font-family:Helvetica,Arial,san-serif;font-weight:normal;font-size:35px;line-height:21px;color:rgb(33,25,34)!important;text-shadow:rgb(255,255,255) 0px 1px 0px;margin-top:60px;margin-right:0px;margin-bottom:30px;margin-left:0px;padding-top:0px;padding-right:20px;padding-bottom:0px;padding-left:20px">
+				Hi <strong>{{ user.get_full_name }}!</strong></h1>
+			    </td>
+			  </tr>
+			  <tr>
+			    {% block body %}{% endblock %}
+			</tbody>
+		      </table>
+		      {% include "mails/mail_footer.html" %}
+</body>
+</html>

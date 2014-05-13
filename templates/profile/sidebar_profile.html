@@ -1,0 +1,13 @@
+{% load i18n %}
+<aside class="submenu-wide">
+<ul class="profile-sidebar">
+  <li class="{% active request "user_circuit_list" user_id=wr_user.id %}"><a href="{% url user_circuit_list user_id=wr_user.id %}">{% trans "Routes" %}</a></li>
+  <li class="{% active request "user_favorite_routes" user_id=wr_user.id %}"><a href="{% url user_favorite_routes user_id=wr_user.id %}">{% trans "Favorites " %}</a></li>
+  <li class="{% active request "show_user_profile_info" user_id=wr_user.id %}"><a href="{% url show_user_profile_info user_id=wr_user.id %}">{% trans "Profile" %}</a></li>
+  {% if own_profile %}
+
+    <li class="{% active request "account_settings" %}"><a href="{% url account_settings %}">{% trans "Settings" %}</a></li>
+
+  {% endif %}
+</ul>
+</aside>

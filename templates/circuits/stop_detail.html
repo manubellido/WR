@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, {% trans "Urban Exploration" %} | {{ stop.place.name }} {% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ stop.place.name }}: {{ stop.description|linebreaksbr }}">
+  <meta name="keywords"content="{{ stop.place.name }}, {{ stop.place.locality.short_name }}, {{ stop.circuit.author.get_full_name }}">
+{% endblock %}
+
+{% block content %}
+{% load thumbnail %}
+<div>
+<h1 class="title stop-title"><span class="route-title-at-stop">{% trans "Route" %}:
+    <a href="{{ stop.circuit.get_absolute_url }}" title="{% trans "back to" %} {{ stop.circuit.name }}">{{ stop.circuit.name }}</a></span><strong>{{ stop.place.name }}</strong></h1>
+<p class="route-info-single stop-distance" data-coords="{{ stop.place.lat|stringformat:"f" }},{{ stop.place.lng|stringformat:"f" }}"><i class="icon-map-marker"></i> <span></span></p>
+
+{% if user.is_authenticated %}
+<p class="route-info-single route-actions">
+  {% if is_done %}
+  <span class="btn been-there been-there-single done"
+	data-url-off="{% url remove_done_controller_resource place_id=stop.place_id %}"
+	data-url-on="{% url add_done_controller_resource place_id=stop.place_id %}"
+	data-text-on="{% trans "Check!" %}"
+	data-text-off="{% trans "Been there, done that" %}"
+	data-toggle-class="done"><i class="icon-flag"></i> <span>{% trans "Check!" %}</span></span>
+  {% else %}
+  <span class="btn been-there been-there-single"
+	data-url-off="{% url remove_done_controller_resource place_id=stop.place_id %}"
+	data-url-on="{% url add_done_controller_resource place_id=stop.place_id %}"
+	data-text-on="{% trans "Check!" %}"
+	data-text-off="{% trans "Been there, done that" %}"
+	data-toggle-class="done"><i class="icon-flag"></i> <span>{% trans "Been there, done that" %}</span></span>
+  {% endif %}
+</p>
+{% endif %}
+
+{% if stop.description %}
+{% load html_extras %}
+<p class="route-info-single stop-description-single">{{ stop.description|urlize|twitterize }}</p>
+{% endif %}
+</div><!-- end of .description -->
+
+<div id="map"></div>
+<div>
+<p class="route-info-single address">{{ stop.place.address|default:'' }} <br> {{ stop.place.crossStreet|default:'' }}</p>
+<div class="route-info-single stop-description">
+{% if stop.picture %}
+<figure class="stop-pic-single">
+
+{% thumbnail stop.picture "400" as img %}
+<img class="stop" src="{{ img.url }}" alt="{{ stop.place.name }}"/>
+{% endthumbnail %}
+</figure>
+{% endif %}
+
+</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+var map;
+$(document).ready(function(){
+  map = new GMaps({
+    div: '#map',
+    lat: {{ stop.place.lat|stringformat:"f" }},
+    lng: {{ stop.place.lng|stringformat:"f" }},
+    scrollwheel: false
+  });
+  map.addMarker({
+    lat: {{ stop.place.lat|stringformat:"f" }},
+    lng: {{ stop.place.lng|stringformat:"f" }}, 
+    title: '{{ stop.place.name }}'
+  });
+});
+</script>
+{% endblock %}

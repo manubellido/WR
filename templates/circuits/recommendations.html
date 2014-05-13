@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "Explore" %}{% endblock %}
+
+{% block content %}
+{% if not user.is_authenticated %}{% include "website/welcome.html" %}{% endif %}
+
+{% include "circuits/inline_filters.html" %}
+{% include "circuits/circuit_list.html" %}
+{% if circuits %}
+<a class="btn btn-primary" id="load-more" data-target-href="{% if gmacs %}{% url home_loc gmac_slug=gmac_slug %}{% else %}{% url home %}{% endif %}"{% comment %}
+		Dont judge me, its 4:00 a.m
+	{% endcomment %} data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+{% endblock %}

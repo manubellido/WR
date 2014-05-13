@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "Register" %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="Worldrat registration">
+{% endblock %}
+
+{% block content %}
+<h1 class="title">{% autoescape off %}{% trans "To finish your registration with <strong>Twitter</strong> please fill in the following information." %}{% endautoescape %}</h1>
+
+  {% if profile_picture_url %}
+  <!--
+      {% load thumbnail %}
+      {% thumbnail profile_picture_url "150x150" crop="center" as img %}
+      <img src="{{ img.url }}" alt="Twitter">
+      {% endthumbnail %}
+      -->
+  <div class="log-reg-form">
+    <div class="row social-btns">
+      <div class="span2">
+	<a href="https://twitter.com/{{ screen_name }}">
+	  <img src="{{ profile_picture_url }}" alt="Twitter">
+	</a>
+      </div>
+      <div class="span4">
+	<p>
+          <a href="https://twitter.com/{{ screen_name }}">@{{ screen_name }}</a>
+	</p>
+      </div>
+    </div>
+    <div class="row social-btns">
+      <ul class="nav nav-list">
+	<li class="divider"></li>
+      </ul>
+    </div>
+  </div>
+
+{% endif %}
+
+<form class="log-reg-form" action="{% url twitter_register %}" method="post">
+
+{% csrf_token %}
+{{ form.first.errors }}
+<label>{% trans "Name" %}</label>
+{{ form.first }}
+{{ form.last.errors }}
+<label>{% trans "Lastname" %}</label>
+{{ form.last }}
+{{ form.email.errors }}
+<label for="email">{% trans "Email" %}</label>
+{% if closed_beta %}
+<input id="email" class="disabled" readonly="readonly" type="email" name="email" value="{{ invitation_instance.email }}" placeholder={% trans "john@doe.com" %}>
+{% else %}
+<input id="id_email" type="email" class="required" name="{{ form.email.name }}" value="{{ form.email.value|default:'' }}" maxlength="75" placeholder={% trans "john@doe.com" %}>
+{% endif %}
+<!--
+    <label for="password1">{% trans "Password" %}</label>
+    <input id="password1" type="password" name="password1">
+    <label for="password2">{% trans "Retype your password" %}</label>
+    <input id="password2" type="password" name="password2">
+    -->
+{{ form.non_field_errors }}
+<fieldset>
+  <input class="btn btn-primary" type="submit" value="{% trans "Submit" %}">
+</fieldset>
+</form>
+{% endblock %}

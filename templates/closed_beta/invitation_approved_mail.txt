@@ -1,0 +1,21 @@
+Welcome to Worldrat!
+
+You must know people in important places because we were forced to accept you
+in our beta right away. At gunpoint.
+
+It's all OK, we're pretty sure you've got what it takes to become a worldrat so
+go ahead and click on the following link to create your new account and become
+one of the select few that can create routes in our web:
+
+
+{{ destination_url }}
+
+
+We'll be waiting for you!
+
+
+
+-- 
+The Worldrat Team
+
+

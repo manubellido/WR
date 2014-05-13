@@ -1,0 +1,30 @@
+{% get_notification_data as notification_data %}
+{% load i18n %}
+<li>
+<div class="activity-item">
+{% if notification.type == 1 %}
+<a class="activity-subject" href="{% url show_profile notification_data.author.id %}">{{ notification_data.author.get_full_name }}</a><span class="user-verb new">{% trans "created" %}</span><a href="route.html">{{ notification_data.circuit.name }}</a>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time>
+{% else %}
+{% if notification.type == 2 %}
+<a class="activity-subject" href="{% url show_profile notification_data.user_favoriting.id %}">{{ notification_data.author.get_full_name }}</a><span class="user-verb fav">{% trans "marked as favorite" %}</span><a href="route.html">{{ notification.created }}</a>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time>
+{% else %}
+{% if notification.type == 3 %}
+<a class="activity-subject" href="{{ notification_data.circuit.get_absolute_url }}">{{ notification_data.circuit.name }}</a><span class="user-verb fav">{% trans "was selected as favorite by %}</span><a href="{% url show_profile notification_data.user_favoriting.id %}">{{ notification_data.user_favoriting.get_full_name }}</a>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time>
+{% else %}
+{% if notification.type == 4 %}
+<a class="activity-subject" href="{{ notification_data.circuit.get_absolute_url }}">{{ notification_data.remixed_circuit.name }}</a><span class="user-verb remix"> {% trans "from %}</span><a href="{% url circuit_detail notification_data.original_circuit.id %}">{{ notification_data.original_circuit.name }}</a>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time>
+{% else %}
+{% if notification.type == 5 %}
+<a class="activity-subject" href="{{ notification_data.circuit.get_absolute_url }}">{{ notification_data.circuit.name }}</a><span class="user-verb modified">{% trans "got added" %}</span><a href="stop.html">{{ notification_data.place.name }}</a>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time><!-- Revisar el fraseo más adelante por medio de A/B testing-->
+{% else %}
+{% if notification.type == 6 %}
+<a class="activity-subject" href="{% url show_profile notification_data.follower.id %}">{{ notification_data.follower.get_full_name }}</a><span class="user-verb follows">{% trans "is following you" %}</span>
+<time datetime="2009-09-04T16:31:24-05:00">{{ notification.created }}</time>
+{% endif %}
+</div><!-- acitivy-item -->
+</li>

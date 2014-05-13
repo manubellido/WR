@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Worldrat, Urban Exploration | Send Invites{% endblock %}
+
+{% block content %}
+{% with request.user.userprofile.invitations_left as invitations_left %}
+<script src="{{ STATIC_URL }}/js/validate_email.js"></script>
+<div>
+{% include "profile/sidebar_profile.html" %}
+<h1 class="title user-title"><strong>Invite</strong> your friends</h1>
+{% if invitations_left > 0 %}
+{% for field in form %}
+  {% if forloop.first %}<form class="log-reg-form" action="." method="POST">{% csrf_token %}{% endif %}
+        <p>You have <strong>{{ invitations_left }} invitation{% if invitations_left > 1 %}s{% endif %} left</strong></p>
+    {{ field.errors}}
+    <label class="control-label">{{ field.label }}</label>
+
+   {% for i in range%}
+    <div id="message_{{ i }}"></div>
+    <input type="email" data-previous="" name="email[]" value="" class="verify_email" id="validation_{{ i }}" data-valid="invalid"/>
+   {% endfor %}
+    <div id="form_messages"></div>
+    <fieldset>
+      <input class="btn btn-primary" type="submit" value="Send Invites">
+    </fieldset>
+    <p>Put any emails you want to invite here, on a separate line each.</p>
+  {% if forloop.last %}</form>{% endif %}
+{% endfor %}
+{% else %}
+<div class="alert alert-info">
+	<p>Sorry, rat, you're all out of beta invitations. But fear not, your friends can still request a beta invite, we're constantly sending out invitations ourselves.</p>
+</div>
+{% endif %}
+</div>
+{% endwith %}
+{% endblock %}

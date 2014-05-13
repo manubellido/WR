@@ -1,0 +1,26 @@
+{% load i18n %}
+
+<div class="inline-filters">
+  <div>{% trans "You are watching" %} </div>
+  <div class="inline-filters-group">
+    <a class="inline-filter-trigger dropdown-toggle" data-toggle="dropdown" href="#">{% if category %}{{ category }}{% else %}{% trans "All routes" %}{% endif %} <i class="icon-sort-down"></i></a>
+    <ul id="categories-filter" class="dropdown-menu">
+      <li><a href="{% if gmacs %}{% url home_loc gmac_slug=gmac_slug %}{% else %}{% url home %}{% endif %}"{% if not category %} class="active"{% endif %}>{% trans "All routes" %}</a>
+      </li>
+      {% for cat in categories %}<li>
+      <a {% if cat.slug == category_slug %}class="active" {% endif %}href="{{ cat.get_absolute_url }}{% if gmacs %}{{ gmac_slug }}{% endif %}">{{ cat.name }}</a>
+      </li>{% endfor %}
+    </ul>
+  </div>
+  <div>
+    {% trans "routes around " %}
+    <input class="city-search inline-filter-trigger" placeholder="City name"
+	   data-default="{% if gmacs %}{{ gmac_get_short_formatted_name|default:'the world' }}{% else %}{% trans "the world" %}{% endif %}"
+	   value="{% if gmacs %}{{ gmac_get_short_formatted_name|default:'the world' }}{% else %}{% trans "the world" %}{% endif %}"
+	   data-category="{{ category_slug }}" data-url="{% url change_location %}" />
+  </div>
+  <!-- {{ request.gmac }} -->
+  <!-- {% if not gmacs and request.gmac %}
+  <p class="suggestion"><a href="{{ request.path }}/{{ request.gmac.slug }}">Would you like to search routes around {{ request.gmac_get_short_formatted_name }}?</a></p>
+  {% endif %} -->
+</div>

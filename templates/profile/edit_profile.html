@@ -1,0 +1,93 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, {% trans "Urban Exploration" %} | {{ user.get_full_name }}{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %}
+
+<div>
+<h1 class="title user-title"><strong>{{ wr_user.first_name}}</strong> {{ wr_user.last_name}}</h1>
+<h2 class="user-route-list">{% trans "Edit Profile" %}</h2>
+
+<!-- UNLINK TWITTER AND FACEBOOK -->
+{% if fb_data %}
+<div class="row social-btns">
+  <p><a class="btn btn-large btn-social" href="{% url facebook_unlink %}">
+	<img src="{{ STATIC_URL }}/images/fb_logo.jpg" width="25" height="25" class="pull-left">{% trans "Unlink Facebook" %}</a></p> 
+</div>
+{% endif %}
+
+{% if twitter_data %}
+<div class="row social-btns">
+  <p><a class="btn btn-large btn-social" href="{% url twitter_unlink %}">
+      <img src="{{ STATIC_URL }}/images/twitter_logo.png" width="25" height="25" class="pull-left">{% trans "Unlink Twitter" %}</a></p> 
+</div>
+{% endif %}
+<!-- UNLINK TWITTER AND FACEBOOK -->
+
+<form class="log-reg-form" method="post" enctype="multipart/form-data" action="{% url edit_profile %}">
+{{ form.non_field_errors }}
+{% csrf_token %}
+
+{{ form.picture.errors }}
+<label>{{ form.picture.label }}</label> {{ form.picture }}
+
+{% load thumbnail %}
+{% if user.userprofile.picture %}
+{% thumbnail user.userprofile.picture "150x150" crop="center" as img %}
+  <img src="{{ img.url }}" alt="{{ user.get_full_name }}">
+  {% endthumbnail %}
+{% endif %}
+
+{% comment %}
+{% elif fb_data %}
+  <img src="{{ fb_data.fb_picture }}" alt="no-picture"/>
+{% elif twitter_data %}
+  <img src="{{ twitter_data.twitter_picture }}" alt="no-picture"/>
+{% endcomment %}
+
+
+{{ form.first_name.errors }}
+<label>{% trans "First Name" %}</label> {{ form.first_name }}
+
+{{ form.last_name.errors }}
+<label>{% trans "Last Name" %}</label> {{ form.last_name }}
+
+{{ form.gender.errors }}
+<label>{{ form.gender.label }}</label> {{ form.gender }}
+
+{{ form.hometown.errors }}
+<label>{{ form.hometown.label }}</label> {{ form.hometown }}
+
+{{ form.bio.errors }}
+<label>{{ form.bio.label }}</label> {{ form.bio }}
+
+<input class="btn btn-primary" type="submit" value="{% trans "Save" %}"/>
+</form>
+
+
+<div class="asoc-social-networks">
+
+<!-- facebook button 
+{% if not fb_data %}
+<p>
+<a class="btn" href="{% url facebook_registration %}"><i class="icon-facebook"></i> Facebook</a>
+</p>
+{% endif %}
+
+<!-- twitter button 
+{% if not twitter_data %}
+<p><a class="btn" href="{% url twitter_login %}"><i class="icon-twitter"></i> Twitter</a></p>
+{% endif %}
+<!-- twitter button -->
+
+{% comment %}
+{% if not foursquare_data %}
+<p><a class="btn" href="{% url foursquare_authorization %}">Foursquare</a></p>
+{% endif %}
+</div>
+{% endcomment %}
+</div>
+
+{% endblock %}

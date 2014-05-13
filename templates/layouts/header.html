@@ -1,0 +1,129 @@
+{% load i18n %}
+<!-- Facebook JS SDK initialization -->
+<div id="fb-root"></div>
+<script>
+  var FACEBOOK_APP_ID = '{{ SETTINGS.FACEBOOK_APP_ID }}';
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId: FACEBOOK_APP_ID,
+      status: true,
+      xfbml: true,
+      cookies: true
+    });
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<header class="navbar">
+<div class="navbar-inner">
+<nav class="container-fluid">
+
+{% if user.is_authenticated %}
+<!-- Inline editor to staff only-->
+{% if user.is_staff %}
+<script src="{{ STATIC_URL }}js/jquery.form.js?v3.09"></script>
+<script src="{{ STATIC_URL }}js/inline_edit.js"></script>
+{% endif %}
+{% endif %}
+
+<ul class="nav">
+{% if user.is_authenticated %}
+<li {% if topbar_item == "explore" %}class="active"{% endif %}><a href="{% url home %}">{% trans "Explore" %}</a></li>
+<li {% if topbar_item == "my_routes" %}class="active"{% endif %}><a href="{% url mycircuits %}">{% trans "My Routes" %}</a></li>
+<li {% if topbar_item == "favorite_routes" %}class="active"{% endif %}><a href="{% url favorite_routes %}">{% trans "My Favorites" %}</a></li>
+
+{# <li {% if topbar_item == "activity" %}class="active"{% endif %}><a href="{% url show_activity %}">{% trans "Activity" %}</a></li> #}
+{% endif %}
+</ul><!-- .nav -->
+
+{% if not user.is_authenticated %}
+<ul class="nav pull-left">
+</ul>
+
+<ul class="nav header">
+  <!-- maybe fix this "active" class -->
+  <li class="header-left active">
+    <a class=""
+       data-toggle="dropdown"
+       href="#">
+      {{ request.session.verbose_language }}
+      <span class="caret language-caret"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <li>
+	<a href="{% url change_lang lang_id=1 %}">{% trans "English" %}</a>
+      </li>
+      <li>
+	<a href="{% url change_lang lang_id=2 %}">{% trans "Español" %}</a>
+      </li>
+    </ul>
+  </li>
+  <li class="header-right {% if not display_login_link %}active{% endif %}"><a href="{% url auth_login %}">{% trans "Log in" %}</a></li>
+<!--   <li class="header-right {% if not display_registration_link %}active{% endif %}"><a href="{% url social_register %}">{% trans "Register" %}</a></li> -->
+    <li class="header-right {% if not display_registration_link %}active{% endif %}"><a href="{% url registration_register %}">{% trans "Register" %}</a></li>
+
+</ul>
+{% endif %}
+
+{% if user.is_authenticated %}
+<div class="btn-group pull-right">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    <i class="icon-user"></i>&nbsp;{{ user.first_name|spacify }}<span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="{% url show_user_profile user.id %}">{% trans "Profile" %}</a></li>
+    {# <li><a href="{% url show_user_profile_following user.id %}">{% trans "Following" %}</a></li> #}
+    {# <li><a href="{% url show_user_profile_followers user.id %}">{% trans "Followers" %}</a></li> #}
+    {# <li><a href="{% url account_settings %}">{% trans "Preferences" %}</a></li> #}
+    {# <li><a href="{% url edit_categories %}">{% trans "Interests" %}</a></li> #}
+    <li><a href="{% url auth_logout_then_login %}">{% trans "Logout" %}</a></li>
+  </ul><!-- .dropdown-menu -->
+</div><!-- .btn-group -->
+
+<ul class="nav pull-right">
+  <li class="active">
+    <a class=""
+       data-toggle="dropdown"
+       href="#">
+      {{ request.session.verbose_language }}
+      <span class="caret language-caret"></span>
+    </a>
+      <span class="caret language-caret"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <li>
+	<a href="{% url change_lang lang_id=1 %}">{% trans "English" %}</a>
+      </li>
+      <li>
+	<a href="{% url change_lang lang_id=2 %}">{% trans "Spanish" %}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+{% endif %}
+
+{% include "widgets/new_route_button.html" %}
+
+
+</nav>
+</div><!-- .navbar-inner -->
+<div class="brand-inner">
+	<div class="container-fluid">
+		<a class="brand" href="/"><img src="{{ STATIC_URL }}images/logo/nu-green.png" alt="Worldrat, Urban Exploration" width="151" height="48"></a>
+
+		<form class="global-search" method="GET" action="{% url haystack_search %}">
+			<input id="q" type="text" name="q" placeholder={% trans "Search (e.g. Pizza, Chicago)" %} {% if query %}value="{{ query }}"{% endif %}>
+		</form>
+
+	</div>
+</div>
+</header>

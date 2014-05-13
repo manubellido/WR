@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "Login" %}{% endblock %}
+{% block head %}
+<meta name="description" content="Login">
+{% endblock %}
+
+{% block content %}
+{% load url from future %}
+<h1 class="title"><strong>{% trans "Come in" %}</strong>, {% trans "rat." %}</h1>
+
+{% comment %}
+<div class="sns-login-form span6">
+<img src="{{ STATIC_URL }}/images/facebook-login.gif">
+<img src="{{ STATIC_URL }}/images/twitter-login.png">
+</div>
+{% endcomment %}
+
+<!-- TWITTER AND FACEBOOK LOGIN -->
+<!-- <div class="row social-btns">
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url 'facebook_registration' %}">
+	<img src="{{ STATIC_URL }}/images/fb_logo.jpg" width="25" height="25" class="pull-left">{% trans "Login with Facebook" %}</a></p> 
+  </div>
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url 'twitter_login' %}">
+	<img src="{{ STATIC_URL }}/images/twitter_logo.png" width="25" height="25" class="pull-left">{% trans "Login with Twitter" %}</a></p> 
+  </div>
+</div> -->
+<!-- TWITTER AND FACEBOOK LOGIN -->
+
+<form class="log-reg-form" method="post" action="{% url 'auth_login' %}">
+{% csrf_token %}
+{% for error in form.errors.values %}
+{% if error != form.email.errors %}
+{% if error != form.password.errors %}
+{{ error }}
+{% endif %}
+{% endif %}
+{% endfor %}
+<input type="hidden" name="next" value="{{ next }}" />
+
+{% if form.email.errors or form.password.errors %}
+<ul class="errorlist">
+  <li>{% trans "Please enter a correct email and password." %}</li>
+</ul>
+{% endif %}
+<label class="control-label">{% trans "Email" %}</label>
+
+<input type="email" name="email">
+
+<label class="control-group">{% trans "Password" %}</label>
+<input type="password" name="password">
+    
+<fieldset>
+<input class="btn btn-primary" type="submit" value={% trans "Login" %}>
+<p class="loginform"><a href="{% url 'auth_password_reset' %}">{% trans "Forgot your password?" %}</a></p>
+</fieldset>
+
+</form>
+
+{% endblock %}

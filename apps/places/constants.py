@@ -1,0 +1,4 @@
+# -*- coding: utf-8 -*-
+
+FS_API_VERSION = '20120610'
+DEFAULT_PLACE_TYPE_ID = '4bf58dd8d48988d103941735'

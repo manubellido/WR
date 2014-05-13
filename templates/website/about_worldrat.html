@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "About Worldrat" %}{% endblock %}
+{% block head %}
+  <meta name="description" content="Worldrat is a web and mobile app for alternative tourism. Find awesome places all over the world, perhaps even in your own city!">
+  <meta name="keywords" content="Worldrat, Germán Martínez, Juan Pablo Scaletti, Breno Colom, Essio Colom, Antonio Ognio">
+{% endblock %}
+
+
+{% block content %}
+<div class="content-wrapper">
+<h1 class="title">{% trans "About Worldrat" %}</h1>
+
+<p>{% blocktrans %} The world is a <strong>big place.</strong>
+<strong>Worldrat</strong> was made for everyone who <strong>loves</strong>
+ to explore it.
+
+<p>Everything you find on Worldrat has been created by another user like you, so you'll get the same experience you find in the real world when a friend recommends you where to go anywhere in the world, even in your own city.</p> {% endblocktrans %}
+
+<p>{% trans "Find us on twitter as" %} <a href="http://twitter.com/worldrat">@worldrat</a>, <a href="http://www.facebook.com/worldrat">Facebook</a> {% trans "or mail us at" %} <a href="mailto:hello@worldrat.com">hello@worldrat.com</a>.</p>
+</div>
+
+{% endblock %}

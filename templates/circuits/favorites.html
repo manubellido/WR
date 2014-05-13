@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "My favorite routes" %}{% endblock %}
+{% block head %}
+  <meta name="description" content="{{ request.user.get_full_name }}'s favorite routes">
+  <meta name="keywords" content="worldrat, {{ request.user.get_full_name }}">
+{% endblock %}
+
+{% block content %}
+<div>
+<h1>{% trans "My favorite routes" %}</h1>
+{% if circuits %}
+  <section data-columns="{{ CIRCUIT_COLUMN_SIZES }}" class="columns">
+  {% for circuit in circuits %}
+    {% include "circuits/circuit_list_item.html" %}
+  {% endfor %}
+  </section>
+{% else %}
+  <div class="alert alert-info">
+    <p>{% trans "Rat, you have <strong>no favorite routes</strong>... sigh" %}</p>
+  </div>
+{% endif %}
+
+{% if circuits  %}
+  <a class="btn btn-primary" id="load-more" data-target-href="{% url mycircuits %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+</div>
+{% endblock %}

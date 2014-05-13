@@ -1,0 +1,183 @@
+{% extends "layouts/embedded_base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "Explore" %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="{{ circuit.name }}: {{ circuit.description|truncatewords:20 }}">
+<meta property="og:title" content="{{ circuit.name }}" />
+<meta property="og:caption" content="by {{ circuit.author.get_full_name }}" />
+<meta property="og:description" content="{{ circuit.description|truncatewords:20 }}" />
+{% if circuit.picture %}
+{% load thumbnail %}
+{% thumbnail circuit.picture "300" crop="center" as img %}
+<meta property="og:image" content="{{ SETTINGS.SITE_PREFIX }}{{ img.url }}" />
+{% endthumbnail %}
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+var map;
+$(document).ready(function(){
+  map = new GMaps({
+    div: '#map',
+    zoom: 13,
+    scrollwheel: false
+  });
+
+  var gmap = map.map
+  var point;
+  var markerBounds = new google.maps.LatLngBounds();
+  var path = [];
+  {% for stop in circuit_stops %}
+  map.addMarker({
+    lat: {{ stop.place.lat|stringformat:"f" }},
+    lng: {{ stop.place.lng|stringformat:"f" }}, 
+    title: '{{ stop.place.name }}',
+    click: makeScrollTo('{{ stop.id }}')
+  });
+  point = new google.maps.LatLng({{ stop.place.lat|stringformat:"f" }}, {{ stop.place.lng|stringformat:"f" }});
+  markerBounds.extend(point);
+  path.push([{{ stop.place.lat|stringformat:"f" }}, {{ stop.place.lng|stringformat:"f" }}]);
+  {% endfor %}
+  gmap.setCenter(markerBounds.getCenter());
+  gmap.fitBounds(markerBounds);
+  map.drawPolyline({
+    path: path,
+    strokeColor: '#1b60e8',
+    strokeOpacity: 0.4,
+    strokeWeight: 6
+  });
+
+  $('#expand-map').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var $this = $(this);
+      var toheight = $this.hasClass('expanded') ? 300 : 500;
+      $this.toggleClass('expanded');
+      map.map.setOptions({disableDefaultUI: true});
+      $('#map').animate(
+          {'height': toheight + 'px'},
+          300,
+          function(){
+            google.maps.event.trigger(map.map, "resize");
+            map.map.setOptions({disableDefaultUI: false});
+          }
+      );
+      return false;
+  });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+{% load thumbnail %}
+{% load done_places %}
+<div>
+  <h1 class="title route-title">{{ circuit.name }}</h1>
+    {% if circuit.remixed_from and circuit.remixed_from.author != circuit.author %}
+  <div class="route-info-single remixed-from remixed-from-single">
+    <p><i class="icon-refresh"></i>
+      {% trans "from" %}
+      <a href="{{ domain }}{{circuit.remixed_from.get_absolute_url}}" target="_blank">
+	{{circuit.remixed_from.name}}
+      </a>
+  </div>
+  {% endif %}
+
+  <p class="route-info-single">
+    {{ circuit_stops_count }} {% trans "stop" %}{{ circuit_stops_count|pluralize }} {% trans "on" %}
+    <a class="category-display" href="{{ domain }}{{ circuit.get_category_object.get_absolute_url }}" target="_blank">
+      {{ circuit.get_category_display }}</a> {% trans "by" %}
+    <a href="{{ domain }}{% url show_user_profile circuit.author.id %}" target="_blank">
+      {{ circuit.author.get_full_name }}</a></p>
+
+  <div class="route-info-single route-stats">
+    <p><span><i class="icon-heart"></i> {{circuit.stats.favorite_count}}</span>
+      {% if not circuit.remixed.from %}
+      <span><i class="icon-refresh"></i>
+	{{circuit.stats.remix_count}}</span>
+      {% endif %}
+      {% if done_places %}
+      <span class="done-stops">
+	{% trans "Done" %} {% done_places user circuit %} {% trans "of" %} {{ circuit_stops_count }} {% trans "stop" %}{{ circuit_stops_count|pluralize }}
+      </span>
+      {% endif %}</p>
+  </div>
+
+  <div class="route-info-single route-actions">
+    {% if user.is_authenticated %}
+    {% if circuit.id in recommends %}
+    <button class="btn">{% trans "Remove from my recommendations" %}</button>
+    {% endif %}
+    {% endif %}  
+    {% if user.is_authenticated %}
+    {% if circuit in user.userprofile.favorites.all %}
+    <span class="btn fav btn-tooltip"
+	  title="{% trans "Remove from my favorites" %}"
+	  data-url-off="{% url remove_favorite_controller_resource circuit_id=circuit.id %}"
+	  data-url-on="{% url add_favorite_controller_resource circuit_id=circuit.id %}"
+	  data-title-on="{% trans "Remove from my favorites" %}"
+	  data-title-off="{% trans "Add to favorites" %}"
+	  data-toggle-class="fav"><i class="icon-heart"></i></span>
+    {% else %}
+    <span class="btn btn-tooltip" title="{% trans "Add to favorites" %}"
+	  data-url-off="{% url remove_favorite_controller_resource circuit_id=circuit.id %}"
+	  data-url-on="{% url add_favorite_controller_resource circuit_id=circuit.id %}"
+	  data-title-on="{% trans "Remove from my favorites" %}"
+	  data-title-off="{% trans "Add to favorites" %}"
+	  data-toggle-class="fav"><i class="icon-heart"></i></span>
+    {% endif %}
+
+  {% endif %}{# user.is_authenticated #}
+    <span class="social-sharing" data-message="Check out {{ circuit.name }}">
+      <span class="btn twitter-btn btn-tooltip" data-type="twitter"
+	    title="{% trans "Share on Twitter" %}"><i class="icon-twitter"></i></span>
+      <span class="btn facebook-btn btn-tooltip" data-type="facebook"
+	    title="{% trans "Share on Facebook" %}"><i class="icon-facebook"></i></span>
+    </span>
+  </div><!-- .route-info-single -->
+
+
+<div id="map-wrapper">
+  <div id="map" class="clear"></div>
+  <div id="expand-map"><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i></div>
+</div>
+
+<section data-columns="{{ CIRCUIT_STOP_COLUMN_SIZES }}" class="columns">
+<div class="flow-item">
+<div class="main-content-details flow-item-content">
+<h2 class="route-title-desc"><span>{% trans "About" %}</span> {{ circuit.name }}</h2>
+<figure class="mainpic route-picture">
+{% if circuit.picture %}
+{% thumbnail circuit.picture "300" crop="center" as img %}
+  <img src="{{ img.url }}" data-ratio-hw="{% widthratio img.height img.width 100 %}" width="{{ img.width }}" height="{{ img.height }}" />
+{% endthumbnail %}
+{% endif %}
+<figcaption class="route-meta">
+{% if circuit.description %}
+{% load html_extras %}
+<p>{{ circuit.description|urlize|twitterize }}<p>
+<p class="user-quote">&mdash; {{ circuit.author.get_full_name }}</p>
+{% endif %}
+</figcaption>
+</figure>
+</div>
+</div><!-- main-content-details -->
+{% for stop in circuit_stops %}
+{% include "circuits/stop_list_item.html" %}
+{% endfor %}
+</section>
+{% if user.is_authenticated %}
+<div class="route-info-single route-actions route-recsys-actions route-vote">
+{% trans "<h3>Rat, <strong>rate this route</strong></h3>" %}
+<p class="opt">({% trans "We'll use it to improve your recommendations" %})</p>
+  <div class="{{ circuit_vote_str }}" data-radio="{% url vote_controller_resource circuit_id=circuit.id %}" data-name="vote" data-val="{{ circuit_vote }}">
+  <span class="btn btn-tooltip" title="Like it" data-val="1" data-val-class="up"><i class="icon-thumbs-up"></i></span>
+  <span class="btn btn-tooltip" title="Hate it" data-val="-1" data-val-class="down"><i class="icon-thumbs-down"></i></span>
+  </div>
+</div>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat | {% trans "Register" %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="Worldrat registration">
+{% endblock %}
+
+{% block content %}
+<h1 class="title">{% autoescape off %}{% trans "Register, because you're a <strong>worldrat</strong> and you know it." %}{% endautoescape %}</h1>
+
+<!-- TWITTER AND FACEBOOK LOGIN -->
+<div class="row social-btns">
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url facebook_registration %}">
+	<img src="{{ STATIC_URL }}/images/fb_logo.jpg" width="25" height="25" class="pull-left">{% trans "Register with Facebook" %}</a></p> 
+  </div>
+  <div class="span6">
+    <p><a class="btn btn-large btn-social" href="{% url twitter_login %}">
+	<img src="{{ STATIC_URL }}/images/twitter_logo.png" width="25" height="25" class="pull-left">{% trans "Register with Twitter" %}</a></p> 
+  </div>
+<!-- TWITTER AND FACEBOOK LOGIN -->
+</div>
+
+<div class="row social-btns">
+<h2> <a href="{% url registration_register %}">{% trans "Or register using your e-mail address" %}</a></h2>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "Breaded tilapia and french fries in Miraflores - Food and Beverages" %}{% endblock %}
+
+{% block content %}
+<section>
+<aside class="sidebar">
+<p><a class="btn" data-toggle="modal" href="#circuit-new">{% trans "New Route" %}</a></p>
+</aside>
+<div class="main">
+<p class="cat"><a href="explore-cat.html">{% trans "Food and Beverage" %}</a></p>
+<div class="title">
+<h1 class="title">{% trans "Breaded tilapia and french fries in Miraflores" %}</h1>
+<p class="by">por <a href="user.html">{% trans "Germán Augusto Martínez Seminario" %}</a></p>
+<div class="route-actions">
+<button>{% trans "Add to Favorites" %}</button>
+</div>
+</div><!-- .title -->
+<iframe width="800" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=43+Avenida+28+de+Julio+Miraflores,+Lima+Peru&amp;aq=t&amp;sll=37.0625,-95.677068&amp;sspn=48.50801,92.900391&amp;ie=UTF8&amp;hq=&amp;hnear=28+de+Julio,+Miraflores+District,+Lima+Region,+Peru&amp;t=m&amp;ll=-12.127446,-77.028151&amp;spn=0.02937,0.085831&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+<img class="route" src="static/img/cafe.jpg" alt="café"/>
+<div class="description">
+<p>{% trans "The Breaded tilapia is considered food of kings since a king thought so.
+Here you'll find the 6 best Breaded tilapia you can find in Miraflores." %}</p>
+</div><!-- end of .description -->
+<p>{% trans "6 stops" %}</p>
+<ol class="stops-list">
+<li>
+<img src="static/img/cafe.jpg" alt="café"/>
+<div class="stop-info">
+<h2><a href="stop.html">{% trans "The corner of the Breaded tilapia with panca chili" %}</a></h2>
+<p class="stop-distance">{% trans "9.4km" %}</p>
+<div class="address">
+<p>{% trans "Av. Hípica 234, Urbanization Los Jockeys. In front of the Hipódromo, Lima - Peru" %}</p>
+</div>
+<div class="description">
+<p>{% trans "The Breaded tilapia is considered food of kings since a king thought so.
+Here you'll find the 6 best Breaded tilapia you can find in Miraflores." %}</p>
+</div><!-- end of .description -->
+</li>
+</ol>
+</div>
+</section>
+{% endblock %}

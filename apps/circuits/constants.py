@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+
+from common.datastructures import Enumeration
+from circuits import strings
+
+DEFAULT_CIRCUIT_STOP_POSITION = 10000
+
+CIRCUIT_CATEGORY_CHOICES = Enumeration([
+    (1, 'ARCHITECTURE', strings.ARCHITECTURE),
+    (2, 'ARTS_AND_CULTURE', strings.ARTS_AND_CULTURE),
+    (3, 'FAMILY_AND_KIDS', strings.FAMILY_AND_KIDS),
+    (4, 'FOOD_AND_DRINK', strings.FOOD_AND_DRINK),
+    (5, 'HISTORY', strings.HISTORY),
+    (6, 'LIFESTYLE', strings.LIFESTYLE),
+    (7, 'MISC', strings.MISC),
+    (8, 'NATURE', strings.NATURE),
+    (9, 'NIGHTLIFE', strings.NIGHTLIFE),
+    (10, 'ROMANCE', strings.ROMANCE),
+    (11, 'SHOPPING', strings.SHOPPING),
+    (12, 'SPORTS_AND_FITNESS', strings.SPORTS_AND_FITNESS),
+    (13, 'TOURISM', strings.TOURISM),
+    (14, 'TV_AND_FILM', strings.TV_AND_FILM),
+])
+
+
+DEFAULT_CIRCUIT_CATEGORY = CIRCUIT_CATEGORY_CHOICES.FOOD_AND_DRINK
+
+DEFAULT_CIRCUITS_OFFSET = 0
+DEFAULT_CIRCUITS_LIMIT = 20
+
+# API
+API_DEFAULT_CIRCUITS_OFFSET = 0
+API_DEFAULT_CIRCUITS_LIMIT = 20
+
+
+CIRCUIT_SOURCE_CHOICES = Enumeration([
+    (1, 'WORLDRAT_USERS', strings.SOURCE_WORLDRAT_USERS),
+    (2, 'WORLDRAT_STAFF', strings.SOURCE_WORLDRAT_STAFF),
+    (3, 'NEXTSTOP', strings.SOURCE_NEXTSTOP),
+])
+
+CIRCUIT_COLUMN_SIZES = '220,310'
+CIRCUIT_STOP_COLUMN_SIZES = '220,300'
+
+EMBEDDING_FAIL_VALUES = [False]

@@ -1,0 +1,13 @@
+{% load i18n %}
+<footer class="container-fluid">
+<ul class="horizontal">
+<li><a href="http://help.worldrat.com">{% trans "Help" %}</a></li>
+<li><a href="/about/">{% trans "About" %}</a></li>
+<li><a href="/privacy_policy/">{% trans "Privacy Policy" %}</a></li>
+<li><a href="/terms_of_use/">{% trans "Terms of Use" %}</a></li>
+</ul>
+<p>&copy; <strong>2013 Worldrat</strong>, {% trans "made in Perú."%}</p>
+<p class="powered-by">
+	<img src="{{ STATIC_URL }}images/poweredByFoursquare_gray.png" alt="Powered by Foursquare">
+</p>
+</footer>

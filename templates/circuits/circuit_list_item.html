@@ -1,0 +1,84 @@
+{% load i18n %}
+
+<article class="flow-item">
+  <div class="flow-item-content">
+    <a class="flow-item-cat"
+       href="{{ circuit.get_category_object.get_absolute_url }}">
+      {{ circuit.get_category_display }}
+    </a>
+    {% if circuit.adult_content %}
+    <span class="pull-right flow-item-adult">18+</span>
+    {% endif %}
+
+    <figure >
+      <a href="{{ circuit.get_absolute_url }}">{% if circuit.picture %}
+	{% load thumbnail %}
+	{% thumbnail circuit.picture "180" as img %}
+	<img class="flow-item-pic" src="{{ img.url }}" alt="{{ circuit.name }}" data-ratio-hw="{% widthratio img.height img.width 100 %}" width="{{ img.width }}" height="{{ img.height }}" />
+	{% endthumbnail %}
+	{% endif %}</a>
+    </figure>
+
+    <div class="route-info infobox">
+      <h2><a href="{{ circuit.get_absolute_url }}">{{ circuit.name }}</a></h2>
+      <p class="by">{% trans "by" %} <a href="{% url show_user_profile user_id=circuit.author.pk %}">{{ circuit.author.get_full_name }}</a></p>
+	  {% with place_count=circuit.circuit_stops.count %}
+	  <p class="stop-count">
+	    ({{ place_count }} {% blocktrans count place_count as counter %}place{% plural %}places{% endblocktrans %})
+	    <!---      ({{ place_count }} place{{ place_count|pluralize:"s" }}) ---->
+	  </p>
+    {% endwith %}
+    <div class="route-info infobox">
+      {% if circuit.description %}
+      <div class="description">
+	{% load html_extras %}
+      {{ circuit.description|linebreaks|urlize|twitterize }}
+      </div><!-- end of .description -->
+      {% endif %}
+      {% if circuit.remixed_from and circuit.remixed_from.author != circuit.author %}
+      <div class="route-info remixed-from">
+        <p><i class="icon-refresh"></i> from <a href="{{circuit.remixed_from.get_absolute_url}}">{{circuit.remixed_from.name}}</a>
+      </div>
+      {% endif %}
+      <div class="route-info route-stats">
+      <p><span><i class="icon-heart"></i> {{circuit.stats.favorite_count}}</span> {% if not circuit.remixed.from %}<span><i class="icon-refresh"></i> {{circuit.stats.remix_count}}</span>{% endif %}</p>
+      </div>
+
+      <div class="item-options">
+        {% if user.is_authenticated %}
+          {% if circuit.id in recommends %}
+          <button class="btn">Remove from my recommendations</button>
+          {% endif %}
+
+          {% if circuit in user.userprofile.favorites.all %}
+          <span class="btn btn-tooltip fav" title="{% trans "Remove from my favorites" %}"
+		data-url-off="{% url remove_favorite_controller_resource circuit_id=circuit.id %}"
+		data-url-on="{% url add_favorite_controller_resource circuit_id=circuit.id %}"
+		data-title-on="{% trans "Remove from my favorites" %}"
+		data-title-off="{% trans "Add to favorites" %}"
+		data-toggle-class="fav"><i class="icon-heart"></i></span>
+          {% else %}
+          <span class="btn btn-tooltip" title="{% trans "Add to favorites" %}"
+		data-url-off="{% url remove_favorite_controller_resource circuit_id=circuit.id %}"
+		data-url-on="{% url add_favorite_controller_resource circuit_id=circuit.id %}"
+		data-title-on="{% trans "Remove from my favorites" %}"
+		data-title-off="{% trans "Add to favorites" %}"
+		data-toggle-class="fav"><i class="icon-heart"></i></span>
+          {% endif %}
+
+          <a data-remix="{% url remix_circuit circuit_id=circuit.id %}"
+	     class="btn btn-tooltip" title="{% trans "Remix" %}"
+	     data-name="{{ circuit.name }}"
+	     data-cat="{{ circuit.category }}"
+	     data-adult="{{ circuit.adult_content }}">
+	    <i class="icon-refresh"></i>
+	  </a>
+          {% if circuit.author == user %}
+          <a class="btn btn-tooltip" href="{% url circuit_edit circuit_id=circuit.id  %}" title="{% trans "Edit" %}"><i class="icon-edit"></i></a>
+          {% endif %}
+        {% endif %}{# user.is_authenticated #}
+      </div><!-- .item-options -->
+    </div><!-- end of .route-info -->
+  </div><!-- end of .route-info -->
+</div><!-- .flow-item-content -->
+</article>

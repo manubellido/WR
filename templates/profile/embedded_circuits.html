@@ -1,0 +1,38 @@
+{% extends "layouts/embedded_base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {{ wr_user.get_full_name }}{% endblock %}
+{% block head %}
+<meta name="description" content="{{ wr_user.get_full_name }} routes">
+{% endblock %}
+
+{% block content %}
+<div>
+<h1 class="title user-title">{% trans "Routes by" %} <strong><a href="{{ domain }}{% url show_user_profile user_id=wr_user.id %}"/>{{ wr_user.first_name }}</strong> {{ wr_user.last_name}}</h1>
+<h2 class="user-route-list"></h2>
+{% if circuits %}
+{% if style == 'cards' %}
+  <section data-columns="200,300" class="columns">
+  {% for circuit in circuits %}
+    {% include "circuits/circuit_list_item.html" %}
+  {% endfor %}
+  </section>
+  {% else %}
+  <ul>
+  {% for circuit in circuits %}
+  <li><a href="{{ circuit.get_absolute_url }}">{{circuit.name}}</a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+{% else %}
+  <div class="alert alert-info">
+  <p>{% trans "No routes by this worldrat yet." %}</p>
+  </div>
+{% endif %}
+
+{% if circuits  %}
+  <a class="btn btn-primary" id="load-more" data-target-href="{% url user_circuit_list user_id=wr_user.id %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+</div><!-- .span9 -->
+{% endblock %}

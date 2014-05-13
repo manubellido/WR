@@ -1,0 +1,39 @@
+{% load i18n %}
+
+<div id="route-edit-modal" class="modal hide fade">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>{% blocktrans %} <strong>Edit</strong> route {% endblocktrans %}</h3>
+  </div>
+
+  <div class="modal-body no-bottom">
+    <label>{% trans "Route" %}</label>
+    {{ circuit_update_form.name }}
+    <label>{% trans "Category" %}</label>
+    {{ circuit_update_form.category }}
+    <label>{% blocktrans %} About this route <small class="opt">(optional)</small> {% endblocktrans %}</label>
+    {{ circuit_update_form.description }}
+    <!-- ADULT CONTENT CHECKBOX -->
+    <div class="adult-input">
+	<span>{{ circuit_update_form.adult_content }}</span>
+	<label
+	   class="adult-checkbox-label"
+	   for="adult_content"
+	   clickable>
+	  {% trans "This route has adult content" %}
+	</label>
+    </div>
+    <!-- END OF ADUL CONTENT CHECKBOX -->
+  </div>
+
+  <div class="modal-footer modal-bottom actions">
+    <div>
+      <form class="_delete-route-form" action="{% url circuit_delete circuit_id=circuit.id %}" method="post" data-msg="{% trans "Are you sure you want to delete this route?" %}">
+	{% csrf_token %}
+	<button type="submit" class="btn btn-danger route-delete pull-left ajax">{% trans "Delete" %}</button>
+      </form>
+    </div>
+    <a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+    <button class="save btn btn-primary">{% trans "Save" %}</button>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %} Worldrat | {% blocktrans with name=request.user.username %} {{ name }}'s profile {% endblocktrans %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="{{ wr_user.get_full_name }} account settings">
+{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %} 
+<h1 class="title user-title"><strong>{{ wr_user.first_name }}</strong> {{ wr_user.last_name }}</h1>
+<h2 class="user-route-list">{% trans "Account Settings" %}</h2>
+
+<div id="notifications"></div>
+
+<form class="log-reg-form" action="{% url account_settings %}" method="post">
+  {% csrf_token %}
+
+  <ul class="emails" data-index="0">  
+  {% for email in user.emails.all %}
+    <li data-index="{{ forloop.counter }}"><span class="user-email {% if email.verified %}verified{% else %}not-verified{% endif %} {% if forloop.first%}primary{% endif %}" data-index="{{ forloop.counter }}">{{ email.email }}</span><span class="delete-email" data-index="{{ forloop.counter }}" data-target-href="{% url remove_email %}">X</span></li>
+  {% endfor %}
+  </ul>
+  
+  <input id="email-candidate" type="email"><input id="append-email" data-target-href="{% url append_email %}" class="btn" type="button" value="Add Email">
+  
+  {{ form.non_field_erros }}
+  {% for field in form %}
+    {{ field.errors }}
+    {{ field.label_tag }} {{ field }}
+  {% endfor %}
+<input class="btn btn-primary" type="submit" value="Submit" />
+{#<a href="{% url auth_password_change user_id=request.user.id%}"> {% trans "Change your password" %}</a>#}
+<p><a href="{% url auth_password_change %}">{% trans "Change your password" %}</a></p>
+</form>
+{% endblock %}

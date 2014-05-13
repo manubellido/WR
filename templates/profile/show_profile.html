@@ -1,0 +1,137 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ wr_user.get_full_name }} | Worldrat, Urban Exploration{% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ wr_user.get_full_name }} | {{ wr_user.userprofile.bio|linebreaksbr }}">
+  <meta name="keywords" content="{{ wr_user.get_fullname }}, {% for category in wr_user.categories.all %}{{ category.get_category_object.name }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}">
+{% endblock %}
+
+{% block content %}
+<script src="{{ STATIC_URL }}js/follow_user.js"></script>
+{% include "profile/sidebar_profile.html" %}
+<div>
+<div class="profile-user-info">
+<h1 class="title user-title"><strong>{{ wr_user.first_name}}</strong> {{ wr_user.last_name}}</h1>
+
+<!-- Currently not using follow
+{% if request.user.is_authenticated and request.user != wr_user %}
+<p class="route-info-single">
+  <a class="btn btn-primary"
+     id="follow-user"
+     data-follow-url="{% url user_follow_controller_resource wr_user.id %}"
+     data-unfollow-url="{% url user_unfollow_controller_resource wr_user.id %}"
+     data-isfollower-url="{% url is_follower_function_resource wr_user.id %}"
+     data-user-id="{{ wr_user.id }}">{% if request.user in followers %}{% trans "Unfollow" %}{% else %}{% trans "Follow" %}{% endif %}
+  </a>
+</p>
+{% endif %}
+
+not using follow-->
+
+<p class="user-location route-info-single">{{ wr_user.userprofile.hometown }}</p>
+<p class="route-info-single user-stats"><span><i class="icon-road"></i> {{ wr_user.circuit_set.count }}</span> <span><i class="icon-heart"></i> {{ wr_user.userprofile.favorites.count }}</span></span></p>
+<figure class="user-detail">
+{% load thumbnail %}
+
+{% if wr_user.userprofile.picture %}
+  {% thumbnail wr_user.userprofile.picture "150x150" crop="center" as img %}
+  <img src="{{ img.url }}" alt="{{ wr_user.get_full_name }}">
+  {% endthumbnail %}
+{% elif fb_data %}
+  <img src="{{ fb_data.fb_picture }}" crop="center" width="150" height="150" alt="no-picture"/>
+{% elif twitter_data %}
+  <img src="{{ twitter_data.twitter_picture }}" crop="center" width="150" height="150" alt="no-picture"/>
+{% endif %}
+
+</figure>
+<div class="user-bio route-info-single">
+{% load html_extras %}
+<p>{{ wr_user.userprofile.bio|urlize|twitterize }}</p>
+</div><!-- .user-bio -->
+<p class="route-info-single route-actions">
+{% if own_profile %}
+<a class="btn btn-tooltip" href="{% url edit_profile %}" title="{% trans "Edit profile" %}"><i class="icon-edit"></i></a>
+{% endif %}
+</p>
+
+<!-- LINK TWITTER AND FACEBOOK
+{% if request.user == wr_user %}
+{% if not fb_data %}
+<div class="row social-btns">
+  <p><a class="btn btn-large btn-social" href="{% url facebook_registration %}">
+  <img src="{{ STATIC_URL }}/images/fb_logo.jpg" width="25" height="25" class="pull-left">{% trans "Link with Facebook" %}</a></p> 
+</div>
+{% endif %}
+
+{% if not twitter_data %}
+<div class="row social-btns">
+  <p><a class="btn btn-large btn-social" href="{% url twitter_login %}">
+      <img src="{{ STATIC_URL }}/images/twitter_logo.png" width="25" height="25" class="pull-left">{% trans "Link with Twitter" %}</a></p> 
+</div>
+{% endif %}
+{% endif %}
+-->
+
+
+
+<!-- LINKS TO SOCIAL NETWORK PAGES
+    <p class="route-info-single social-networks">
+      {% if fb_data %}
+      <a href="{{ fb_data.fb_link }}" title="{{ user.userprofile.name }} in Facebook"><i class="icon-facebook"></i></a>
+      {% endif %}
+      {% if twitter_data %}
+      <a href="{{ twitter_data.twitter_link }}" title="{{ user.userprofile.name }} in Twitter"><i class="icon-twitter"></i></a>
+      {% endif %}
+    </p>
+    </div>
+-->
+
+
+<div class="interests">
+{% if user_categories %}
+<h2 class="user-route-list">{% trans "Interested in" %}</h2>
+<p class="user-cats">
+{% for category in user_categories %}
+<a href="{{ category.get_category_object.get_absolute_url }}">{{ category.get_category_object.name }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+{% endfor %}
+</p>
+{% else %}
+<div class="alert alert-info">
+<p>{% trans "This worldrat has <strong>no preferred categories</strong>" %}.</p>
+{% endif %}
+{% if own_profile %}
+<p class="route-info-single"><a class="btn btn-primary" data-toggle="modal" href="#categories-modal">{% trans "Edit my category list" %}</a></p>
+{% endif %}
+</div>
+</p><!-- .user-cats -->
+
+{% include "profile/categories_edit_modal.html" %}
+</div><!-- end of .interests -->
+
+</div><!-- end of .user-meta -->
+
+{% comment %}
+<div class="user-actions">
+  {% if user.is_authenticated %}
+    {% if following_wr_user %}
+      <p> {% trans "Already following" %} {{ wr_user.get_full_name }}</p>
+    {% else %}
+
+    {% if not own_profile %}
+      <form action="#" method="post">{% csrf_token %}
+      <!-- aqui deberia estar la url de follow_user, pero no estoy seguro de por qué ha sido borrada de user_profile.urls, estoy reemplazando con # para que funcione el sitio-->
+      <input type="submit" value="Follow {{ wr_user.get_full_name }}"/>
+      </form>
+    {% endif %}
+
+  {% endif %}
+  <!-- el botón e convierte en un following cuando ya lo estás siguiendo y un drop down con actions?-->
+{% endif %}
+</div><!-- .user-actions -->
+
+{% endcomment %}
+</div>
+{% endblock %}
+

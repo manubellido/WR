@@ -1,0 +1,9 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h1>{% trans "Verificación Exitosa" %}</h1>
+<p>{% blocktrans with first_name=email.user.first_name email=email.email %}{{ first_name }}, el correo {{ email }} ha sido exitosamente verificado.{% endblocktrans %}</p>
+
+{% endblock %}

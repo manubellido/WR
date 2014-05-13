@@ -1,0 +1,51 @@
+{% load i18n %}
+<div id="welcomeCarousel" class="hero-unit carousel slide">
+<div class="carousel-inner">
+  <div class="active item">
+    <figure><img src="{{ STATIC_URL }}images/route_cards.png" alt="Worldrat circuits"></figure>
+    <div>
+     <h1>{% trans "The<strong> world</strong> is a big place, <strong>explore it</strong>. Say hello to <strong>Worldrat!</strong>" %}</h1>
+    <p>
+    <a class="btn btn-primary btn-large" href="{% url registration_register %}">{% trans "Register today" %}</a> <span class="login-hero">{% trans "Already a rat?" %} <a href="{% url auth_login %}">{% trans "Login" %}</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="item">
+    <figure><img src="{{ STATIC_URL }}images/route_map.png" alt="Worldrat route"></figure>
+    <div>
+    {% blocktrans %}
+    <h1>Become a <strong>worldrat</strong>. Visit all the <strong>places</strong> in the routes that you discover or that Worldrat <strong>recommends</strong></h1>{% endblocktrans %}
+    <p>
+    <a class="btn btn-primary btn-large" href="{% url registration_register %}">{% trans "Register today" %}</a> <span class="login-hero">{% trans "Already a worldrat?" %} <a href="{% url auth_login %}">{% trans "Login" %}</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="item">
+    <figure><img src="{{ STATIC_URL }}images/route_love.png" alt="Worldrat route"></figure>
+    <div>
+    {% blocktrans %}
+    <h1>Fell in<strong> love</strong> with a route? Mark it as a <strong>favorite</strong>. Pure rat love.</h1>{% endblocktrans %}
+    <p>
+    <a class="btn btn-primary btn-large" href="{% url registration_register %}">{% trans "Register today" %}</a> <span class="login-hero">{% trans "Already a rat?" %} <a href="{% url auth_login %}">{% trans "Login" %}</a>
+    </p>
+    </div>
+  </div>
+
+  <div class="item">
+    <figure><img src="{{ STATIC_URL }}images/route_remix.png" alt="Worldrat route"></figure>
+    <div>
+    {% blocktrans %}
+    <h1>Think a route could be much better?<br/> You've got what it takes to make it perfect. <strong>Remix</strong> it. It's the<strong> Worldrat way!</strong></h1>{% endblocktrans %}
+    <p>
+    <a class="btn btn-primary btn-large" href="{% url registration_register %}">{% trans "Register today" %}</a> <span class="login-hero">{% trans "Already a rat?" %} <a href="{% url auth_login %}">{% trans "Login" %}</a>
+    </p>
+    </div>
+  </div>
+
+</div><!-- .carousel-inner -->
+<a class="carousel-control left" href="#welcomeCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
+<a class="carousel-control right" href="#welcomeCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
+<hr>
+</div><!-- #welcomeCarousel -->

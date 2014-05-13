@@ -1,0 +1,8 @@
+{% extends "layouts/embedded_base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<label>{% trans "Paste this html on your website:" %}</label>
+<textarea rows="3" readonly="readonly" >{{ embed_html }}</textarea>
+{% endblock %}

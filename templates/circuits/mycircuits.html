@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "My routes" %}{% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ request.user.get_full_name }}'s routes">
+  <meta name="keywords" content="worldrat, {{ request.user.get_full_name }}">
+{% endblock %}
+
+{% block content %}
+<div>
+  <h1>{% trans "My routes" %}</h1>
+{% if not circuits %}
+<div class="alert alert-info">
+<p>{% trans "No routes? <strong>Rat, come on!</strong>" %}  </p>
+{% include "widgets/new_route_button.html" %}
+</div>
+{% endif %}
+<section data-columns="{{ CIRCUIT_COLUMN_SIZES }}" class="columns">
+{% for circuit in circuits %}
+{% include "circuits/circuit_list_item.html" %}  
+{% endfor %}
+</section>
+
+{% if circuits  %}
+  <a class="btn btn-primary" id="load-more" data-target-href="{% url mycircuits %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+</div>
+{% endblock %}

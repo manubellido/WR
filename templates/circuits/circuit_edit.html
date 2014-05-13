@@ -1,0 +1,159 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Edit Route" %} – {{ circuit.name }}{% endblock %}
+
+{% block content %}
+{% load thumbnail %}
+
+<div id="route-edit-page">
+
+<div>
+
+<div id="error" class="alert alert-block alert-error fade in hide">
+  <span class="close" data-dismiss="alert">&times;</span>
+  <h3 class="alert-heading">You got an error</h3>
+  <div class="error-body"></div>
+</div><!-- #error -->
+
+<h1 class="title route-title">{{ circuit.name }}</h1>
+{% if circuit.remixed_from and circuit.remixed_from.author != circuit.author %}
+    <div class="route-info-single remixed-from remixed-from-single">
+	<p><i class="icon-refresh"></i> {% trans "from" %} <a href="{{circuit.remixed_from.get_absolute_url}}">{{circuit.remixed_from.name}}</a>
+	</div>
+    {% endif %}
+<p class="route-info-single"> {{ circuit_stops_count }} {% trans "stop" %}{{ circuit_stops_count|pluralize }} {% trans "on" %}
+  <a class="category-display" href="{{ circuit.get_category_object.get_absolute_url }}">{{ circuit.get_category_display }}</a> {% trans "by" %}
+  <a href="{% url show_user_profile circuit.author.id %}">{{ circuit.author.get_full_name }}</a></p>
+
+<p class="route-info-single route-actions">
+
+<button class="btn _route-edit-trigger btn-tooltip"
+	title="{% trans "Edit" %}"><i class="icon-edit"></i></button>
+<a class="btn _route-pic-trigger btn-tooltip"
+   title="{% trans "Add a Picture" %}"><i class="icon-camera"></i></a></p>
+<p class="route-info-single">
+  <a href="{{ circuit.get_absolute_url }}">
+    <i class="icon-arrow-left"></i> {% trans "Back to route" %}
+  </a>
+</p>
+
+</div>
+
+<div id="route-search" class="well">
+  <h2>{% trans "Add a Stop" %}</h2>
+  <div>
+    <input id="query" type="text" placeholder="{% trans "Search for a stop to add" %}" class="input-xxlarge"/>
+    {% trans "in" %} 
+    <input id="city" type="text" placeholder="City" class="input-large" data-coords="-12.1259255,-77.0289959" data-default="Lima, Perú" value="Lima, Perú" />
+  </div>
+  <div id="results-title">
+  <h3>{% trans "Results for" %} <strong class="search-term"></strong> {% trans "in" %} <span class="search-location"></span></h3>
+  </div>
+  <div class="btn btn-primary" id="add-new-place-btn">{% trans "Not here? Add it!" %}</div>
+  <div id="no-results" class="alert alert-info">
+    <p>{% trans "Sorry rat, <strong>we don't have</strong> the place you're looking for." %}</p>
+  </div>
+  <section id="search-results" class="columns" data-columns="{{ CIRCUIT_STOP_COLUMN_SIZES }}"></section>
+</div><!-- #route-search -->
+
+<section id="route-stops" class="columns" data-columns="{{ CIRCUIT_STOP_COLUMN_SIZES }}" data-sorted>
+
+<article class="flow-item _sticky">
+<div class="flow-item-content main-content-details">
+  <h2 class="route-title-desc"><span>{% trans "About" %}</span>
+  <span class="route-title">{{ circuit.name }}</span>
+  </h2>
+  <figure class="mainpic route-main-pic">
+  {% if circuit.picture %}
+  {% thumbnail circuit.picture "300" crop="center" as img %}
+    <img class=" _route-pic-trigger" src="{{ img.url }}" data-ratio-hw="{% widthratio img.height img.width 100 %}" width="{{ img.width }}" height="{{ img.height }}" />
+  {% endthumbnail %}
+  <span class=" _route-pic-trigger">{% trans "Change picture" %}</span>
+  {% else %}
+  <div class="route-photo-add"><a class="_route-pic-trigger">{% trans "Add a picture" %}</a></div>
+  {% endif %}
+  <figcaption class="route-meta">
+  {% if circuit.description %}
+  {% load html_extras %}
+  <div class="route-description">{{ circuit.description|urlize|linebreaks|twitterize }}</div>
+  {% else %}
+  <div class="route-description"><a class="_route-edit-trigger">{% trans "Add a description" %}</a></div>
+  {% endif %}
+  <p class="user-quote">&mdash; <a href="{% url  show_user_profile user_id=circuit.author.id %}">{{ circuit.author.get_full_name }}</a></p>
+  </figcaption>
+  </figure>
+</div><!-- .flow-item-content .main-content-details -->
+</article>
+
+{% for stop in stops %}
+  {% include "circuits/stop_edit_list_item.html" %}
+{% endfor %}
+</section>
+
+</div><!-- .span9 -->
+{% include "circuits/circuit_edit_modal.html" %}
+{% include "circuits/circuit_edit_picture_modal.html" %}
+{% include "circuits/stop_edit_modal.html" %}
+{% include "circuits/stop_new_modal.html" %}
+{% include "circuits/place_edit_new_modal.html" %}
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/select2.css"/>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+$(document).ready(function(){
+  $('button.route-delete').on("click", function(){
+    $.ajax({
+      type: "POST",
+      url: this.getAttribute('href'),
+      data: {} 
+    });
+  });
+  $('button.stop-delete').on("click", function(){
+    $.ajax({
+      type: "POST",
+      url: this.getAttribute('href'),
+      data: {} 
+    });
+  });
+});
+</script>
+<script>
+var CIRCUIT_DATA = '{{ circuit.to_json|escape }}';
+var CIRCUIT_DATA_JS = '{{ circuit.to_json|escapejs }}';
+var CIRCUIT_EDIT_URL = '{{ circuit.get_update_url }}';
+var NEW_STOP_URL = '{% url circuit_stop_creation_controller_resource circuit.id %}';
+var STATIC_MAPS_ROOT = '{{ STATIC_MAPS_ROOT }}';
+var GOOGLE_API_KEY = '{{ GOOGLE_API_KEY }}';
+</script>
+<script src="{{ STATIC_URL }}js/select2.min.js"></script>
+
+<!-- <script src="{{ STATIC_URL }}js/newroute.min.js"></script> -->
+<script src="{{ STATIC_URL }}js/newroute.js"></script>
+
+<script type="text/html" id="tmpl-search-result">
+<article class="flow-item _search-result">
+<div class="flow-item-content">
+  <span class="stop-type flow-item-cat"></span>
+  <figure>
+    <img class="flow-item-pic" src="" data-ratio-hw="100" width="230" height="230" />
+  </figure>
+  <div class="infobox stop-info">
+    <h3 class="stop-name"></h3>
+    <div class="stop-address"></div>
+    <div class="stop-cross-street"></div>
+  </div>
+</div><!-- .flow-item-content -->
+</article>
+</script>
+
+<script type="text/html" id="tmpl-new-stop">
+{% include "circuits/stop_edit_list_item.html" with stop=empty_stop only %}
+</script>
+{% endblock %}

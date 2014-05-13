@@ -1,0 +1,4 @@
+{% load i18n %}
+{% if request.user.is_authenticated %}
+<a class="btn btn-primary" data-toggle="modal" href="#circuit-new"><i class="icon-plus"></i>  {% trans "New route" %} </a>
+{% endif %}

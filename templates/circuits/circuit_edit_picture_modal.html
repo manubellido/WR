@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<iframe class="hide" name="route-picture-edit-target"></iframe>
+
+<form id="route-picture-edit-modal" class="modal hide fade" target="route-picture-edit-target" enctype="multipart/form-data" method="POST" action="{% url circuit_picture_controller circuit.id %}">
+  <fieldset class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>{% trans "Route <strong>picture</strong>" %}</h3>
+  </fieldset>
+  <fieldset class="modal-body">
+    <img src="" alt=""/>
+    <div>
+      {{ circuit_picture_form.picture }}
+    </div>
+  </fieldset>
+  <fieldset class="modal-footer">
+    {% csrf_token %}
+    <input type="hidden" name="circuit_id" value="{{ circuit.id }}" />
+    <a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+    <button type="submit" class="btn btn-primary save">{% trans "Save" %}</button>
+  </fieldset>
+</form>

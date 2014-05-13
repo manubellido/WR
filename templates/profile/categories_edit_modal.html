@@ -1,0 +1,20 @@
+{% load i18n %}
+<form id="categories-modal" class="modal hide fade" action="{% url set_favorite_cats %}" method="post">
+  <div class="modal-header">
+  <button class="close" data-dismiss="modal">×</button>
+  <h3>{% trans "Pick your <strong>preferred categories</strong>" %}</h3>
+  </div>
+  <div class="modal-body styled-checks">
+  {% for field in categories_form %}
+  <label{% if field.name in user_categories_ids %} class="checked"{% endif %}>
+    <i class="icon-ok-circle"></i> {{ field.label }}
+    <input type="checkbox" name="category" value="{{ field.name }}" {% if field.name in user_categories_ids %}checked{% endif %} />
+  </label>
+  {% endfor %}
+  </div>
+  <div class="modal-footer actions">
+    {% csrf_token %}
+    <a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+    <button class="save btn btn-primary">{% trans "Save" %}</button>
+  </div>
+</form>

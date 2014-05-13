@@ -1,0 +1,55 @@
+{% load thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" {% block extra_meta %}{% endblock %}>
+<title>{% block title %}{% endblock %}</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}favicon.ico">
+<script src="{{ STATIC_URL }}js/jquery1.7.1.min.js"></script>
+<script src="{{ STATIC_URL }}js/modernizr2.min.js"></script>
+{% if SETTINGS.TEMPLATE_DEBUG %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" href="{{ STATIC_URL }}css/ie7.css"/><![endif]-->
+{% else %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/core.min.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" href="{{ STATIC_URL }}css/ie7.min.css"/><![endif]-->
+{% endif %}
+{% block head %}{% endblock %}
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-31654540-1']);
+_gaq.push(['_trackPageview']);
+</script>
+<script src="//www.google-analytics.com/ga.js" async></script>
+</head>
+
+<body>
+
+<section class="container-fluid">
+<div class="row-fluid">
+{% block content %}{% endblock %}
+</div><!-- .row-fluid -->
+<br class="clear"/>
+</section>
+
+{% include "layouts/embedded_footer.html" %}
+<script>var FACEBOOK_APP_ID = '{{ SETTINGS.FACEBOOK_APP_ID }}';</script>
+<script src="//maps.googleapis.com/maps/api/js?libraries=places,geometry&amp;sensor=true"></script>
+<script src="{{ STATIC_URL }}js/underscore1.3.3.min.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+{% if SETTINGS.TEMPLATE_DEBUG %}
+<script src="{{ STATIC_URL }}js/json2.js"></script>
+<script src="{{ STATIC_URL }}js/polyfills.js"></script>
+<script src="{{ STATIC_URL }}js/gmaps.js"></script>
+<script src="{{ STATIC_URL }}js/main.js"></script>
+{% else %}
+<script src="{{ STATIC_URL }}js/core.min.js"></script>
+{% endif %}
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

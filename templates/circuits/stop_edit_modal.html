@@ -1,0 +1,38 @@
+{% load i18n %}
+
+<iframe class="hide" name="stop-edit-target"></iframe>
+
+<form id="stop-edit-modal" class="modal hide fade" target="stop-edit-target" enctype="multipart/form-data" method="POST" action="">
+<fieldset class="modal-header">
+<button class="close" data-dismiss="modal">×</button>
+<h3>{% trans "<strong>Edit</strong> place" %}</h3>
+</fieldset>
+<fieldset class="modal-body">
+<div class="info">
+<img src="" alt=""/>
+<div>
+<hgroup>
+<h3 class="stop-name"></h3>
+<h4 class="stop-type"></h4>
+</hgroup>
+<p class="stop-address"></p>
+<p class="stop-cross-street"></p>
+</div>
+</div>
+<div class="stop-img-edit">
+<label>{% trans "Upload a photo" %}</label>
+{{ stop_creation_form.picture }}
+</div>
+<div class="stop-description">
+<label>{% blocktrans %}Why this stop? <small class="opt">(optional)</small>{% endblocktrans %}</label>
+{{ stop_creation_form.description }}
+</div>
+</fieldset>
+<fieldset class="modal-footer">
+{% csrf_token %}
+<input type="hidden" name="stop_id" />
+<button class="btn btn-mini btn-danger stop-remove pull-left" data-msg="Remove this place from the route?">{% trans "Remove" %}</button>
+<a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+<button type="submit" class="btn btn-primary save">{% trans "Save" %}</button>
+</fieldset>
+</form>

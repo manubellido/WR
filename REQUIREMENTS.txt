@@ -1,0 +1,51 @@
+# Common requirements
+# -----------------------
+# This file collects all required third-party applications that are needed
+# to run this project. Later you can install all these apps in a row
+# using pip. Example:
+#
+#     pip install -r REQUIREMENTS.txt
+#
+PIL
+celery==2.5.5
+clint
+django
+django-admin-tools
+django-celery==2.5.5
+django-countries
+django-debug-toolbar
+django-rosetta
+django_extensions
+facepy
+feedparser
+foursquare
+#git+https://github.com/ojii/django-classy-tags.git
+git+http://github.com/bltravis/django-mailer.git
+https://bitbucket.org/ubernostrum/django-registration/get/v0.8.tar.gz
+https://github.com/slimkrazy/python-google-places/zipball/master
+numconv
+ordereddict
+oauth2
+psycopg2
+pygeoip
+pymongo
+python-dateutil
+recaptcha-client
+redis
+requests
+rfc3339
+hg+https://bitbucket.org/ubernostrum/django-registration#egg=django-registration
+simplejson
+sorl-thumbnail==11.12
+south
+tweepy
+twython
+unidecode
+## Development
+werkzeug
+##Haystack
+##PAra usar Solr se necesita Jetty
+git+git://github.com/toastdriven/django-haystack.git
+pysolr
+python-memcached
+sphinx

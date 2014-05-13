@@ -1,0 +1,12 @@
+{% load i18n %}
+{% trans "Welcome to Worldrat." %}
+
+{% trans "Click on the following link to activate your account:" %}
+
+http://{{ site }}/registration/activate/{{ activation_key}}
+
+{% blocktrans with expiration_days=expiration_days %}
+This activation key will expire in {{ expiration_days }} days, so, you know, hurry.
+{% endblocktrans %}
+
+{% trans "The Rat King." %}

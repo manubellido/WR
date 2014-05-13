@@ -1,0 +1,64 @@
+{% load i18n %}
+{% load thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{% endblock %}</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}favicon.ico">
+<script src="{{ STATIC_URL }}js/libs.min.js"></script>
+
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-responsive.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css"/>
+<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+<!--[if lte IE 7]><link rel="stylesheet" href="{{ STATIC_URL }}css/ie7.css"/><![endif]-->
+
+<!-- This used to be an else for if SETTINGS.TEMPLATE_DEBUG
+<link rel="stylesheet" href="{{ STATIC_URL }}css/core.css"/>
+--->
+<!--[if lte IE 7]><link rel="stylesheet" href="{{ STATIC_URL }}css/ie7.min.css"/><![endif]-->
+
+{% block head %}{% endblock %}
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-31654540-1']);
+_gaq.push(['_trackPageview']);
+</script>
+<script src="//www.google-analytics.com/ga.js" async></script>
+</head>
+
+<body>
+{% include "layouts/header.html" %}
+
+<section class="container-fluid">
+<div class="row-fluid">
+{% block content %}{% endblock %}
+</div><!-- .row-fluid -->
+<br class="clear"/>
+</section>
+
+{% include "layouts/footer.html" %}
+{% include "layouts/circuit-new-modal.html" %}
+<script>var FACEBOOK_APP_ID = '{{ SETTINGS.FACEBOOK_APP_ID }}';</script>
+<script src="//maps.googleapis.com/maps/api/js?libraries=places,geometry&amp;sensor=true"></script>
+
+<script src="{{ STATIC_URL }}js/json2.js"></script>
+<script src="{{ STATIC_URL }}js/polyfills.js"></script>
+<script src="{{ STATIC_URL }}js/gmaps.js"></script>
+<script src="{{ STATIC_URL }}js/main.js"></script>
+
+<!-- This used to be an else for if SETTINGS.TEMPLATE_DEBUG
+<script src="{{ STATIC_URL }}js/core.min.js"></script>
+-->
+
+<script src="{{ STATIC_URL }}js/clickable_label.js"></script>
+{% block scripts %}{% endblock %}
+
+{% if first_time and categories_form %}
+{% include "profile/categories_edit_modal.html" %}
+<script>$('#categories-modal').modal({keyboard:false});</script>
+{% endif %}
+</body>
+</html>

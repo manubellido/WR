@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ user.get_full_name  }} | Worldrat, Urban Exploration {% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ wr_user.get_full_name }}'s followees">
+{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %}
+
+<div class="span9">
+<h1>{% trans "Following" %}</h1>
+<ol class="user-list">
+{% for f in followed_users_checked %}
+<li>
+<img src="http://placehold.it/80x80" alt="{{ f.followed_user.user.username }}"/>
+<div class="user-info">
+<h2><a href="{% url show_user_profile f.followed_user.user.id %}">{{ f.followed_user.user.get_ful_name }}</a></h2>
+<p>{{ f.followed_user.bio }}</p>
+
+{% if f.is_following %}
+<p>{% trans "Already following" %} {{ f.followed_user.user.get_full_name }}</p>
+{% else %}
+<form action="{% url user_profile.views.show_profile f.followed_user.user.id %}" method="post">{% csrf_token %}
+<input type="submit" value="Follow {{ f.followed_user.user.username }}"/>
+</form>
+{% endif %}
+</div>
+</li>
+{% endfor %}
+</ol>
+</div>
+{% endblock %}

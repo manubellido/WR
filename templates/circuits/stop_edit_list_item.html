@@ -1,0 +1,27 @@
+{% load i18n %}
+
+<article class="flow-item _stop"  data-json="{{ stop.json }}">
+<div class="flow-item-content">
+  <span class="stop-type flow-item-cat">{{ stop.place_type }}</span>
+  <figure>
+    {% if stop.picture_url %}
+    <img class="flow-item-pic _stop-thumbnail" src="{{ stop.picture_url }}" data-ratio-hw="{{ stop.picture_ratio_hw }}" />
+    {% else %}
+    <img class="flow-item-pic _stop-thumbnail" src="{{ STATIC_MAPS_ROOT }}?size=260x260&amp;sensor=true&amp;zoom=17&amp;markers=size:large%7C{{ stop.lat }},{{ stop.lng }}&amp;key={{ GOOGLE_API_KEY }}" data-ratio-hw="100" width="260" height="260" />
+    {% endif %}
+  </figure>
+
+  <div class="infobox stop-info">
+    <h2 class="stop-name"><a class="stop-edit" data-id="{{ stop.place_id }}">{{ stop.name }}</a></h2>
+    <div class="stop-address"><p>{{ stop.address|default:'' }}</p></div>
+    <div class="stop-cross-street"><p>{{ stop.crossStreet|default:'' }}</p></div>
+    {% load html_extras %}
+    <div class="stop-description"><p>{{ stop.description|default:''|urlize|twitterize }}</p></div>
+    <!-- end of .description -->
+    <div class="item-options">
+    <button class="btn stop-edit" data-id="{{ stop.place_id }}" title="{% trans "Edit" %}"><i class="icon-edit"></i></button>
+    </div>
+  </div>
+</div><!-- .flow-item-content -->
+</article>
+

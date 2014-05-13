@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% load i18n %}
+{% block title %} 404, rat {% endblock %}
+{% block content %}
+<h1>404</h1>
+<div class="alert alert-info">
+{% blocktrans %}
+<p><strong>Sorry rat</strong>, this page doesn't exist.</p>
+{% endblocktrans %}
+<p class="call-to-action">In the meantime let me tell you a story:<br> <a href="http://twitter.com/breno">@breno</a> wanted to have a <a href="{{ STATIC_URL }}images/rat.png">rat's picture</a> on this page but <a href="http://twitter.com/germanmartinez">@germanmartinez</a> (me) took it out.<br>All that happened while the rest of the <a href="http://twitter.com/worldrat">@worldrat</a> team was working on important stuff.</p>
+</div>
+{% endblock %}

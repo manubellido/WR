@@ -1,0 +1,81 @@
+COUNTRY: peru
+breña lima
+lima district
+ate vitarte
+barranco district
+comas district
+chorrillos lima
+el agustino lima
+jesus maria lima
+la molina district
+la victoria lima
+lince district lima
+magdalena del mar lima
+miraflores lima
+pueblo libre lima
+puente piedra lima
+rimac lima
+san isidro lima
+independencia lima
+san juan de miraflores lima
+san luis lima
+san martin de porres lima
+san miguel lima
+santiago de surco lima
+surquillo lima
+villa maria del triunfo lima
+san juan de lurigancho lima
+santa rosa lima
+los olivos lima
+san borja lima
+villa el salvador lima
+santa anita lima
+callao
+arequipa
+trujillo
+chiclayo
+piura
+iquitos
+cusco
+chimbote
+huancayo
+tacna
+ica
+juliaca
+pucallpa
+sullana
+chincha
+ayacucho
+huanuco
+huacho
+puno
+tarapoto
+huaraz
+tumbes
+talara
+huaral
+moquegua
+jaen
+moyobamba
+cerro de pasco
+paita
+tingo maria
+puerto maldonado
+chulucanas
+pisco
+barranca
+ilo
+abancay
+yurimaguas
+lambayeque
+chancay
+tarma
+sicuani
+san vicente de cañete
+huancavelica
+viru
+la union
+imperial
+guadalupe
+sechura
+ferreñafe

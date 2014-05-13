@@ -1,0 +1,43 @@
+{% load i18n %}
+
+<iframe class="hide" name="stop-new-target"></iframe>
+
+<form id="stop-new-modal" class="modal hide fade" target="stop-new-target" enctype="multipart/form-data" method="POST" action="{% url circuit_stop_creation_controller_resource circuit.id %}">
+  <fieldset class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>{% trans "<strong>Add</strong> a stop" %}</h3>
+  </fieldset>
+  <fieldset class="modal-body">
+    <div class="info">
+      <h3 class="stop-name"></h3>
+      <p class="stop-address"></p>
+      <p class="stop-cross-street"></p>
+    </div>
+    <div class="stop-img-edit">
+      <label>Photo</label>
+      {{ stop_creation_form.picture }}
+    </div>
+    <div class="stop-description">
+      <label>{% blocktrans %}Why this stop? <small class="opt">(optional)</small>{% endblocktrans %}</label>
+      {{ stop_creation_form.description }}
+    </div>
+  </fieldset>
+  <fieldset class="modal-footer">
+    {% csrf_token %}
+    <input type="hidden" name="place_id">
+    <input type="hidden" name="name">
+    <input type="hidden" name="address">
+    <input type="hidden" name="crossStreet">
+    <input type="hidden" name="city">
+    <input type="hidden" name="state">
+    <input type="hidden" name="country">    
+    <input type="hidden" name="lat">
+    <input type="hidden" name="lng">
+    <input type="hidden" name="place_type_id">
+    <input type="hidden" name="phone">
+    <input type="hidden" name="twitter">
+    <input type="hidden" name="website">
+    <a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+    <button type="submit" class="btn btn-primary save">{% trans "Save" %}</button>
+  </fieldset>
+</form>

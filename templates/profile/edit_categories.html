@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Worldrat, Urban Exploration |
+{{ user.userprofile.name }}{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %}
+
+<div class="span9">
+<h1>Interests</h1>
+<ul class="preferred-category-list">
+{% for field in form %}
+<li id="{{ field.help_text }}" >
+<label>{{ field.label }}</label>
+{{ field }}
+</li>
+{% endfor %}
+</ul>
+</div><!-- .span9 -->
+
+{% endblock %}

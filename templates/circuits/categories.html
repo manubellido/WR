@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, Urban Exploration | {% trans "Explore" %}{% endblock %}
+
+{% block content %}
+
+{% include "circuits/inline_filters.html" %}
+{% include "circuits/circuit_list.html" %}
+{% if circuits %}
+<a class="btn btn-primary" id="load-more" data-target-href="{% url circuit_category_listing category_slug=category_slug %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+{% endblock %}

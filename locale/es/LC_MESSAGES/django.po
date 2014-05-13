@@ -1,0 +1,4359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Marco Flores <marco@worldrat.com>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-13 02:26-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: apps/FS_tools/strings.py:5
+msgid "Picture URL"
+msgstr "URL de foto"
+
+#: apps/FS_tools/strings.py:6
+msgid "picture width"
+msgstr "ancho de foto"
+
+#: apps/FS_tools/strings.py:7
+msgid "picture height"
+msgstr "altura de foto"
+
+#: apps/FS_tools/strings.py:8
+msgid "user id"
+msgstr "ID de usuario"
+
+#: apps/FS_tools/strings.py:9 apps/FS_tools/strings.py:10
+msgid "Foursquare picture"
+msgstr "Foto de Foursquare"
+
+#: apps/FS_tools/strings.py:12
+msgid "CircuitStop and FSPhoto adapter"
+msgstr "Adaptador de parada y FSPhoto"
+
+#: apps/FS_tools/strings.py:13
+msgid "CircuitStop and FSPhoto adapters"
+msgstr "Adaptador de parada y FSPhoto"
+
+#: apps/circuits/strings.py:5 apps/circuits/strings.py:6
+#: templates/profile/circuits.html:13 templates/profile/sidebar_profile.html:4
+msgid "Routes"
+msgstr "Rutas"
+
+#: apps/circuits/strings.py:7
+msgid "Route name"
+msgstr "Nombre de ruta"
+
+#: apps/circuits/strings.py:8 apps/googlemaps_localities/strings.py:18
+#: apps/topics/strings.py:10
+msgid "Slug"
+msgstr "Slug"
+
+#: apps/circuits/strings.py:9
+msgid "Route author"
+msgstr "Autor de ruta"
+
+#: apps/circuits/strings.py:10 apps/circuits/strings.py:36
+msgid "Route rating"
+msgstr "Rating de ruta"
+
+#: apps/circuits/strings.py:11
+msgid "Route category"
+msgstr "Categoria de ruta"
+
+#: apps/circuits/strings.py:12
+msgid "Route picture"
+msgstr "Foto de ruta"
+
+#: apps/circuits/strings.py:13 apps/topics/strings.py:8
+msgid "Topics"
+msgstr "Tópicos"
+
+#: apps/circuits/strings.py:14 apps/circuits/strings.py:31
+#: apps/visits/strings.py:7
+msgid "Visits"
+msgstr "Visitas"
+
+#: apps/circuits/strings.py:15
+msgid "Published"
+msgstr "Publicado"
+
+#: apps/circuits/strings.py:16
+msgid "Highlighted route"
+msgstr "Ruta resaltada"
+
+#: apps/circuits/strings.py:17
+msgid "Route description"
+msgstr "Descripción de ruta"
+
+#: apps/circuits/strings.py:18
+msgid "Original route"
+msgstr "Ruta original"
+
+#: apps/circuits/strings.py:19
+msgid "Adult content"
+msgstr "Contenido para adultos"
+
+#: apps/circuits/strings.py:21 apps/circuits/strings.py:24
+#: apps/places/strings.py:23 apps/places/strings.py:52
+msgid "Place"
+msgstr "Lugar"
+
+#: apps/circuits/strings.py:22 apps/places/strings.py:24
+msgid "Places"
+msgstr "Lugares"
+
+#: apps/circuits/strings.py:23 templates/circuits/circuit_edit_modal.html:10
+#: templates/circuits/stop_detail.html:13
+#: templates/layouts/circuit-new-modal.html:9
+#: templates/layouts/circuit-new-modal.html:47
+msgid "Route"
+msgstr "Ruta"
+
+#: apps/circuits/strings.py:25
+msgid "Description"
+msgstr "Descripción"
+
+#: apps/circuits/strings.py:26
+msgid "Position"
+msgstr "Posición"
+
+#: apps/circuits/strings.py:28
+#, python-format
+msgid "Place %(place)s as part of the route %(circuit)s"
+msgstr "Lugar %(place)s como parte de la ruta %(circuit)s"
+
+#: apps/circuits/strings.py:30 apps/visits/strings.py:6
+msgid "Visit"
+msgstr "Visita"
+
+#: apps/circuits/strings.py:32
+msgid "Visitor"
+msgstr "Visitante"
+
+#: apps/circuits/strings.py:33
+msgid "Visited route"
+msgstr "Ruta visitada"
+
+#: apps/circuits/strings.py:34
+msgid "Visit duration"
+msgstr "Duracion de la visita"
+
+#: apps/circuits/strings.py:37
+msgid "Route ratings"
+msgstr "Ratings de la ruta"
+
+#: apps/circuits/strings.py:38
+msgid "Rating user"
+msgstr "Usuario que vota"
+
+#: apps/circuits/strings.py:39
+msgid "Rated route"
+msgstr "Ruta votada"
+
+#: apps/circuits/strings.py:40
+msgid "Rating"
+msgstr "Rating"
+
+#: apps/circuits/strings.py:42
+msgid "Upvote"
+msgstr "Voto positivo"
+
+#: apps/circuits/strings.py:43
+msgid "Downvote"
+msgstr "Voto negativo"
+
+#: apps/circuits/strings.py:44
+msgid "Pending vote"
+msgstr "Voto pendiente"
+
+#: apps/circuits/strings.py:46
+msgid "Registering interested category"
+msgstr "Registrando categoria interesante"
+
+#: apps/circuits/strings.py:47
+msgid "Registering interested categories"
+msgstr "Registrando categorias interesantes"
+
+#: apps/circuits/strings.py:49 apps/organizations/strings.py:6
+#: apps/places/strings.py:53 apps/user_profile/strings.py:6
+#: apps/user_profile/strings.py:35 apps/user_profile/strings.py:44
+msgid "User"
+msgstr "Usuario"
+
+#: apps/circuits/strings.py:50 templates/circuits/circuit_edit_modal.html:12
+#: templates/layouts/circuit-new-modal.html:11
+#: templates/layouts/circuit-new-modal.html:49
+msgid "Category"
+msgstr "Categoria"
+
+#: apps/circuits/strings.py:52
+#, python-format
+msgid "%(user)s is interested in %(category)s"
+msgstr "%(user)s esta interesado en %(category)s"
+
+#: apps/circuits/strings.py:56
+msgid "Food & Drink"
+msgstr "Comida y bebidas"
+
+#: apps/circuits/strings.py:57
+msgid "Family & Kids"
+msgstr "Familia y niños"
+
+#: apps/circuits/strings.py:58
+msgid "Arts & Culture"
+msgstr "Arte y cultura"
+
+#: apps/circuits/strings.py:59
+msgid "Architecture"
+msgstr "Arquitectura"
+
+#: apps/circuits/strings.py:60
+msgid "Nightlife"
+msgstr "Vida nocturna"
+
+#: apps/circuits/strings.py:61
+msgid "TV & Film"
+msgstr "TV y cine"
+
+#: apps/circuits/strings.py:62
+msgid "Romance"
+msgstr "Romance"
+
+#: apps/circuits/strings.py:63
+msgid "Sports & Fitness"
+msgstr "Deportes y bienestar"
+
+#: apps/circuits/strings.py:64
+msgid "Lifestyle"
+msgstr "Lifestyle"
+
+#: apps/circuits/strings.py:65
+msgid "Academic & Education"
+msgstr "Academia y Educación"
+
+#: apps/circuits/strings.py:66
+msgid "Nature"
+msgstr "Naturaleza"
+
+#: apps/circuits/strings.py:67
+msgid "Tourism"
+msgstr "Turismo"
+
+#: apps/circuits/strings.py:68
+msgid "History"
+msgstr "Historia"
+
+#: apps/circuits/strings.py:69
+msgid "Shopping"
+msgstr "Shopping"
+
+#: apps/circuits/strings.py:70
+msgid "Miscellaneous"
+msgstr "Miscelánea"
+
+#: apps/circuits/strings.py:74
+msgid "Worldrat users"
+msgstr "Usuario Worldrat"
+
+#: apps/circuits/strings.py:75
+msgid "Worldrat staff"
+msgstr "Equipo Worldrat"
+
+#: apps/circuits/strings.py:76
+msgid "Nextstop"
+msgstr "Nextstop"
+
+#: apps/circuits/strings.py:79
+#, python-format
+msgid "Remix succesful! You have created a new route from %(route)s"
+msgstr "Remix exitoso! Has creado una nueva ruta a partir de %(route)s"
+
+#: apps/circuits/strings.py:84
+msgid "No route exists under the given identifier"
+msgstr "No existan rutas con ese identificador"
+
+#: apps/circuits/strings.py:86
+#, python-format
+msgid ""
+"No place with id %(stop_id)s exists under a route with id %(circuit_id)s or "
+"the route does not exist."
+msgstr ""
+"En el circuito %(circuit_id)s no existe la parada %(stop_id)s o la ruta no "
+"existe"
+
+#: apps/circuits/strings.py:90
+#, python-format
+msgid ""
+"No place with id %(place_id)s exists in the route with id %(circuit_id)s"
+msgstr "En el circuito %(circuit_id)s no existe la parada %(place_id)s"
+
+#: apps/circuits/strings.py:95
+msgid "The category does not exist for any routes"
+msgstr "Esta categoria no existe"
+
+#: apps/circuits/strings.py:98
+msgid "User does not exist"
+msgstr "El usuario no existe"
+
+#: apps/circuits/strings.py:102
+msgid "Only the author of the route can make changes to it."
+msgstr "Solo el autor de la ruta puede modificarla"
+
+#: apps/circuits/strings.py:105
+msgid "The place is already included in the route"
+msgstr "Este lugar ya existe en la ruta"
+
+#: apps/circuits/strings.py:107
+msgid "Route collection"
+msgstr "Colección de rutas"
+
+#: apps/circuits/strings.py:108
+msgid "Route category collection"
+msgstr "Colección de categoria de rutas"
+
+#: apps/circuits/strings.py:109
+msgid "Unknown category value"
+msgstr "Valor de categoria desconocido"
+
+#: apps/circuits/strings.py:111
+#, python-format
+msgid "GMAC not known %(gmac)s"
+msgstr "GMAC %(gmac)s no conocido"
+
+#: apps/circuits/strings.py:113
+msgid "Route already published"
+msgstr "Esta ruta ya ha sido publicada"
+
+#: apps/circuits/strings.py:114
+msgid "Route already unpublished"
+msgstr "Esta ruta ya ha sido despublicada"
+
+#: apps/circuits/strings.py:116
+msgid "Route already upvoted by user"
+msgstr "La ruta ya tiene su voto positivo"
+
+#: apps/circuits/strings.py:117
+msgid "Route already downvoted by user"
+msgstr "La ruta ya tiene su voto negativo"
+
+#: apps/circuits/strings.py:119
+msgid "Route already favorited by user"
+msgstr "La ruta ya está como favorita"
+
+#: apps/circuits/strings.py:120
+msgid "Route has not been favorited by user"
+msgstr "La ruta no ha sido marcada como favorita"
+
+#: apps/circuits/strings.py:122
+msgid "A route can not be favorited by its author"
+msgstr "Un autor no puede marcar sus rutas como favoritas"
+
+#: apps/circuits/strings.py:125
+msgid "Route category already followed"
+msgstr "La categoria de la ruta ya esta siendo seguida"
+
+#: apps/circuits/strings.py:126
+msgid "Route category is not being followed"
+msgstr "La categoria de la ruta no esta siendo seguida"
+
+#: apps/circuits/strings.py:130
+msgid "Choose category"
+msgstr "Elija categoria"
+
+#: apps/circuits/strings.py:132
+msgid "Untitled route"
+msgstr "Ruta sin titulo"
+
+#: apps/closed_beta/strings.py:5 apps/social_reg_auth/forms.py:37
+#: templates/registration/login.html:48
+#: templates/registration/registration_form.html:29
+#: templates/social_reg_auth/twitter_register.html:52
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: apps/closed_beta/strings.py:6
+msgid "IP Address"
+msgstr "Dirección IP"
+
+#: apps/closed_beta/strings.py:7 apps/organizations/strings.py:18
+msgid "Approved?"
+msgstr "Aprovado"
+
+#: apps/closed_beta/strings.py:8
+msgid "Mail sent?"
+msgstr "Mail enviado"
+
+#: apps/closed_beta/strings.py:9
+msgid "Used?"
+msgstr "Usado"
+
+#: apps/closed_beta/strings.py:10
+msgid "Invite code"
+msgstr "Código de invitación"
+
+#: apps/closed_beta/strings.py:11
+#, python-format
+msgid "Invite %(invite)s"
+msgstr "Invitación %(invite)s"
+
+#: apps/closed_beta/strings.py:12
+msgid "Approve invites"
+msgstr "Aprobar invitaciones"
+
+#: apps/closed_beta/strings.py:14
+msgid "Invite email list"
+msgstr "Invitar lista de emails"
+
+#: apps/closed_beta/strings.py:19
+msgid ""
+"Rat trouble! This email has already been invited to the beta! Please try "
+"another :-\\)"
+msgstr "Este email ya cuenta con una invitación para el beta"
+
+#: apps/closed_beta/strings.py:25
+msgid "We werent able to sent the invitations."
+msgstr "No pudimos enviar las invitaciones"
+
+#: apps/closed_beta/strings.py:28
+msgid "Invitations Sent"
+msgstr "Invitación enviada"
+
+#: apps/common/models.py:36
+msgid "Creado"
+msgstr "Creado"
+
+#: apps/common/models.py:42
+msgid "Modificado"
+msgstr "Modificado"
+
+#: apps/common/models.py:49
+msgid "Creado por"
+msgstr "Creado por"
+
+#: apps/common/models.py:55
+msgid "Modificado por"
+msgstr "Modificado por"
+
+#: apps/googlemaps_localities/strings.py:5 apps/places/strings.py:28
+msgid "Locality"
+msgstr "Localidad"
+
+#: apps/googlemaps_localities/strings.py:6
+msgid "Administrative Area Level 1"
+msgstr "Área administrativa nivel 1"
+
+#: apps/googlemaps_localities/strings.py:7
+msgid "Administrative Area Level 2"
+msgstr "Área administrativa nivel 2"
+
+#: apps/googlemaps_localities/strings.py:8
+msgid "Administrativa Area Level 3"
+msgstr "Área administrativa nivel 3"
+
+#: apps/googlemaps_localities/strings.py:9 apps/places/strings.py:9
+#: apps/places/strings.py:16 apps/places/strings.py:27
+msgid "Country"
+msgstr "País"
+
+#: apps/googlemaps_localities/strings.py:11
+msgid "Google Maps Address Component"
+msgstr "Google Maps Address Component"
+
+#: apps/googlemaps_localities/strings.py:12
+msgid "Google Maps Address Components"
+msgstr "Google Maps Address Components"
+
+#: apps/googlemaps_localities/strings.py:14
+msgid "Short name"
+msgstr "Nombre corto"
+
+#: apps/googlemaps_localities/strings.py:15
+msgid "Long name"
+msgstr "Nombre largo"
+
+#: apps/googlemaps_localities/strings.py:16
+#: apps/googlemaps_localities/strings.py:21
+msgid "Location"
+msgstr "Locación"
+
+#: apps/googlemaps_localities/strings.py:17
+msgid "Formatted name"
+msgstr "Nombre formateado"
+
+#: apps/googlemaps_localities/strings.py:19
+msgid "Type"
+msgstr "Tipo"
+
+#: apps/googlemaps_localities/strings.py:20
+msgid "Parent"
+msgstr "Padre"
+
+#: apps/googlemaps_localities/strings.py:22
+msgid "Bounds (Northeast)"
+msgstr "Bordes nor-este"
+
+#: apps/googlemaps_localities/strings.py:23
+msgid "Bounds (Southwest)"
+msgstr "Bordes sur-oeste"
+
+#: apps/googlemaps_localities/strings.py:24
+msgid "Viewport (Northeast)"
+msgstr "Viewport nor-este"
+
+#: apps/googlemaps_localities/strings.py:25
+msgid "Viewport (Southeast)"
+msgstr "Viewport sur-este"
+
+#: apps/googlemaps_localities/strings.py:26 apps/topics/strings.py:20
+#: apps/topics/strings.py:31
+msgid "Created at"
+msgstr "Creado en"
+
+#: apps/googlemaps_localities/strings.py:27
+msgid "Updated at"
+msgstr "Actualizado en"
+
+#: apps/googlemaps_localities/strings.py:32
+msgid ""
+"Information of the latitude and/or longitude is missing from the request"
+msgstr "Información de latitud y longitud está faltando en el request"
+
+#: apps/googlemaps_localities/strings.py:37
+msgid ""
+"The value for the latitude must be a real number in the range of -90.0 to "
+"+90.0"
+msgstr "El valor de latitud tiene que estar entre +90 y -90"
+
+#: apps/googlemaps_localities/strings.py:42
+msgid ""
+"The value for the longitude must be a real number in the range of -180.0 to "
+"+180.0"
+msgstr "El valor de longitud tiene que estar entre +180 y -180"
+
+#: apps/googlemaps_localities/strings.py:47
+msgid ""
+"The request did not included a list of GMAC objects in its body properly "
+"represented as a JSON document"
+msgstr "El request no incluyó una lista de objetos GMAC adecuadamente"
+
+#: apps/googlemaps_localities/strings.py:52
+msgid "No GMAC object could be found associated to the data sent"
+msgstr "No se encontró un objeto GMAC asociado con la data enviada"
+
+#: apps/googlemaps_localities/strings.py:56
+msgid ""
+"The contents of the body of the request could not be properly parsed as JSON "
+"information"
+msgstr ""
+"El contenido del cuerpo de la petición no fue correctamente parseado como "
+"JSON"
+
+#: apps/notifications/strings.py:5
+msgid "Notifiable event"
+msgstr "Evento notificable"
+
+#: apps/notifications/strings.py:6
+msgid "Notifiable events"
+msgstr "Eventos notificables"
+
+#: apps/notifications/strings.py:7 apps/user_profile/strings.py:55
+msgid "Owner"
+msgstr "Dueño"
+
+#: apps/notifications/strings.py:8 apps/notifications/strings.py:17
+msgid "Notification type"
+msgstr "Tipo de notificación"
+
+#: apps/notifications/strings.py:9
+msgid "Metadata"
+msgstr "Metadata"
+
+#: apps/notifications/strings.py:10
+msgid "Processed"
+msgstr "Procesado"
+
+#: apps/notifications/strings.py:11
+msgid "Date and time of processing"
+msgstr "Fecha y hora de procesado"
+
+#: apps/notifications/strings.py:13
+msgid "Notification"
+msgstr "Notificación"
+
+#: apps/notifications/strings.py:14 apps/notifications/strings.py:46
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#: apps/notifications/strings.py:15
+msgid "Notified user"
+msgstr "Usuario notificado"
+
+#: apps/notifications/strings.py:16
+msgid "Notification info"
+msgstr "Información de notificación"
+
+#: apps/notifications/strings.py:18
+msgid "Notification displayed"
+msgstr "Notificación mostrada"
+
+#: apps/notifications/strings.py:20
+msgid "Route created"
+msgstr "Ruta creada"
+
+#: apps/notifications/strings.py:21
+msgid "Route added to favorites"
+msgstr "Ruta añadida a favoritos"
+
+#: apps/notifications/strings.py:22
+msgid "Route remixed"
+msgstr "Ruta remixeada"
+
+#: apps/notifications/strings.py:23
+msgid "Route updated"
+msgstr "Ruta actualizada"
+
+#: apps/notifications/strings.py:24
+msgid "Followed user"
+msgstr "Usuario seguido"
+
+#: apps/notifications/strings.py:25
+msgid "Shared content"
+msgstr "Contenido compartido"
+
+#: apps/notifications/strings.py:28
+msgid "Worldrat Notification"
+msgstr "Notificación"
+
+#: apps/notifications/strings.py:31
+msgid "A new route was created by     one of the users that you follow."
+msgstr ""
+
+#: apps/notifications/strings.py:33
+#, fuzzy, python-format
+msgid "Your route \"%(route)s\" has been     favorited by %(user)s."
+msgstr "La ruta no ha sido marcada como favorita"
+
+#: apps/notifications/strings.py:35
+#, python-format
+msgid "Your route \"%(route)s\" has been     remixed by %(user)s"
+msgstr ""
+
+#: apps/notifications/strings.py:38
+msgid "One of the users you follow     updated his route."
+msgstr ""
+
+#: apps/notifications/strings.py:41
+#, fuzzy
+msgid "You are now beeing followed."
+msgstr "La categoria de la ruta no esta siendo seguida"
+
+#: apps/notifications/strings.py:43
+#, fuzzy
+msgid "User x has shared content."
+msgstr "Contenido compartido"
+
+#: apps/notifications/strings.py:47
+msgid "Non existant notification"
+msgstr "Notificación inexistente"
+
+#: apps/organizations/strings.py:7
+msgid "Corporate Name"
+msgstr "Nombre de la empresa"
+
+#: apps/organizations/strings.py:8
+msgid "Short Name"
+msgstr "Nombre corto"
+
+#: apps/organizations/strings.py:9 apps/places/strings.py:31
+#: apps/places/strings.py:35
+msgid "Website"
+msgstr "Sitio web"
+
+#: apps/organizations/strings.py:10
+msgid "Compnay Phone"
+msgstr "Teléfono de la empresa"
+
+#: apps/organizations/strings.py:11
+msgid "Company Email"
+msgstr "Correo electrónico de la empresa"
+
+#: apps/organizations/strings.py:13
+msgid "Contact person name"
+msgstr "Nombre de la persona de contacto"
+
+#: apps/organizations/strings.py:14
+msgid "Contact person phone"
+msgstr "Teléfono de la persona de contacto"
+
+#: apps/organizations/strings.py:15
+msgid "Contact person email"
+msgstr "Correo electronico de la persona de contacto"
+
+#: apps/organizations/strings.py:16
+msgid "Contact person position"
+msgstr "Cargo de la persona de contacto"
+
+#: apps/organizations/strings.py:19
+msgid "Acivation mail sent?"
+msgstr "¿Se envió el correo de activación?"
+
+#: apps/places/strings.py:10
+msgid "Countries"
+msgstr "Países"
+
+#: apps/places/strings.py:11 apps/places/strings.py:20
+#: apps/redirections/strings.py:4
+#: templates/registration/registration_form.html:23
+#: templates/social_reg_auth/twitter_register.html:46
+msgid "Name"
+msgstr "Nombre"
+
+#: apps/places/strings.py:13 apps/places/strings.py:15
+#: apps/places/strings.py:21
+msgid "State"
+msgstr "Estado"
+
+#: apps/places/strings.py:14
+msgid "States"
+msgstr "Estados"
+
+#: apps/places/strings.py:18
+msgid "City"
+msgstr "Ciudad"
+
+#: apps/places/strings.py:19
+msgid "Cities"
+msgstr "Ciudades"
+
+#: apps/places/strings.py:25
+msgid "Place name"
+msgstr "Nombre del lugar"
+
+#: apps/places/strings.py:26
+msgid "Address"
+msgstr "Dirección"
+
+#: apps/places/strings.py:29 apps/places/strings.py:33
+#: apps/places/strings.py:55
+msgid "Coordinates"
+msgstr "Coordenadas"
+
+#: apps/places/strings.py:30 apps/places/strings.py:34
+msgid "Telephone"
+msgstr "Teléfono"
+
+#: apps/places/strings.py:32
+msgid "Place city"
+msgstr "Ciudad del lugar"
+
+#: apps/places/strings.py:36
+msgid "Twitter account"
+msgstr "Cuenta de Twitter"
+
+#: apps/places/strings.py:37 apps/places/strings.py:47
+msgid "Place type"
+msgstr "Tipo de lugar"
+
+#: apps/places/strings.py:38
+msgid "Place reference"
+msgstr "Referencia del lugar"
+
+#: apps/places/strings.py:40
+msgid "Place type relationship"
+msgstr "Relación con PlaceType"
+
+#: apps/places/strings.py:41
+msgid "Place type name"
+msgstr "Nombre del PlaceType"
+
+#: apps/places/strings.py:42
+msgid "Place type names"
+msgstr "Nombres de tipo de lugar"
+
+#: apps/places/strings.py:43
+msgid "Short place type name"
+msgstr "Nombre corto del tipo de lugar"
+
+#: apps/places/strings.py:44
+msgid "Place type prefix"
+msgstr "Prefijo del tipo de lugar"
+
+#: apps/places/strings.py:45
+msgid "Icon sizes"
+msgstr "Tamaños de ícono"
+
+#: apps/places/strings.py:46
+msgid "Icon format"
+msgstr "Formato de ícono"
+
+#: apps/places/strings.py:48
+msgid "Place types"
+msgstr "Tipos de lugar"
+
+#: apps/places/strings.py:50
+msgid "Done place register"
+msgstr "Registro de lugar terminado"
+
+#: apps/places/strings.py:51
+msgid "Done place registers"
+msgstr "Registros de lugar terminado"
+
+#: apps/places/strings.py:54 apps/visits/strings.py:8
+msgid "IP address"
+msgstr "Dirección IP"
+
+#: apps/places/strings.py:56
+msgid "¿From place?"
+msgstr "¿De lugar?n"
+
+#: apps/places/strings.py:58
+#, python-format
+msgid "User \"%(user)s\" has marked place \"%(place)s\" as done"
+msgstr "El usuario %(user)s a marcado el lugar %(place)s como visitado"
+
+#: apps/places/strings.py:61
+#, python-format
+msgid "Place with identifier %(place_id)s does not exist"
+msgstr "El lugar identificado con %(place_id)s no existe"
+
+#: apps/places/strings.py:62
+msgid "Place is already marked as Done"
+msgstr "El lugar ya está marcado como Terminado"
+
+#: apps/places/strings.py:63
+msgid "Place is not marked as Done"
+msgstr "El lugar no está marcado como Terminado"
+
+#: apps/places/strings.py:65
+#, python-format
+msgid "No place type found under the token %(placetype_id)s"
+msgstr "No se encontró un tipo de lugar identificado con %(placetype_id)s"
+
+#: apps/places/strings.py:66
+msgid "Place type collection"
+msgstr "Colección de tipos de lugar"
+
+#: apps/redirections/strings.py:5
+msgid "Path (without domain or trailing slashes)"
+msgstr "Ruta (sin dominio ni slashes al final)"
+
+#: apps/redirections/strings.py:6
+msgid "Redirect to"
+msgstr "Redigir a"
+
+#: apps/redirections/strings.py:8
+msgid "Redirection"
+msgstr "Redirección"
+
+#: apps/redirections/strings.py:9
+msgid "Redirections"
+msgstr "Redirecciones"
+
+#: apps/simulation/strings.py:7
+msgid "Topico"
+msgstr ""
+
+#: apps/simulation/strings.py:8
+msgid "Topicos"
+msgstr ""
+
+#: apps/simulation/strings.py:9
+msgid "Nombre del topico"
+msgstr ""
+
+#: apps/simulation/strings.py:12 templates/profile/show_profile.html:25
+msgid "Follow"
+msgstr "Seguir"
+
+#: apps/simulation/strings.py:13
+msgid "Follows"
+msgstr ""
+
+#: apps/simulation/strings.py:14
+msgid "Usuario haciendo Follow"
+msgstr ""
+
+#: apps/simulation/strings.py:15
+msgid "Topico siendo Follow"
+msgstr ""
+
+#: apps/simulation/strings.py:18
+msgid "Usuario interesado"
+msgstr ""
+
+#: apps/simulation/strings.py:19
+msgid "Topico de interes"
+msgstr ""
+
+#: apps/simulation/strings.py:20
+msgid "Interes Explicito"
+msgstr ""
+
+#: apps/simulation/strings.py:21
+msgid "Intereses Explicitos"
+msgstr ""
+
+#: apps/simulation/strings.py:25
+msgid "Notificaciones"
+msgstr ""
+
+#: apps/social_reg_auth/strings.py:6
+#: apps/user_profile/registration/strings.py:6
+msgid "John"
+msgstr "Juan"
+
+#: apps/social_reg_auth/strings.py:7
+#: apps/user_profile/registration/strings.py:7
+msgid "Doe"
+msgstr "Pérez"
+
+#: apps/suggestions/strings.py:6
+msgid "Facebook invite"
+msgstr "Invitación de Facebook"
+
+#: apps/suggestions/strings.py:7
+msgid "Facebook invites"
+msgstr "Invitaciones de Facebook"
+
+#: apps/suggestions/strings.py:8 apps/suggestions/strings.py:15
+msgid "Inviting user"
+msgstr "Usuario que invita"
+
+#: apps/suggestions/strings.py:9
+msgid "Facebook invited user"
+msgstr "Usuario de Facebook invitado"
+
+#: apps/suggestions/strings.py:10 apps/suggestions/strings.py:17
+msgid "Invitation sent"
+msgstr "Invitación enviada"
+
+#: apps/suggestions/strings.py:11 apps/suggestions/strings.py:18
+msgid "Invitation accepted"
+msgstr "Invitación aceptada"
+
+#: apps/suggestions/strings.py:13
+msgid "Twitter invitation"
+msgstr "Invitación de Twitter"
+
+#: apps/suggestions/strings.py:14
+msgid "Twitter invitations"
+msgstr "Invitaciones de Twitter"
+
+#: apps/suggestions/strings.py:16
+msgid "Twitter invited user"
+msgstr "Usuario de Twitter invitado"
+
+#: apps/suggestions/strings.py:20
+msgid "Follow user suggestion"
+msgstr "Sugerencia de seguir a usuario"
+
+#: apps/suggestions/strings.py:21
+msgid "Follow user suggestions"
+msgstr "Sugerencias de seguir a usuario"
+
+#: apps/suggestions/strings.py:22
+msgid "Source"
+msgstr "Fuente"
+
+#: apps/suggestions/strings.py:23
+msgid "Reciving user"
+msgstr "Usuario que recibe"
+
+#: apps/suggestions/strings.py:24
+msgid "Seggested user"
+msgstr ""
+
+#: apps/suggestions/strings.py:25
+msgid "Succesful suggestion"
+msgstr ""
+
+#: apps/suggestions/strings.py:26
+msgid "Facebook"
+msgstr ""
+
+#: apps/suggestions/strings.py:27
+msgid "Twitter"
+msgstr ""
+
+#: apps/topics/strings.py:7 apps/topics/strings.py:19
+msgid "Topic"
+msgstr ""
+
+#: apps/topics/strings.py:9
+msgid "Topic name"
+msgstr ""
+
+#: apps/topics/strings.py:11
+msgid "Elder Topic"
+msgstr ""
+
+#: apps/topics/strings.py:12 templates/profile/followers.html:15
+msgid "Followers"
+msgstr ""
+
+#: apps/topics/strings.py:13
+msgid "Following users"
+msgstr ""
+
+#: apps/topics/strings.py:16
+msgid "Topic Follow"
+msgstr ""
+
+#: apps/topics/strings.py:17
+msgid "Topic Follows"
+msgstr ""
+
+#: apps/topics/strings.py:18 apps/user_profile/strings.py:56
+msgid "Follower"
+msgstr ""
+
+#: apps/topics/strings.py:22
+#, python-format
+msgid "User %(user)s follows topic %(topic)s"
+msgstr ""
+
+#: apps/topics/strings.py:26
+msgid "Interest topic"
+msgstr ""
+
+#: apps/topics/strings.py:27
+msgid "Interesting topics"
+msgstr ""
+
+#: apps/topics/strings.py:29
+msgid "Interested user"
+msgstr ""
+
+#: apps/topics/strings.py:30
+msgid "Interested users"
+msgstr ""
+
+#: apps/topics/strings.py:33
+#, python-format
+msgid "User %(user)s is interested in topic %(topic)s"
+msgstr ""
+
+#: apps/user_profile/forms.py:101 apps/user_profile/forms.py:171
+#: apps/user_profile/registration/forms.py:45
+#: apps/user_profile/registration/forms.py:197
+msgid "E-mail"
+msgstr "Correo electrónico"
+
+#: apps/user_profile/forms.py:106 apps/user_profile/registration/forms.py:51
+#: apps/user_profile/registration/forms.py:124
+#: templates/registration/login.html:51
+#: templates/registration/registration_form.html:36
+#: templates/social_reg_auth/twitter_register.html:59
+msgid "Password"
+msgstr "Contraseña"
+
+#: apps/user_profile/forms.py:110
+msgid ""
+"Please enter a correct email and password. Note that both fields are case-"
+"sensitive."
+msgstr "Ingrese un email y una contraseña correctas"
+
+#: apps/user_profile/forms.py:112
+msgid ""
+"Your Web browser doesn't appear to have cookies enabled. Cookies are "
+"required for logging in."
+msgstr "Tu navegador parece no tener habilitado los cookies."
+
+#: apps/user_profile/forms.py:114
+msgid "This account is inactive."
+msgstr "Esta cuenta esta inactiva"
+
+#: apps/user_profile/forms.py:115
+msgid "Email address invalid"
+msgstr "Dirección de email inválida"
+
+#: apps/user_profile/forms.py:166
+msgid ""
+"That e-mail address doesn't have an associated user account. Are you sure "
+"you've registered?"
+msgstr ""
+
+#: apps/user_profile/forms.py:168
+msgid ""
+"The user account associated with this e-mail address cannot reset the "
+"password."
+msgstr ""
+
+#: apps/user_profile/strings.py:7
+msgid "Gender"
+msgstr "Género"
+
+#: apps/user_profile/strings.py:8
+msgid "Hometown"
+msgstr "Lugar de nacimiento"
+
+#: apps/user_profile/strings.py:9
+msgid "Language"
+msgstr "Idioma"
+
+#: apps/user_profile/strings.py:10
+msgid "Available invitations"
+msgstr "Inivitaciones disponibles"
+
+#: apps/user_profile/strings.py:11
+msgid "About me"
+msgstr "Acerca de mí"
+
+#: apps/user_profile/strings.py:12
+msgid "Avatar"
+msgstr "Imagen de perfil"
+
+#: apps/user_profile/strings.py:13
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: apps/user_profile/strings.py:14
+msgid "User profile"
+msgstr "Perfil de usuario"
+
+#: apps/user_profile/strings.py:15
+msgid "User profiles"
+msgstr "Perfiles de usuario"
+
+#: apps/user_profile/strings.py:17
+msgid "Has organization data"
+msgstr "Tiene información organizacional"
+
+#: apps/user_profile/strings.py:19
+msgid "Current Password"
+msgstr "Contraseña actual"
+
+#: apps/user_profile/strings.py:20
+msgid "New Password"
+msgstr "Nueva contraseña"
+
+#: apps/user_profile/strings.py:21
+msgid "New Password (Again)"
+msgstr "Nueva contraseña (otra vez)"
+
+#: apps/user_profile/strings.py:23
+msgid "Male"
+msgstr "Masculino"
+
+#: apps/user_profile/strings.py:24
+msgid "Female"
+msgstr "Femenino"
+
+#: apps/user_profile/strings.py:25
+msgid "Prefer not to say"
+msgstr "Me reservo"
+
+#: apps/user_profile/strings.py:27
+msgid "Usuario"
+msgstr "Usuario"
+
+#: apps/user_profile/strings.py:28
+msgid "Access Token para Facebook"
+msgstr "Clave de acceso para Facebook"
+
+#: apps/user_profile/strings.py:29
+msgid "Facebook ID"
+msgstr "ID de Facebook"
+
+#: apps/user_profile/strings.py:30
+msgid "Facebook name"
+msgstr "Nombre de Facebook"
+
+#: apps/user_profile/strings.py:31
+msgid "Facebook link"
+msgstr "Enlace de Facebook"
+
+#: apps/user_profile/strings.py:32 apps/user_profile/strings.py:33
+#: apps/user_profile/strings.py:68
+msgid "Facebook user credentials"
+msgstr "Credenciales de usuario de Facebook"
+
+#: apps/user_profile/strings.py:36
+msgid "Twitter ID"
+msgstr "ID de Twitter"
+
+#: apps/user_profile/strings.py:37
+msgid "Twitter name"
+msgstr "Nombre en Twitter"
+
+#: apps/user_profile/strings.py:38
+msgid "Twitter OAuth Token"
+msgstr "Clave OAuth de Twitter"
+
+#: apps/user_profile/strings.py:39
+msgid "Twitter OAuth Secret"
+msgstr "Secreto OAuth de Twitter"
+
+#: apps/user_profile/strings.py:40
+msgid "Twitter user name"
+msgstr "Nombre de usuario de Twitter"
+
+#: apps/user_profile/strings.py:41 apps/user_profile/strings.py:42
+#: apps/user_profile/strings.py:70
+msgid "Twitter user credentials"
+msgstr "Credenciales de usuario de Twitter"
+
+#: apps/user_profile/strings.py:45
+msgid "Foursquare ID"
+msgstr "ID de Foursquare"
+
+#: apps/user_profile/strings.py:46
+msgid "Foursquare name"
+msgstr "Nombre de Foursquare"
+
+#: apps/user_profile/strings.py:47
+msgid "Foursquare OAuth access token"
+msgstr "Clave de acceso OAuth de Foursquare"
+
+#: apps/user_profile/strings.py:48
+msgid "Foursquare link"
+msgstr "Enlace de Foursquare"
+
+#: apps/user_profile/strings.py:49 apps/user_profile/strings.py:50
+msgid "Foursquare user credentials"
+msgstr "Credenciales de usuario de Foursquare"
+
+#: apps/user_profile/strings.py:52
+msgid "User follower"
+msgstr "Seguidor de usuario"
+
+#: apps/user_profile/strings.py:53
+msgid "User followers"
+msgstr "Seguidores de usuario"
+
+#: apps/user_profile/strings.py:57
+msgid "Context"
+msgstr "Contexto"
+
+#: apps/user_profile/strings.py:59
+msgid "Unspecified context"
+msgstr "Contexto no especificado"
+
+#: apps/user_profile/strings.py:60
+msgid "Reciprocal user"
+msgstr "Usuario recíproco"
+
+#: apps/user_profile/strings.py:61
+msgid "Spontaneous follower"
+msgstr "Seguidor espontáneo"
+
+#: apps/user_profile/strings.py:62
+msgid "Facebook friend suggestion"
+msgstr "Sugerencia de amigo de Facebook"
+
+#: apps/user_profile/strings.py:63
+msgid "Twitter friend suggestion"
+msgstr "Sugerencia de amigo de Twitter"
+
+#: apps/user_profile/strings.py:64
+msgid "Worldrat suggestion"
+msgstr "Sugerencia en Worldrat"
+
+#: apps/user_profile/strings.py:66
+msgid "User can not follow himself"
+msgstr "El usuario no puede seguirse a sí mismo"
+
+#: apps/user_profile/strings.py:67
+msgid "Facebook user credential"
+msgstr "Credencial de usuario de Facebook"
+
+#: apps/user_profile/strings.py:69
+msgid "Twitter user crendential"
+msgstr "Credencial de usuario de Twitter"
+
+#: apps/user_profile/strings.py:73
+msgid "Welcome to Worldrat"
+msgstr "Bienvenido a Worldrat."
+
+#: apps/user_profile/strings.py:74
+#, python-format
+msgid ""
+"We have created an account for you using your social data. You can continue "
+"login in with Facebook/Twitter, but just so you know your Worldrat "
+"credentials are:\n"
+"     username: %(username)s\n"
+"     password: %(password)s\n"
+" We recommend you change your password to something you remember. "
+msgstr ""
+
+#: apps/user_profile/strings.py:85
+msgid "No user exists under the specified identifier."
+msgstr "No existe un usuario con el identificador especificado."
+
+#: apps/user_profile/strings.py:89
+msgid "No user exists under the specified follower identifier."
+msgstr "No existe un usuario con el identificador de seguidor especificado."
+
+#: apps/user_profile/strings.py:93
+msgid "No user exists under the specified followee identifier."
+msgstr ""
+"No existe un usuario con el identificador de usuario seguido especificado."
+
+#: apps/user_profile/strings.py:97
+msgid "The follower does not yet have a user profile created."
+msgstr "El seguidor aún no tiene un perfil de usuario creado."
+
+#: apps/user_profile/strings.py:101
+msgid "The followee does not yet have a user profile created."
+msgstr "El usuario seguido aún no tiene un perfil de usuario creado."
+
+#: apps/user_profile/strings.py:105
+msgid "Already following user"
+msgstr "Ya estás siguiendo a este usuario."
+
+#: apps/user_profile/strings.py:109
+msgid "Already not following user"
+msgstr "Este usuario no está siendo seguido"
+
+#: apps/user_profile/strings.py:113
+msgid "A user account can not follow itself"
+msgstr "Una cuenta de usuario no se puede seguir a sí misma"
+
+#: apps/user_profile/strings.py:117
+#, python-format
+msgid "The email %(email)s is already being used by another user."
+msgstr "El correo %(email)s ya está siendo utilizado por otro usuario."
+
+#: apps/user_profile/strings.py:122
+msgid "This mail is valid."
+msgstr "La dirección de email es inválida"
+
+#: apps/user_profile/strings.py:126
+#, python-format
+msgid "The email %(email)s is invalid."
+msgstr "Esta dirección de email %(email)s es inválida"
+
+#: apps/user_profile/strings.py:128
+msgid "You did not specify an email"
+msgstr "No especificó una dirección de email"
+
+#: apps/user_profile/strings.py:130
+#: templates/registration/activation_email_subject.txt:2
+msgid "Welcome to Worldrat, where rat is you!"
+msgstr "Bienvenido a Worldrat"
+
+#: apps/user_profile/registration/forms.py:56
+#: apps/user_profile/registration/forms.py:129
+msgid "Password (again)"
+msgstr "Contraseña (otra vez)"
+
+#: apps/user_profile/registration/strings.py:8
+msgid "Passwords don't match"
+msgstr "Las contraseñas no coinciden"
+
+#: apps/visits/strings.py:9
+msgid "Country code"
+msgstr "Código de país"
+
+#: apps/visits/strings.py:10
+msgid "User agent"
+msgstr "Agente usuario"
+
+#: apps/visits/strings.py:11
+msgid "Visitor id"
+msgstr "ID del visitante"
+
+#: apps/website/strings.py:10
+msgid "Recommended routes"
+msgstr "Rutas recomendadas"
+
+#: apps/website/strings.py:12
+#, python-format
+msgid "%(section_name)s in %(location_name)s"
+msgstr "%(section_name)s en %(location_name)s"
+
+#: apps/website/strings.py:17
+msgid ""
+"A JSON document with the address components and the current section of the "
+"page must be sent via the POST method."
+msgstr ""
+"Un documento en JSON con los componentes de la dirección y la sección actual "
+"de la página debe ser enviado a través del método POST."
+
+#: apps/website/strings.py:22
+msgid ""
+"The document sent in the body of the request is not valid JSON or does not "
+"match the requirements."
+msgstr ""
+"El documento enviado en el cuerpo de la petición no está en formato JSON o "
+"no cumple con los requisitos."
+
+#: apps/website/strings.py:26
+msgid "Missing POST parameter: page"
+msgstr "Falta un parámetro POST: página"
+
+#: apps/website/strings.py:28
+msgid "The section sent was not recognized"
+msgstr "La sección enviada no fue reconocida"
+
+#: apps/website/strings.py:30
+msgid "No component address object could be retrieved"
+msgstr "No se pudo recuperar un objeto componente de dirección"
+
+#: templates/403.html:8
+msgid ""
+"\n"
+"<p><strong>Hey, there.</strong> You don't have permission to edit this "
+"content.</p>\n"
+msgstr ""
+"\n"
+"<p><strong>Más despacio.</strong> No tienes permiso para editar este "
+"contenido.</p>\n"
+
+#: templates/404.html:6
+msgid ""
+"\n"
+"<p><strong>Sorry rat</strong>, this page doesn't exist.</p>\n"
+msgstr ""
+"\n"
+"<p><strong>Lo sentimos, rata.</strong> Esta página no existe.</p>\n"
+
+#: templates/circuits/adult_content_agreement.html:4
+#, fuzzy
+msgid "Adult content agreement"
+msgstr "Contenido para adultos"
+
+#: templates/circuits/adult_content_agreement.html:12
+msgid ""
+"The route you are trying to watch has content marked as adults-only. Do you "
+"still want to continue?"
+msgstr ""
+"La ruta que deseas ver tiene contenido sólo para adultos. ¿Deseas continuar?"
+
+#: templates/circuits/adult_content_agreement.html:19
+msgid "Yes, take me there."
+msgstr "Sí, continúa."
+
+#: templates/circuits/adult_content_agreement.html:23
+msgid "No, take me back."
+msgstr "No, sácame de aquí."
+
+#: templates/circuits/categories.html:4
+#: templates/circuits/circuit_detail.html:4
+#: templates/circuits/embedded_circuit_detail.html:4
+#: templates/circuits/recommendations.html:4 templates/layouts/header.html:40
+msgid "Explore"
+msgstr "Explorar"
+
+#: templates/circuits/categories.html:12 templates/circuits/favorites.html:25
+#: templates/circuits/mycircuits.html:25
+#: templates/circuits/recommendations.html:16
+#: templates/profile/circuits.html:35
+#: templates/profile/embedded_circuits.html:34
+#: templates/profile/favorites.html:34 templates/search/search.html:23
+msgid "No more"
+msgstr "No hay más rutas"
+
+#: templates/circuits/categories.html:12 templates/circuits/favorites.html:25
+#: templates/circuits/mycircuits.html:25
+#: templates/circuits/recommendations.html:16
+#: templates/profile/circuits.html:35
+#: templates/profile/embedded_circuits.html:34
+#: templates/profile/favorites.html:34 templates/search/search.html:23
+msgid "More routes"
+msgstr "Más rutas"
+
+#: templates/circuits/circuit.html:4
+msgid "Breaded tilapia and french fries in Miraflores - Food and Beverages"
+msgstr ""
+
+#: templates/circuits/circuit.html:9
+msgid "New Route"
+msgstr "Ruta nueva"
+
+#: templates/circuits/circuit.html:12
+msgid "Food and Beverage"
+msgstr "Comida y bebidas"
+
+#: templates/circuits/circuit.html:14
+msgid "Breaded tilapia and french fries in Miraflores"
+msgstr ""
+
+#: templates/circuits/circuit.html:15
+msgid "Germán Augusto Martínez Seminario"
+msgstr ""
+
+#: templates/circuits/circuit.html:17
+msgid "Add to Favorites"
+msgstr "Añadir a favoritos"
+
+#: templates/circuits/circuit.html:26
+msgid "6 stops"
+msgstr ""
+
+#: templates/circuits/circuit.html:31
+msgid "The corner of the Breaded tilapia with panca chili"
+msgstr ""
+
+#: templates/circuits/circuit.html:32
+msgid "9.4km"
+msgstr ""
+
+#: templates/circuits/circuit.html:34
+msgid ""
+"Av. Hípica 234, Urbanization Los Jockeys. In front of the Hipódromo, Lima - "
+"Peru"
+msgstr ""
+
+#: templates/circuits/circuit_detail.html:89
+#: templates/circuits/circuit_edit.html:22
+#: templates/circuits/embedded_circuit_detail.html:82
+msgid "from"
+msgstr "de"
+
+#: templates/circuits/circuit_detail.html:97
+#: templates/circuits/circuit_detail.html:111
+#: templates/circuits/circuit_edit.html:25
+#: templates/circuits/embedded_circuit_detail.html:90
+#: templates/circuits/embedded_circuit_detail.html:104
+msgid "stop"
+msgstr "parada"
+
+#: templates/circuits/circuit_detail.html:97
+#: templates/circuits/circuit_edit.html:25
+#: templates/circuits/embedded_circuit_detail.html:90
+msgid "on"
+msgstr "en"
+
+#: templates/circuits/circuit_detail.html:99
+#: templates/circuits/circuit_edit.html:26
+#: templates/circuits/circuit_list_item.html:24
+#: templates/circuits/embedded_circuit_detail.html:92
+msgid "by"
+msgstr "por"
+
+#: templates/circuits/circuit_detail.html:111
+#: templates/circuits/embedded_circuit_detail.html:104
+msgid "Done"
+msgstr "Hecho"
+
+#: templates/circuits/circuit_detail.html:111
+#: templates/circuits/embedded_circuit_detail.html:104
+msgid "of"
+msgstr "de"
+
+#: templates/circuits/circuit_detail.html:119
+#: templates/circuits/embedded_circuit_detail.html:112
+msgid "Remove from my recommendations"
+msgstr "Quitar de mis recomendaciones"
+
+#: templates/circuits/circuit_detail.html:125
+#: templates/circuits/circuit_detail.html:128
+#: templates/circuits/circuit_detail.html:135
+#: templates/circuits/circuit_list_item.html:54
+#: templates/circuits/circuit_list_item.html:57
+#: templates/circuits/circuit_list_item.html:64
+#: templates/circuits/embedded_circuit_detail.html:118
+#: templates/circuits/embedded_circuit_detail.html:121
+#: templates/circuits/embedded_circuit_detail.html:128
+msgid "Remove from my favorites"
+msgstr "Quitar de mis favoritos"
+
+#: templates/circuits/circuit_detail.html:129
+#: templates/circuits/circuit_detail.html:132
+#: templates/circuits/circuit_detail.html:136
+#: templates/circuits/circuit_list_item.html:58
+#: templates/circuits/circuit_list_item.html:61
+#: templates/circuits/circuit_list_item.html:65
+#: templates/circuits/embedded_circuit_detail.html:122
+#: templates/circuits/embedded_circuit_detail.html:125
+#: templates/circuits/embedded_circuit_detail.html:129
+msgid "Add to favorites"
+msgstr "Añadir a favoritos"
+
+#: templates/circuits/circuit_detail.html:141
+#: templates/circuits/circuit_list_item.html:70
+#: templates/layouts/circuit-new-modal.html:37
+msgid "Remix"
+msgstr "Remix"
+
+#: templates/circuits/circuit_detail.html:148
+#: templates/circuits/circuit_edit.html:31
+#: templates/circuits/circuit_list_item.html:77
+#: templates/circuits/stop_edit_list_item.html:22
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/circuits/circuit_detail.html:153
+#: templates/circuits/embedded_circuit_detail.html:136
+msgid "Share on Twitter"
+msgstr "Compartir en Twitter"
+
+#: templates/circuits/circuit_detail.html:155
+#: templates/circuits/embedded_circuit_detail.html:138
+msgid "Share on Facebook"
+msgstr "Compartir en Facebook"
+
+#: templates/circuits/circuit_detail.html:158
+msgid "Embed this route"
+msgstr "Insertar esta ruta"
+
+#: templates/circuits/circuit_detail.html:169
+msgid "Embedded route size:"
+msgstr "Tamaño de la ruta:"
+
+#: templates/circuits/circuit_detail.html:176
+msgid "Custom size"
+msgstr "Otro tamaño"
+
+#: templates/circuits/circuit_detail.html:181
+msgid "Width"
+msgstr "Ancho"
+
+#: templates/circuits/circuit_detail.html:185
+msgid "Height"
+msgstr "Alto"
+
+#: templates/circuits/circuit_detail.html:192
+msgid "Use this code on your website:"
+msgstr "Usa este código en tu página:"
+
+#: templates/circuits/circuit_detail.html:213
+#: templates/circuits/circuit_edit.html:62
+#: templates/circuits/embedded_circuit_detail.html:151
+#: templates/layouts/footer.html:5
+msgid "About"
+msgstr "Acerca de"
+
+#: templates/circuits/circuit_detail.html:236
+#: templates/circuits/embedded_circuit_detail.html:174
+msgid "<h3>Rat, <strong>rate this route</strong></h3>"
+msgstr "<h3>Rata, <strong>califica esta ruta</strong></h3>"
+
+#: templates/circuits/circuit_detail.html:237
+#: templates/circuits/embedded_circuit_detail.html:175
+msgid "We'll use it to improve your recommendations"
+msgstr "Lo usaremos para mejorar tus recomendaciones"
+
+#: templates/circuits/circuit_detail.html:239
+msgid "Like it"
+msgstr "Me gusta"
+
+#: templates/circuits/circuit_detail.html:240
+msgid "Hate it"
+msgstr "No me gusta"
+
+#: templates/circuits/circuit_edit.html:4
+msgid "Edit Route"
+msgstr "Editar ruta"
+
+#: templates/circuits/circuit_edit.html:33
+msgid "Add a Picture"
+msgstr "Añadir foto"
+
+#: templates/circuits/circuit_edit.html:36
+msgid "Back to route"
+msgstr "Volver a la ruta"
+
+#: templates/circuits/circuit_edit.html:42
+msgid "Add a Stop"
+msgstr "Añadir una parada"
+
+#: templates/circuits/circuit_edit.html:44
+msgid "Search for a stop to add"
+msgstr "Buscar una parada para añadir"
+
+#: templates/circuits/circuit_edit.html:45
+#: templates/circuits/circuit_edit.html:49
+msgid "in"
+msgstr "en"
+
+#: templates/circuits/circuit_edit.html:49 templates/search/search.html:10
+msgid "Results for"
+msgstr "Resultados para"
+
+#: templates/circuits/circuit_edit.html:51
+msgid "Not here? Add it!"
+msgstr "¿No lo encuentras? ¡Agrégalo!"
+
+#: templates/circuits/circuit_edit.html:53
+msgid "Sorry rat, <strong>we don't have</strong> the place you're looking for."
+msgstr ""
+"Lo lamentamos, rata, <strong>no encontramos</strong> el lugar que estás "
+"buscando."
+
+#: templates/circuits/circuit_edit.html:70
+msgid "Change picture"
+msgstr "Cambiar foto"
+
+#: templates/circuits/circuit_edit.html:72
+msgid "Add a picture"
+msgstr "Añadir foto"
+
+#: templates/circuits/circuit_edit.html:79
+msgid "Add a description"
+msgstr "Añadir descripción"
+
+#: templates/circuits/circuit_edit_modal.html:6
+msgid " <strong>Edit</strong> route "
+msgstr "<strong>Editar</strong> ruta"
+
+#: templates/circuits/circuit_edit_modal.html:14
+msgid " About this route <small class=\"opt\">(optional)</small> "
+msgstr "Acerca de esta ruta <small class=\"opt\">(opcional)</small>"
+
+#: templates/circuits/circuit_edit_modal.html:23
+#: templates/layouts/circuit-new-modal.html:22
+#: templates/layouts/circuit-new-modal.html:60
+msgid "This route has adult content"
+msgstr "Esta ruta no es apta para menores"
+
+#: templates/circuits/circuit_edit_modal.html:31
+msgid "Are you sure you want to delete this route?"
+msgstr "¿Realmente quieres eliminar esta ruta?"
+
+#: templates/circuits/circuit_edit_modal.html:33
+msgid "Delete"
+msgstr ""
+
+#: templates/circuits/circuit_edit_modal.html:36
+#: templates/circuits/circuit_edit_picture_modal.html:19
+#: templates/circuits/place_edit_new_modal.html:28
+#: templates/circuits/stop_edit_modal.html:35
+#: templates/circuits/stop_new_modal.html:40
+#: templates/profile/categories_edit_modal.html:17
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/circuits/circuit_edit_modal.html:37
+#: templates/circuits/circuit_edit_picture_modal.html:20
+#: templates/circuits/stop_edit_modal.html:36
+#: templates/circuits/stop_new_modal.html:41
+#: templates/profile/categories_edit_modal.html:18
+#: templates/profile/edit_profile.html:66
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/circuits/circuit_edit_picture_modal.html:8
+msgid "Route <strong>picture</strong>"
+msgstr "<strong>Foto</strong> de ruta"
+
+#: templates/circuits/circuit_embed_form.html:6
+#: templates/profile/user_circuit_list_embed_form.html:6
+msgid "Paste this html on your website:"
+msgstr "Pega este código html en tu página"
+
+#: templates/circuits/circuit_list.html:12
+msgid "Sorry rat, still no "
+msgstr "Lo sentimos, rata. Aún no hay rutas de "
+
+#: templates/circuits/circuit_list.html:12
+msgid " routes in here."
+msgstr " aquí."
+
+#: templates/circuits/circuit_list.html:14
+msgid "Sorry rat, still no routes in here."
+msgstr "Lo sentimos, rata. Aún no hay rutas aquí."
+
+#: templates/circuits/circuit_list.html:18
+msgid ""
+" Why don't you <a data-toggle=\"modal\" href=\"#circuit-new\">create the "
+"first one</a>? "
+msgstr ""
+"¿Por qué no <a data-toggle=\"modal\" href=\"#circuit-new\">crear la primera</"
+"a>?"
+
+#: templates/circuits/circuit_list_item.html:27
+msgid "place"
+msgid_plural "places"
+msgstr[0] "lugar"
+msgstr[1] "lugares"
+
+#: templates/circuits/favorites.html:4 templates/circuits/favorites.html:11
+msgid "My favorite routes"
+msgstr "Mis rutas favoritas"
+
+#: templates/circuits/favorites.html:20 templates/profile/favorites.html:23
+msgid "Rat, you have <strong>no favorite routes</strong>... sigh"
+msgstr "<strong>No tienes</strong> rutas favoritas..."
+
+#: templates/circuits/inline_filters.html:4
+msgid "You are watching"
+msgstr "Estás viendo rutas de"
+
+#: templates/circuits/inline_filters.html:6
+#: templates/circuits/inline_filters.html:8
+msgid "All routes"
+msgstr "Todas las rutas"
+
+#: templates/circuits/inline_filters.html:16
+msgid "routes around "
+msgstr "en "
+
+#: templates/circuits/inline_filters.html:18
+#: templates/circuits/inline_filters.html:19
+msgid "the world"
+msgstr "la Tierra"
+
+#: templates/circuits/mycircuits.html:4 templates/circuits/mycircuits.html:11
+msgid "My routes"
+msgstr "Mis rutas"
+
+#: templates/circuits/mycircuits.html:14 templates/profile/circuits.html:25
+msgid "No routes? <strong>Rat, come on!</strong>"
+msgstr "¿Ninguna ruta por aquí? ¿Qué pasó?"
+
+#: templates/circuits/place_edit_new_modal.html:6
+msgid " \"<strong>New</strong> stop\" "
+msgstr "<strong>Nueva</strong> parada"
+
+#: templates/circuits/place_edit_new_modal.html:7
+msgid "<strong>click</strong> on the map to add a marker"
+msgstr "<strong>Haz clic</strong> en el mapa para añadir un marcador"
+
+#: templates/circuits/place_edit_new_modal.html:29
+msgid "Create"
+msgstr "Crear"
+
+#: templates/circuits/stop_detail.html:4 templates/profile/circuits.html:4
+#: templates/profile/edit_profile.html:4 templates/profile/followers.html:4
+msgid "Urban Exploration"
+msgstr "Exploración urbana"
+
+#: templates/circuits/stop_detail.html:14
+msgid "back to"
+msgstr "de vuelta a"
+
+#: templates/circuits/stop_detail.html:23
+#: templates/circuits/stop_detail.html:25
+#: templates/circuits/stop_detail.html:30
+#: templates/circuits/stop_list_item.html:37
+#: templates/circuits/stop_list_item.html:39
+#: templates/circuits/stop_list_item.html:44
+msgid "Check!"
+msgstr "¡Visitado!"
+
+#: templates/circuits/stop_detail.html:24
+#: templates/circuits/stop_detail.html:31
+#: templates/circuits/stop_detail.html:32
+#: templates/circuits/stop_list_item.html:38
+#: templates/circuits/stop_list_item.html:45
+#: templates/circuits/stop_list_item.html:46
+msgid "Been there, done that"
+msgstr "Ya estuve ahí"
+
+#: templates/circuits/stop_edit.html:4
+msgid "Placeholder"
+msgstr "Texto auxiliar"
+
+#: templates/circuits/stop_edit_modal.html:8
+msgid "<strong>Edit</strong> place"
+msgstr "<strong>Editar</strong> lugar"
+
+#: templates/circuits/stop_edit_modal.html:23
+msgid "Upload a photo"
+msgstr "Subir una foto"
+
+#: templates/circuits/stop_edit_modal.html:27
+#: templates/circuits/stop_new_modal.html:21
+msgid "Why this stop? <small class=\"opt\">(optional)</small>"
+msgstr "¿Por qué esta parada? <small class=\"opt\">(opcional)</small>"
+
+#: templates/circuits/stop_edit_modal.html:34
+msgid "Remove"
+msgstr "Eliminar"
+
+#: templates/circuits/stop_new_modal.html:8
+msgid "<strong>Add</strong> a stop"
+msgstr "<strong>Añadir</strong> parada"
+
+#: templates/layouts/circuit-new-modal.html:6
+msgid "<strong>New</strong> route"
+msgstr "<strong>Nueva</strong> ruta"
+
+#: templates/layouts/circuit-new-modal.html:13
+#: templates/layouts/circuit-new-modal.html:51
+msgid "About this route"
+msgstr "Acerca de esta ruta"
+
+#: templates/layouts/circuit-new-modal.html:13
+#: templates/layouts/circuit-new-modal.html:51
+msgid "optional"
+msgstr "opcional"
+
+#: templates/layouts/circuit-new-modal.html:29
+msgid "Start adding places"
+msgstr "Empieza a agregar lugares"
+
+#: templates/layouts/circuit-new-modal.html:67
+msgid "Remix!"
+msgstr "¡Remix!"
+
+#: templates/layouts/embedded_footer.html:3
+msgid "Powered by"
+msgstr ""
+
+#: templates/layouts/footer.html:4
+msgid "Help"
+msgstr "Ayuda"
+
+#: templates/layouts/footer.html:6 templates/website/privacy_policy.html:12
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: templates/layouts/footer.html:7 templates/website/terms_of_use.html:11
+msgid "Terms of Use"
+msgstr "Términos de uso"
+
+#: templates/layouts/footer.html:9
+msgid "made in Perú."
+msgstr "hecho en Perú."
+
+#: templates/layouts/header.html:41
+msgid "My Routes"
+msgstr "Mis rutas"
+
+#: templates/layouts/header.html:42
+msgid "My Favorites"
+msgstr "Mis favoritos"
+
+#: templates/layouts/header.html:63 templates/layouts/header.html.py:102
+msgid "English"
+msgstr "English"
+
+#: templates/layouts/header.html:66
+msgid "Español"
+msgstr "Español"
+
+#: templates/layouts/header.html:70
+msgid "Log in"
+msgstr "Ingresa"
+
+#: templates/layouts/header.html:71
+#: templates/registration/company_registration_form.html:3
+#: templates/registration/pre_registration_with_social.html:4
+#: templates/registration/registration_form.html:4
+#: templates/social_reg_auth/twitter_register.html:4
+msgid "Register"
+msgstr "Registro"
+
+#: templates/layouts/header.html:81 templates/profile/sidebar_profile.html:6
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/layouts/header.html:86
+msgid "Logout"
+msgstr "Salir"
+
+#: templates/layouts/header.html:105
+msgid "Spanish"
+msgstr "Español"
+
+#: templates/layouts/header.html:122
+msgid "Search (e.g. Pizza, Chicago)"
+msgstr "Buscar (ej. Pizza, Chicago)"
+
+#: templates/profile/account_settings.html:4
+#, python-format
+msgid " %(name)s's profile "
+msgstr " perfil de %(name)s "
+
+#: templates/profile/account_settings.html:12
+msgid "Account Settings"
+msgstr "Configuración de cuenta"
+
+#: templates/profile/account_settings.html:34
+msgid "Change your password"
+msgstr "Cambiar contraseña"
+
+#: templates/profile/activity.html:4
+msgid "Activity"
+msgstr "Actividad"
+
+#: templates/profile/activity.html:11
+msgid "Recent activity"
+msgstr "Actividad reciente"
+
+#: templates/profile/activity.html:20
+msgid "Show more"
+msgstr "Mostrar mas"
+
+#: templates/profile/activity_item.html:6
+msgid "created"
+msgstr "creado"
+
+#: templates/profile/activity_item.html:10
+msgid "marked as favorite"
+msgstr "marcado como favorito"
+
+#: templates/profile/activity_item.html:22
+msgid "got added"
+msgstr "agregado"
+
+#: templates/profile/activity_item.html:26
+msgid "is following you"
+msgstr "te está siguiendo"
+
+#: templates/profile/categories_edit_modal.html:5
+msgid "Pick your <strong>preferred categories</strong>"
+msgstr "Escoge tus <strong>categorías preferidas</strong>"
+
+#: templates/profile/circuits.html:15
+msgid "Embed this user's routes"
+msgstr "Insertar las rutas de este usuario"
+
+#: templates/profile/circuits.html:30
+#: templates/profile/embedded_circuits.html:29
+msgid "No routes by this worldrat yet."
+msgstr "Este usuario aún no ha creado rutas."
+
+#: templates/profile/edit_profile.html:11
+msgid "Edit Profile"
+msgstr "Editar perfil"
+
+#: templates/profile/edit_profile.html:17
+msgid "Unlink Facebook"
+msgstr "Desenlazar de Facebook"
+
+#: templates/profile/edit_profile.html:24
+msgid "Unlink Twitter"
+msgstr "Desenlazar de Twitter"
+
+#: templates/profile/edit_profile.html:52
+msgid "First Name"
+msgstr "Nombre"
+
+#: templates/profile/edit_profile.html:55
+msgid "Last Name"
+msgstr "Apellido"
+
+#: templates/profile/embedded_circuits.html:11
+msgid "Routes by"
+msgstr "Rutas de"
+
+#: templates/profile/favorites.html:14
+msgid "Favs"
+msgstr "Favoritos"
+
+#: templates/profile/favorites.html:27
+msgid ""
+"\n"
+"    <p>This worldrat has <strong>no favorite routes</strong></p>\n"
+"    "
+msgstr ""
+"\n"
+"    <p>Este usuario no tiene <strong>rutas preferidas</strong></p>\n"
+"    "
+
+#: templates/profile/followers.html:25 templates/profile/following.html:25
+msgid "Already following"
+msgstr "Ya lo estás siguiendo"
+
+#: templates/profile/following.html:15
+msgid "Following"
+msgstr "Siguiendo a"
+
+#: templates/profile/show_profile.html:25
+msgid "Unfollow"
+msgstr "Dejar de seguir"
+
+#: templates/profile/show_profile.html:54
+msgid "Edit profile"
+msgstr "Editar perfil"
+
+#: templates/profile/show_profile.html:63
+msgid "Link with Facebook"
+msgstr "Enlazar con Facebook"
+
+#: templates/profile/show_profile.html:70
+msgid "Link with Twitter"
+msgstr "Enlazar con Twitter"
+
+#: templates/profile/show_profile.html:93
+msgid "Interested in"
+msgstr "Intereses"
+
+#: templates/profile/show_profile.html:101
+msgid "This worldrat has <strong>no preferred categories</strong>"
+msgstr "Este usuario no tiene <strong>categorías preferidas</strong>"
+
+#: templates/profile/show_profile.html:104
+msgid "Edit my category list"
+msgstr "Editar mi lista de categorías"
+
+#: templates/profile/sidebar_profile.html:5
+msgid "Favorites "
+msgstr "Favoritos"
+
+#: templates/profile/sidebar_profile.html:8
+msgid "Settings"
+msgstr "Configuración"
+
+#: templates/registration/activate.html:4
+msgid "Account activation"
+msgstr "Activación de cuenta"
+
+#: templates/registration/activate.html:7
+msgid "All your account are belong to us!"
+msgstr ""
+
+#: templates/registration/activation_email.txt:2
+msgid "Welcome to Worldrat."
+msgstr "Bienvenido a Worldrat."
+
+#: templates/registration/activation_email.txt:4
+msgid "Click on the following link to activate your account:"
+msgstr "Haz clic en el siguiente enlace para activar tu cuenta."
+
+#: templates/registration/activation_email.txt:8
+#, python-format
+msgid ""
+"\n"
+"This activation key will expire in %(expiration_days)s days, so, you know, "
+"hurry.\n"
+msgstr ""
+
+#: templates/registration/activation_email.txt:12
+msgid "The Rat King."
+msgstr ""
+
+#: templates/registration/company_registration_complete.html:5
+msgid "You've successfully registered your company!"
+msgstr "¡Has registrado con éxito a tu empresa!"
+
+#: templates/registration/company_registration_complete.html:6
+msgid ""
+"We'll be approving your invitation shortly and send you an activation link "
+"to the company mail you provided."
+msgstr ""
+"En breve aprobaremos tu invitación y enviaremos un enlace de activación al "
+"correo corporativo que ingresaste."
+
+#: templates/registration/company_registration_complete.html:8
+#: templates/registration/registration_complete.html:9
+msgid "Go home"
+msgstr "Inicio"
+
+#: templates/registration/company_registration_form.html:10
+msgid ""
+"You big rat, you. Leave your company info to join <strong>worldrat</strong>, "
+"corporate style."
+msgstr ""
+"Llena la información de tu empresa para unirte a <strong>worldrat</strong> "
+"al estilo corporativo."
+
+#: templates/registration/email_successfully_verified.html:5
+msgid "Verificación Exitosa"
+msgstr ""
+
+#: templates/registration/email_successfully_verified.html:6
+#, python-format
+msgid "%(first_name)s, el correo %(email)s ha sido exitosamente verificado."
+msgstr ""
+
+#: templates/registration/login.html:4 templates/registration/login.html:55
+#: templates/registration/password_reset_complete.html:10
+#: templates/website/welcome.html:9 templates/website/welcome.html.py:20
+#: templates/website/welcome.html:31 templates/website/welcome.html.py:42
+msgid "Login"
+msgstr "Entrar"
+
+#: templates/registration/login.html:10
+msgid "Come in"
+msgstr "Adelante"
+
+#: templates/registration/login.html:10
+msgid "rat."
+msgstr "rata."
+
+#: templates/registration/login.html:23
+msgid "Login with Facebook"
+msgstr "Entrar con Facebook"
+
+#: templates/registration/login.html:27
+msgid "Login with Twitter"
+msgstr "Entrar con Twitter"
+
+#: templates/registration/login.html:45
+msgid "Please enter a correct email and password."
+msgstr "Ingrese un email y una contraseña correctas."
+
+#: templates/registration/login.html:56
+#: templates/registration/reset_password.html:4
+msgid "Forgot your password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+#: templates/registration/password_change_form.html:4
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: templates/registration/password_change_form.html:8
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: templates/registration/password_change_form.html:18
+#: templates/registration/password_reset_confirm.html:17
+#: templates/registration/registration_form.html:41
+#: templates/social_reg_auth/twitter_register.html:66
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/registration/password_reset_complete.html:7
+msgid "Password changed"
+msgstr "Contraseña cambiada"
+
+#: templates/registration/password_reset_complete.html:9
+msgid ""
+"You've got a <strong>new password</strong>, let's see for <strong>how long "
+"you remember this one ;-)</strong>"
+msgstr ""
+"Ya tienes una <strong>nueva contraseña</strong>, veamos cuánto tiempo "
+"dura :-)"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/reset_password.html:22
+msgid "Reset password"
+msgstr "Nueva contraseña"
+
+#: templates/registration/pre_registration_with_social.html:11
+#: templates/registration/registration_form.html:11
+msgid "Register, because you're a <strong>worldrat</strong> and you know it."
+msgstr "Regístrate, porque eres un <strong>worldrat</strong> y lo sabes."
+
+#: templates/registration/pre_registration_with_social.html:17
+msgid "Register with Facebook"
+msgstr "Regístrate con Facebook"
+
+#: templates/registration/pre_registration_with_social.html:21
+msgid "Register with Twitter"
+msgstr "Regístrate con Twitter"
+
+#: templates/registration/pre_registration_with_social.html:27
+msgid "Or register using your e-mail address"
+msgstr "O regístrate usando tu correo electrónico"
+
+#: templates/registration/registration_complete.html:6
+msgid "You've successfully registered!"
+msgstr "¡Te has registrado con éxito!"
+
+#: templates/registration/registration_complete.html:7
+msgid "We have sent to your email an activation code."
+msgstr "Hemos enviado un código de activación a tu correo."
+
+#: templates/registration/registration_form.html:26
+#: templates/social_reg_auth/twitter_register.html:49
+msgid "Lastname"
+msgstr "Apellido"
+
+#: templates/registration/registration_form.html:31
+#: templates/registration/registration_form.html:33
+#: templates/social_reg_auth/twitter_register.html:54
+#: templates/social_reg_auth/twitter_register.html:56
+msgid "john@doe.com"
+msgstr "juan@perez.com"
+
+#: templates/registration/registration_form.html:38
+#: templates/social_reg_auth/twitter_register.html:61
+msgid "Retype your password"
+msgstr "Vuelve a escribir la contraseña"
+
+#: templates/registration/reset_done.html:4
+msgid "Password restored"
+msgstr "Contraseña reestablecida"
+
+#: templates/registration/reset_done.html:8
+msgid "Password reset"
+msgstr "Contraseña reestablecida"
+
+#: templates/registration/reset_done.html:10
+msgid ""
+"We've sent you an email with instructions to change your password to the "
+"address you provided. You'll receive it shortly."
+msgstr ""
+"Te hemos enviado un correo con instrucciones para cambiar tu contraseña."
+
+#: templates/registration/reset_password.html:12
+msgid "Lost your password?"
+msgstr "¿Perdiste tu contraseña?"
+
+#: templates/registration/reset_password.html:12
+msgid "What kind of rat are you?"
+msgstr "¿Qué clase de rata eres?"
+
+#: templates/registration/verification_email.txt:1
+#, python-format
+msgid "Hola %(first_name)s"
+msgstr ""
+
+#: templates/registration/verification_email.txt:3
+#, python-format
+msgid ""
+"Visita el enlace %(url)s para asociar este correo a tu cuenta de Worldrat."
+msgstr ""
+
+#: templates/search/search.html:13
+msgid ""
+"Whoops! We found <strong>no routes</strong> for this search (and we really "
+"tried!)"
+msgstr ""
+"¡Ups! <strong>No encontramos</strong> rutas para tu búsqueda (¡y realmente "
+"tratamos!)"
+
+#: templates/social_reg_auth/twitter_register.html:11
+msgid ""
+"To finish your registration with <strong>Twitter</strong> please fill in the "
+"following information."
+msgstr ""
+"Para terminar de registrarte usando <strong>Twitter</strong> llena esta "
+"información."
+
+#: templates/website/about_worldrat.html:4
+#: templates/website/about_worldrat.html:12
+msgid "About Worldrat"
+msgstr "Acerca de Worldrat"
+
+#: templates/website/about_worldrat.html:13
+msgid ""
+" The world is a <strong>big place.</strong>\n"
+"<strong>Worldrat</strong> was made for everyone who <strong>loves</strong>\n"
+" to explore it.\n"
+"\n"
+"<p>Everything you find on Worldrat has been created by another user like "
+"you, so you'll get the same experience you find in the real world when a "
+"friend recommends you where to go anywhere in the world, even in your own "
+"city.</p> "
+msgstr ""
+" El mundo es un lugar <strong>grande.</strong>\n"
+"<strong>Worldrat</strong> está hecho para aquellos a quienes les "
+"<strong>encanta</strong>\n"
+" explorarlo.\n"
+"\n"
+"<p>Todo lo que encuentres en Worldrat ha sido creado por otro usuario como "
+"tú, de ese modo tendrás la misma experiencia que encuentras en el mundo real "
+"cuando un amigo te recomienda un lugar para visitar en cualquier parte del "
+"mundo, incluso tu propia ciudad.</p> "
+
+#: templates/website/about_worldrat.html:19
+msgid "Find us on twitter as"
+msgstr "Encuéntranos en Twitter como"
+
+#: templates/website/about_worldrat.html:19
+msgid "or mail us at"
+msgstr "o escríbenos a"
+
+#: templates/website/privacy_policy.html:14
+msgid ""
+"\n"
+"<p>Last updated: July 2012</p>\n"
+"\n"
+"<p>This policy applies to worldrat.com, a site (\"Site\") provided by "
+"Landmarker S.A.C.</p>\n"
+"\n"
+"<p>Information we collect and how we use it</p>\n"
+"\n"
+"<h2>In order to provide our full range of services, we may collect the "
+"following types of information:</h2>\n"
+"\n"
+"<p><strong>Information you provide:</strong> When you sign up for an account "
+"with worldrat.com, we ask you for personal information (such as your "
+"username, email address and an account password). You do not need to "
+"register for an account or provide any personal information to us in order "
+"to use some features of the Site, such as browsing recommendations.</p>\n"
+"\n"
+"<p><strong>Cookies:</strong> When you visit worldrat.com, we send one or "
+"more cookies - a small file containing a string of characters to your "
+"computer - that uniquely identifies your browser. We use cookies to improve "
+"the quality of our service by storing user preferences and tracking user "
+"trends, such as how people use the site.</p>\n"
+"\n"
+"<p><strong>Log information:</strong> When you access worldrat.com, our "
+"servers automatically record information that your browser sends whenever "
+"you visit a website.These server logs may include information such as your "
+"web request, Internet Protocol address, browser type, browser language, the "
+"date and time of your request and one or more cookies that may uniquely "
+"identify your browser.</p>\n"
+"\n"
+"<p><strong>Login location:</strong> When you sign in to worldrat.com, we use "
+"your approximate physical location (based on the Internet Protocol address "
+"of your computer) to provide more relevant suggestions to you, such as "
+"places, guides or other members in your city or region. We will not use or "
+"store a location more specific than the city/region level for you without "
+"your explicit permission.</p>\n"
+"\n"
+"<p><strong>User communications:</strong> When you send email or other "
+"communications to worldrat.com, we may retain those communications in order "
+"to process your inquiries, respond to your requests and improve our services."
+"</p>\n"
+"\n"
+"<p><strong>Links:</strong> worldrat.com may present links in a format that "
+"enables us to keep track of whether these links have been followed. We use "
+"this information to improve the quality of our technology and customized "
+"content.</p>\n"
+"\n"
+"<p><strong>Other sites:</strong> This Privacy Policy applies to worldrat.com "
+"only. We do not exercise control over the sites displayed in recommendations "
+"or other external links you may find on our site. These other sites may "
+"place their own cookies or other files on your computer, collect data or "
+"solicit personal information from you.</p>\n"
+"\n"
+"<p>worldrat only processes personal information for the purposes described "
+"in this Privacy Policy. In addition to the above, such purposes include:</"
+"p>\n"
+"\n"
+"<p>Providing our Site to users, including the display of customized content;"
+"</p>\n"
+"\n"
+"<p>Auditing, research and analysis in order to maintain, protect and improve "
+"our Site;</p>\n"
+"\n"
+"<p>Ensuring the technical functioning of our network; and</p>\n"
+"\n"
+"<p>Developing new services.</p>\n"
+"\n"
+"<p>worldrat.com processes personal information on our servers in the United "
+"States of America and may in the future use servers in other countries.</p>\n"
+"\n"
+"<h2>Choices for personal information</h2>\n"
+"\n"
+"<p>When you sign up for worldrat.com, we ask you to provide personal "
+"information. If we use this information in a manner different than the "
+"purpose for which it was collected, then we will ask for your consent prior "
+"to such use.</p>\n"
+"\n"
+"<p>If we propose to use personal information for any purposes other than "
+"those described in this Privacy Policy, we will offer you an effective way "
+"to opt out of the use of personal information for those other purposes.</p>\n"
+"\n"
+"<p>Most browsers are initially set up to accept cookies, but you can reset "
+"your browser to refuse all cookies or to indicate when a cookie is being "
+"sent. However, some worldrat.com features and services may not function "
+"properly if your cookies are disabled.</p>\n"
+"\n"
+"<p>You can decline to submit personal information to worldrat.com, in which "
+"case you may not be able to use all of the features of the Site.</p>\n"
+"\n"
+"<h2>Information sharing</h2>\n"
+"\n"
+"<p>worldrat.com will only share personal information with other companies or "
+"individuals outside of worldrat.com in the following limited circumstances:</"
+"p>\n"
+"\n"
+"<p>When we have your consent. We require opt-in consent for the sharing of "
+"any sensitive personal information.</p>\n"
+"\n"
+"<p>When we have a good faith belief that access, use, preservation or "
+"disclosure of such information is reasonably necessary to (a) satisfy any "
+"applicable law, regulation, legal process or enforceable governmental "
+"request, (b) enforce applicable Terms of Service, including investigation of "
+"potential violations thereof, (c) detect, prevent, or otherwise address "
+"fraud, security or technical issues, or (d) protect against imminent harm to "
+"the rights, property or safety of worldrat.com, its users or the public as "
+"required or permitted by law.</p>\n"
+"\n"
+"<p>If worldrat.com becomes involved in a merger, acquisition, or any form of "
+"sale of some or all of its assets, we will provide notice before personal "
+"information is transferred and becomes subject to a different privacy policy."
+"</p>\n"
+"\n"
+"<p>We may share with third parties certain pieces of aggregated, non-"
+"personal information, such as the number of users who looked at a particular "
+"recommendation. Such information does not identify you individually.</p>\n"
+"\n"
+"<p>Please contact us through our feedback form at <a href=\"http://help."
+"worldrat.com\">help.worldrat.com</a> for any additional questions about the "
+"management or use of personal data.</p>\n"
+"\n"
+"<h2>Information security</h2>\n"
+"\n"
+"<p>We take appropriate security measures to protect against unauthorized "
+"access to or unauthorized alteration, disclosure or destruction of data. "
+"These include internal reviews of our data collection, storage and "
+"processing practices and security measures, as well as physical security "
+"measures to guard against unauthorized access to systems where we store "
+"personal data.</p>\n"
+"\n"
+"<p>We restrict access to personal information to worldrat.com employees, "
+"contractors and agents who need to know that information in order to "
+"operate, develop or improve our services. These individuals are bound by "
+"confidentiality obligations and may be subject to discipline, including "
+"termination and criminal prosecution, if they fail to meet these obligations."
+"</p>\n"
+"\n"
+"<h2>Data integrity</h2>\n"
+"\n"
+"<p>worldrat.com processes personal information only for the purposes for "
+"which it was collected and in accordance with this Privacy Policy or any "
+"applicable service-specific privacy notice. We review our data collection, "
+"storage and processing practices to ensure that we only collect, store and "
+"process the personal information needed to provide or improve our services. "
+"We take reasonable steps to ensure that the personal information we process "
+"is accurate, complete, and current, but we depend on our users to update or "
+"correct their personal information whenever necessary.</p>\n"
+"\n"
+"<h2>Accessing and updating personal information</h2>\n"
+"\n"
+"<p>When you use worldrat.com, we make good faith efforts to provide you with "
+"access to your personal information and either to correct this data if it is "
+"inaccurate or to delete such data at your request if it is not otherwise "
+"required to be retained by law or for legitimate business purposes. We ask "
+"individual users to identify themselves and the information requested to be "
+"accessed, corrected or removed before processing such requests, and we may "
+"decline to process requests that are unreasonably repetitive or systematic, "
+"require disproportionate technical effort, jeopardize the privacy of others, "
+"or would be extremely impractical (for instance, requests concerning "
+"information residing on backup tapes), or for which access is not otherwise "
+"required. In any case where we provide information access and correction, we "
+"perform this service free of charge, except if doing so would require a "
+"disproportionate effort."
+msgstr ""
+
+#: templates/website/terms_of_use.html:13
+msgid ""
+"\n"
+"<p>Last updated: July 2012</p>\n"
+"\n"
+"<p>These terms apply to worldrat.com, a site (\"Site\") provided by "
+"Landmarker S.A.C.</p>\n"
+"\n"
+"<h2>Your usage of worldrat.com</h2>\n"
+"\n"
+"<p>Thank you for your interest in worldrat.com. Be aware that by accessing "
+"the worldrat.com website, you are agreeing to abide by the Terms of Service "
+"(\"Terms\") set forth here. If you do not agree to these Terms, you should "
+"not use the site. worldrat.com reserves the right to change these Terms at "
+"any time without explicit notice, including the right to limit transmissions "
+"and/or storage, or charge for use. Thus, we recommend that you check the "
+"Terms periodically.</p>\n"
+"\n"
+"<p>worldrat.com grants you a limited license to use its Site in accordance "
+"with these Terms. We reserve the right to terminate your account at any time "
+"and for any reason, without prior notice to you. By using the worldrat.com "
+"Site, you acknowledge and agree that if we disable access to your account, "
+"you may be prevented from accessing the Site, including your account "
+"details, or any other content that is contained in your account.</p>\n"
+"\n"
+"<h2>Your responsibilities</h2>\n"
+"\n"
+"<p>You are solely responsible for your use of the Site, and by accessing the "
+"Site, you understand and agree that you use the Site at your own risk.</p>\n"
+"\n"
+"<p>worldrat.com is a repository of information. Thus, user-posted content "
+"does not represent the advice, views, opinions or beliefs of worldrat.com, "
+"and worldrat.com makes no claim of accuracy of any user-posted material.</"
+"p>\n"
+"\n"
+"<p>worldrat.com links to third-party websites. The linked websites' content, "
+"business practices and privacy policies are not under our control, and we "
+"are not responsible for the content of any linked website or any link "
+"contained in a linked website. The inclusion of a link on the Site does not "
+"imply any endorsement by or any affiliation with worldrat.com.</p>\n"
+"\n"
+"<p>By accessing the Site or following links to third-party websites you may "
+"be exposed to content that you consider offensive or inappropriate. While "
+"worldrat.com reserves the right to remove such content, you acknowledge and "
+"agree that worldrat.com cannot be responsible for such content and that you "
+"nonetheless may be exposed to such materials.</p>\n"
+"\n"
+"<p>In order to access certain features of the Site, you may be required to "
+"provide information about yourself (such as an email address) as part of the "
+"registration process for the Site. You agree that any registration "
+"information you give to worldrat.com will always be accurate, correct and up "
+"to date.</p>\n"
+"\n"
+"<p>You agree not to access (or attempt to access) any of the Site by any "
+"means other than through the interface provided by worldrat.com, unless you "
+"have been specifically allowed to do so in a separate agreement with "
+"worldrat.com. You specifically agree not to access (or attempt to access) "
+"any of the Site through any automated means (including use of scripts or web "
+"crawlers) and shall ensure that you comply with the instructions set out in "
+"any robots.txt file present on the Site. You agree that you will not engage "
+"in any activity that interferes with or disrupts the Site.</p>\n"
+"\n"
+"<p>Unless you have been specifically permitted to do so in a separate "
+"agreement with worldrat.com, you agree that you will not reproduce, "
+"duplicate, copy, sell, trade or resell any part of the Site for any purpose."
+"</p>\n"
+"\n"
+"<p>Content presented to you as part of the Site may be protected by "
+"intellectual property rights which are owned by the person providing that "
+"content to worldrat.com (or by other persons or companies on their behalf). "
+"You may not modify, rent, lease, loan, sell, distribute or create derivative "
+"works based on this content (either in whole or in part) unless you have "
+"been specifically told that you may do so by worldrat.com or by the owners "
+"of that content, in a separate agreement.</p>\n"
+"\n"
+"<p>You understand and agree that you are responsible for maintaining the "
+"confidentiality of passwords associated with any account you use to access "
+"the Site. Accordingly, you agree that you will be solely responsible for all "
+"activities that occur under your account. If you become aware of any "
+"unauthorized use of your password or of your account, you agree to notify "
+"worldrat.com immediately.</p>\n"
+"\n"
+"<p>You agree that you are solely responsible for any breach of your "
+"obligations under the Terms and for the consequences (including any loss or "
+"damage which worldrat.com may suffer) of any such breach.</p>\n"
+"\n"
+"<h2>Your content</h2>\n"
+"\n"
+"<p>You shall be solely responsible for the content (\"Content\") you submit "
+"through the Site. As part of submitting Content you affirm, represent, and/"
+"or warrant that you own or have the necessary licenses, rights, consents, "
+"and permissions to enable inclusion and use of the Content in the manner "
+"contemplated by the Site and these Terms.</p>\n"
+"\n"
+"<p>For clarity, you retain copyright and any other rights you already hold "
+"in any content which you submit, post or display on or through the Site. By "
+"submitting, posting or displaying Content, you give worldrat.com a license "
+"to display the Content on or through the Site. You agree that this license "
+"includes a right for worldrat.com to make such Content available to other "
+"companies, organizations or individuals with whom worldrat.com has "
+"relationships for the provision of syndicated services, and to use such "
+"Content in connection with the provision of those services.</p>\n"
+"\n"
+"<p>You understand and agree that worldrat.com, in performing the required "
+"technical steps to provide services to our users, may (a) transmit or "
+"distribute your Content over various public networks and in various media; "
+"and (b) make such changes to your Content as are necessary to conform and "
+"adapt that content to the technical requirements of connecting networks, "
+"devices, services or media.</p>\n"
+"\n"
+"<h2>Your privacy</h2>\n"
+"\n"
+"<p>For information about worldrat.com's data protection practices, please "
+"read the privacy policy at http://www.worldrat.com/privacy_policy.html. This "
+"policy explains how worldrat.com treats your personal information, and "
+"protects your privacy, when you use the Site. You agree to the use of your "
+"data in accordance with these privacy policies.</p>\n"
+"\n"
+"<h2>Our proprietary rights</h2>\n"
+"\n"
+"<p>You acknowledge and agree that worldrat.com owns all legal right, title "
+"and interest in and to the Site, including any intellectual property rights "
+"which subsist in the Site. Unless you have agreed otherwise in writing with "
+"worldrat.com, nothing in the Terms gives you a right to use any of worldrat."
+"com's trade names, trade marks, service marks, logos, domain names, and "
+"other distinctive brand features. You may not copy, modify, create a "
+"derivative work of, reverse engineer, decompile or otherwise attempt to "
+"extract the source code of the software or any part thereof, unless this is "
+"expressly permitted or required by law, or unless you have been specifically "
+"told that you may do so, in writing, by worldrat.com."
+msgstr ""
+
+#: templates/website/welcome.html:7
+msgid ""
+"The<strong> world</strong> is a big place, <strong>explore it</strong>. Say "
+"hello to <strong>Worldrat!</strong>"
+msgstr ""
+"El<strong> mundo</strong> es grande, <strong>explóralo</strong>. ¡Esto es "
+"<strong>Worldrat!</strong>"
+
+#: templates/website/welcome.html:9 templates/website/welcome.html.py:20
+#: templates/website/welcome.html:31 templates/website/welcome.html.py:42
+msgid "Register today"
+msgstr "Registro"
+
+#: templates/website/welcome.html:9 templates/website/welcome.html.py:31
+#: templates/website/welcome.html:42
+msgid "Already a rat?"
+msgstr "¿Ya tienes una cuenta?"
+
+#: templates/website/welcome.html:17
+msgid ""
+"\n"
+"    <h1>Become a <strong>worldrat</strong>. Visit all the <strong>places</"
+"strong> in the routes that you discover or that Worldrat <strong>recommends</"
+"strong></h1>"
+msgstr ""
+"\n"
+"    <h1>Sé un <strong>worldrat</strong>. Visita los <strong>lugares</strong> "
+"que descubres o que Worldrat <strong>recomienda.</strong></h1>"
+
+#: templates/website/welcome.html:20
+msgid "Already a worldrat?"
+msgstr "¿Ya estás registrado?"
+
+#: templates/website/welcome.html:28
+msgid ""
+"\n"
+"    <h1>Fell in<strong> love</strong> with a route? Mark it as a "
+"<strong>favorite</strong>. Pure rat love.</h1>"
+msgstr ""
+"\n"
+"    <h1>¿Te <strong>encantó</strong> una ruta? Añádela a tus "
+"<strong>favoritos</strong>. Amor ratuno.</h1>"
+
+#: templates/website/welcome.html:39
+msgid ""
+"\n"
+"    <h1>Think a route could be much better?<br/> You've got what it takes to "
+"make it perfect. <strong>Remix</strong> it. It's the<strong> Worldrat way!</"
+"strong></h1>"
+msgstr ""
+"\n"
+"    <h1>¿Te parece que una ruta podría ser mucho mejor?<br/> Puedes hacerla "
+"perfecta. Haz un <strong>remix</strong> de ella. ¡Así lo hacemos en "
+"<strong>Worldrat!</strong></h1>"
+
+#: templates/website/who_we_are.html:4
+msgid "Who We are"
+msgstr "Quiénes somos"
+
+#: templates/widgets/new_route_button.html:3
+msgid "New route"
+msgstr "Nueva ruta"
+
+#, fuzzy
+#~ msgid "Email address"
+#~ msgstr "Dirección de email inválida"
+
+#~ msgid "A user with that username already exists."
+#~ msgstr "Ese nombre de usuario ya está tomado."
+
+#~ msgid "The two password fields didn't match."
+#~ msgstr "Los campos de contraseña no coinciden."
+
+#~ msgid "Sorry rat, still no <strong>recommended</strong> routes in here."
+#~ msgstr ""
+#~ "Lo sentimos, rata, aún no hay rutas <strong>recomendadas</strong> aquí."
+
+#~ msgid "Recommended"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "Adult Content"
+#~ msgstr "Contenido para adultos"
+
+#~ msgid "(We'll use it to improve your recommendations)"
+#~ msgstr "(Lo usaremos para mejorar tus recomendaciones)"
+
+#~ msgid "Or register with Worldrat"
+#~ msgstr "O regístrate con Worldrat"
+
+#, fuzzy
+#~ msgid " Why this stop? <small class=\"opt\">(optional)</small>  "
+#~ msgstr ""
+#~ " \"¿Por qué esta parada? <small class=\"opt\">(opcional)</small>\"  "
+
+#~ msgid " \"Why this stop? <small class=\"opt\">(optional)</small>\"  "
+#~ msgstr "¿Por qué esta parada? <small class=\"opt\">(opcional)</small>  "
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Quick links"
+#~ msgstr "Enlaces rápidos"
+
+#~ msgid "Return to site"
+#~ msgstr "Regresar a la página"
+
+#, fuzzy
+#~ msgid "Log out"
+#~ msgstr "Cerrar sesión"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicaciones"
+
+#~ msgid "Administration"
+#~ msgstr "Administración"
+
+#~ msgid "Recent Actions"
+#~ msgstr "Actividad reciente"
+
+#~ msgid "Latest Django News"
+#~ msgstr "Noticias recientes de Django"
+
+#~ msgid "Support"
+#~ msgstr "Soporte"
+
+#~ msgid "Django documentation"
+#~ msgstr "Documentación de Django"
+
+#~ msgid "Django \"django-users\" mailing list"
+#~ msgstr "Lista de correos \"django-users\" de Django"
+
+#~ msgid "Django irc channel"
+#~ msgstr "Canal irc de Django"
+
+#~ msgid "Links"
+#~ msgstr "Enlaces"
+
+#~ msgid "No recent actions."
+#~ msgstr "Actividad reciente"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS"
+
+#~ msgid "Home"
+#~ msgstr "Inicia"
+
+#~ msgid "%(name)s"
+#~ msgstr "%(name)s"
+
+#~ msgid "Modules"
+#~ msgstr "Módulos"
+
+#~ msgid "Add"
+#~ msgstr "Añadir"
+
+#~ msgid "Change"
+#~ msgstr "Cambiar"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Favoritos"
+
+#~ msgid "Django site admin"
+#~ msgstr "Admin de Django"
+
+#~ msgid "Django administration"
+#~ msgstr "Administración Django"
+
+#~ msgid "Please enter a name for the bookmark"
+#~ msgstr "Por favor, ingrese un nombre para el marcador"
+
+#~ msgid "Welcome,"
+#~ msgstr "Bienvenido,"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentación"
+
+#~ msgid "Cache: %.2fms"
+#~ msgstr "Caché: %.2fms"
+
+#~ msgid "Cache Usage"
+#~ msgstr "Uso de caché"
+
+#~ msgid "HTTP Headers"
+#~ msgstr "Cabeceras HTTP"
+
+#~ msgid "Logging"
+#~ msgstr "Registro"
+
+#~ msgid "Log Messages"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "Profiling"
+#~ msgstr "Perfil"
+
+#~ msgid "Request Vars"
+#~ msgstr "Variables de petición"
+
+#~ msgid "Settings from <code>%s</code>"
+#~ msgstr "Ajustes de <code>%s</code>"
+
+#~ msgid "Signals"
+#~ msgstr "Señales"
+
+#~ msgid "SQL"
+#~ msgstr "SQL"
+
+#~ msgid "Templates"
+#~ msgstr "Templates"
+
+#~ msgid "Templates (%(num_templates)s rendered)"
+#~ msgstr "Templates (%(num_templates)s renderizados)"
+
+#~ msgid "Resource Usage"
+#~ msgstr "Uso de recursos"
+
+#~ msgid "User CPU time"
+#~ msgstr "Tiempo de CPU del usuario"
+
+#~ msgid "System CPU time"
+#~ msgstr "Tiempo de CPU del sistema"
+
+#~ msgid "Total CPU time"
+#~ msgstr "Tiempo CPU total"
+
+#, fuzzy
+#~ msgid "Context switches"
+#~ msgstr "Tipo de lugar"
+
+#, fuzzy
+#~ msgid "Versions"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "Hide Toolbar"
+#~ msgstr "Mostrar barra de herramientas"
+
+#~ msgid "Show Toolbar"
+#~ msgstr "Mostrar barra de herramientas"
+
+#, fuzzy
+#~ msgid "Total Time"
+#~ msgstr "Tiempo CPU total"
+
+#~ msgid "Function"
+#~ msgstr "Función"
+
+#, fuzzy
+#~ msgid "Channel"
+#~ msgstr "Cambiar"
+
+#, fuzzy
+#~ msgid "Message"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "No messages logged"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "TotTime"
+#~ msgstr "Tiempo CPU total"
+
+#, fuzzy
+#~ msgid "Count"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "View information"
+#~ msgstr "Duracion de la visita"
+
+#, fuzzy
+#~ msgid "View Function"
+#~ msgstr "Función"
+
+#, fuzzy
+#~ msgid "Setting"
+#~ msgstr "Configuración"
+
+#, fuzzy
+#~ msgid "Signal"
+#~ msgstr "Señales"
+
+#, fuzzy
+#~ msgid "Action"
+#~ msgstr "Locación"
+
+#, fuzzy
+#~ msgid "SQL Profiled"
+#~ msgstr "Perfil"
+
+#, fuzzy
+#~ msgid "Template Source"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "Template path"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "Template"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "Toggle Context"
+#~ msgstr "Contexto"
+
+#, fuzzy
+#~ msgid "Context processor"
+#~ msgstr "Tipo de lugar"
+
+#, fuzzy
+#~ msgid "Resource"
+#~ msgstr "Uso de recursos"
+
+#, fuzzy
+#~ msgid "Version"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "Bosnian"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "British English"
+#~ msgstr "Publicado"
+
+#, fuzzy
+#~ msgid "Estonian"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Basque"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "Persian"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "Polish"
+#~ msgstr "Publicado"
+
+#, fuzzy
+#~ msgid "Romanian"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Slovenian"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Albanian"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Tatar"
+#~ msgstr "Imagen de perfil"
+
+#, fuzzy
+#~ msgid "Vietnamese"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "This month"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "This year"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please enter the correct username and password for a staff account. Note "
+#~ "that both fields are case-sensitive."
+#~ msgstr "Ingrese un email y una contraseña correctas"
+
+#, fuzzy
+#~ msgid "Action:"
+#~ msgstr "Locación"
+
+#, fuzzy
+#~ msgid "action time"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "object id"
+#~ msgstr "Mostrar mas"
+
+#, fuzzy
+#~ msgid "object repr"
+#~ msgstr "Mostrar mas"
+
+#, fuzzy
+#~ msgid "action flag"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "change message"
+#~ msgstr "Uso de caché"
+
+#, fuzzy
+#~ msgid "log entry"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "log entries"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "Changed %s."
+#~ msgstr "Cambiar contraseña"
+
+#, fuzzy
+#~ msgid "Added %(name)s \"%(object)s\"."
+#~ msgstr "%(name)s"
+
+#, fuzzy
+#~ msgid "No fields changed."
+#~ msgstr "Registro de lugar terminado"
+
+#, fuzzy
+#~ msgid "The %(name)s \"%(obj)s\" was added successfully."
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "The %(name)s \"%(obj)s\" was changed successfully."
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid ""
+#~ "The %(name)s \"%(obj)s\" was added successfully. You may edit it again "
+#~ "below."
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "No action selected."
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "Add %s"
+#~ msgstr "%(name)s"
+
+#, fuzzy
+#~ msgid "Change %s"
+#~ msgstr "Cambiar contraseña"
+
+#, fuzzy
+#~ msgid "%(count)s %(name)s was changed successfully."
+#~ msgid_plural "%(count)s %(name)s were changed successfully."
+#~ msgstr[0] "Contraseña (otra vez)"
+#~ msgstr[1] "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "Change history: %s"
+#~ msgstr "Foto de ruta"
+
+#, fuzzy
+#~ msgid "Site administration"
+#~ msgstr "Duracion de la visita"
+
+#, fuzzy
+#~ msgid "%s administration"
+#~ msgstr "Administración"
+
+#, fuzzy
+#~ msgid "Run the selected action"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "Clear selection"
+#~ msgstr "Idioma"
+
+#, fuzzy
+#~ msgid "View on site"
+#~ msgstr "Regresar a la página"
+
+#, fuzzy
+#~ msgid "Add %(name)s"
+#~ msgstr "%(name)s"
+
+#, fuzzy
+#~ msgid "Remove from sorting"
+#~ msgstr "Quitar de mis favoritos"
+
+#, fuzzy
+#~ msgid "Toggle sorting"
+#~ msgstr "Rating de ruta"
+
+#, fuzzy
+#~ msgid "My Actions"
+#~ msgstr "Locación"
+
+#, fuzzy
+#~ msgid "Unknown content"
+#~ msgstr "Tipo de lugar"
+
+#, fuzzy
+#~ msgid "Username:"
+#~ msgstr "Usuario"
+
+#, fuzzy
+#~ msgid "Password:"
+#~ msgstr "Contraseña"
+
+#, fuzzy
+#~ msgid "Forgotten your password or username?"
+#~ msgstr "Cambiar contraseña"
+
+#, fuzzy
+#~ msgid "Date/time"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "Show all"
+#~ msgstr "Mostrar barra de herramientas"
+
+#, fuzzy
+#~ msgid "Enter a username and password."
+#~ msgstr "Ingresa la contraseña nueva"
+
+#, fuzzy
+#~ msgid "Add another %(verbose_name)s"
+#~ msgstr "El equipo de %(site_name)s"
+
+#~ msgid "Log in again"
+#~ msgstr "Ingresa otra vez"
+
+#~ msgid "Password change"
+#~ msgstr "Cambio de contraseña"
+
+#~ msgid "Password change successful"
+#~ msgstr "Cambio de contraseña exitoso"
+
+#~ msgid "Your password was changed."
+#~ msgstr "Tu contraseña fue cambiada."
+
+#, fuzzy
+#~ msgid ""
+#~ "Please enter your old password, for security's sake, and then enter your "
+#~ "new password twice so we can verify you typed it in correctly."
+#~ msgstr ""
+#~ "Por favor, ingresa tu nueva contraseña dos veces para que podamos "
+#~ "verificar que lo hiciste correctamente."
+
+#~ msgid "Old password"
+#~ msgstr "Contraseña antigua"
+
+#~ msgid "New password"
+#~ msgstr "Contraseña nueva"
+
+#~ msgid "Change my password"
+#~ msgstr "Cambiar contraseña"
+
+#~ msgid "Password reset complete"
+#~ msgstr "Reestablecimiento de contraseña completo"
+
+#~ msgid "Password reset confirmation"
+#~ msgstr "Confirmación de reestablecimiento de contraseña"
+
+#~ msgid "Enter new password"
+#~ msgstr "Ingresa la contraseña nueva"
+
+#~ msgid ""
+#~ "Please enter your new password twice so we can verify you typed it in "
+#~ "correctly."
+#~ msgstr ""
+#~ "Por favor, ingresa tu nueva contraseña dos veces para que podamos "
+#~ "verificar que lo hiciste correctamente."
+
+#~ msgid "New password:"
+#~ msgstr "Contraseña nueva:"
+
+#~ msgid "Confirm password:"
+#~ msgstr "Confirmar contraseña:"
+
+#~ msgid "Password reset unsuccessful"
+#~ msgstr "Reestablecimiento de contraseña fallido"
+
+#~ msgid ""
+#~ "The password reset link was invalid, possibly because it has already been "
+#~ "used.  Please request a new password reset."
+#~ msgstr ""
+#~ "El enlace de reestablecimiento de contraseña fue inválido. Probablemente "
+#~ "ya ha sido utilizado. Por favor, solicita nuevamente un reestablecimiento "
+#~ "de contraseña"
+
+#~ msgid "Password reset successful"
+#~ msgstr "Reestablecimiento de contraseña exitoso"
+
+#~ msgid ""
+#~ "We've e-mailed you instructions for setting your password to the e-mail "
+#~ "address you submitted. You should be receiving it shortly."
+#~ msgstr ""
+#~ "Hemos enviado a tu correo electrónico instrucciones para establecer tu "
+#~ "contraseña. Deberías recibirlas en breve."
+
+#~ msgid ""
+#~ "You're receiving this e-mail because you requested a password reset for "
+#~ "your user account at %(site_name)s."
+#~ msgstr ""
+#~ "Has recibido este correo porque solicitaste un reestablecimiento de "
+#~ "contraseña para tu cuenta de usuario en %(site_name)s."
+
+#~ msgid "Please go to the following page and choose a new password:"
+#~ msgstr "Por favor, ve a la siguiente página y escoge una contraseña nueva:"
+
+#~ msgid "Your username, in case you've forgotten:"
+#~ msgstr "Tu nombre de usuario, en caso de que lo hayas olvidado."
+
+#~ msgid "Thanks for using our site!"
+#~ msgstr "¡Gracias por usar nuestra página!"
+
+#~ msgid "The %(site_name)s team"
+#~ msgstr "El equipo de %(site_name)s"
+
+#~ msgid ""
+#~ "Forgotten your password? Enter your e-mail address below, and we'll e-"
+#~ "mail instructions for setting a new one."
+#~ msgstr ""
+#~ "¿Se te olvidó la contraseña? Ingresa tu correo electrónico abajo y te "
+#~ "enviaremos instrucciones para establecer una nueva."
+
+#~ msgid "E-mail address:"
+#~ msgstr "Dirección de correo:"
+
+#~ msgid "Reset my password"
+#~ msgstr "Reestablecer mi contraseña"
+
+#, fuzzy
+#~ msgid "Bookmarklets"
+#~ msgstr "Favoritos"
+
+#, fuzzy
+#~ msgid "Documentation bookmarklets"
+#~ msgstr "Documentación"
+
+#, fuzzy
+#~ msgid "Documentation for this page"
+#~ msgstr "Documentación"
+
+#, fuzzy
+#~ msgid "Show object ID"
+#~ msgstr "Mostrar mas"
+
+#, fuzzy
+#~ msgid "Permissions"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "Password changed successfully."
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "Change password: %s"
+#~ msgstr "Cambiar contraseña"
+
+#, fuzzy
+#~ msgid "Password confirmation"
+#~ msgstr "Contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please enter a correct username and password. Note that both fields are "
+#~ "case-sensitive."
+#~ msgstr "Ingrese un email y una contraseña correctas"
+
+#, fuzzy
+#~ msgid "New password confirmation"
+#~ msgstr "Nueva contraseña (otra vez)"
+
+#, fuzzy
+#~ msgid "iterations"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "name"
+#~ msgstr "Nombre largo"
+
+#, fuzzy
+#~ msgid "codename"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "permission"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "permissions"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "username"
+#~ msgstr "Nombre de ruta"
+
+#~ msgid "last name"
+#~ msgstr "apellido"
+
+#, fuzzy
+#~ msgid "e-mail address"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "password"
+#~ msgstr "Contraseña"
+
+#, fuzzy
+#~ msgid "staff status"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "active"
+#~ msgstr "Actividad"
+
+#, fuzzy
+#~ msgid "last login"
+#~ msgstr "Nombre del lugar"
+
+#, fuzzy
+#~ msgid "user"
+#~ msgstr "ID de usuario"
+
+#, fuzzy
+#~ msgid "users"
+#~ msgstr "ID de usuario"
+
+#, fuzzy
+#~ msgid "Logged out"
+#~ msgstr "Cerrar sesión"
+
+#, fuzzy
+#~ msgid "Enter a valid e-mail address."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Password reset on %(site_name)s"
+#~ msgstr "Contraseña"
+
+#, fuzzy
+#~ msgid "Content"
+#~ msgstr "Contexto"
+
+#, fuzzy
+#~ msgid "Flag selected comments"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "approved"
+#~ msgid_plural "approved"
+#~ msgstr[0] "Aprovado"
+#~ msgstr[1] "Aprovado"
+
+#, fuzzy
+#~ msgid "Approve selected comments"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "removed"
+#~ msgid_plural "removed"
+#~ msgstr[0] "Aprovado"
+#~ msgstr[1] "Aprovado"
+
+#, fuzzy
+#~ msgid "Remove selected comments"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "%(site_name)s comments"
+#~ msgstr "El equipo de %(site_name)s"
+
+#, fuzzy
+#~ msgid "Latest comments on %(site_name)s"
+#~ msgstr "Contraseña"
+
+#, fuzzy
+#~ msgid "Comment"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "content type"
+#~ msgstr "Tipo de lugar"
+
+#, fuzzy
+#~ msgid "object ID"
+#~ msgstr "Mostrar mas"
+
+#, fuzzy
+#~ msgid "user's name"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "user's URL"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "comment"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "is removed"
+#~ msgstr "Aprovado"
+
+#, fuzzy
+#~ msgid "comments"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "comment flag"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "comment flags"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "Approve a comment"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "Approve"
+#~ msgstr "Aprovado"
+
+#, fuzzy
+#~ msgid "Thanks for approving"
+#~ msgstr "¡Gracias por usar nuestra página!"
+
+#, fuzzy
+#~ msgid "Remove a comment"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "Really remove this comment?"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "Thanks for removing"
+#~ msgstr "¡Gracias por usar nuestra página!"
+
+#, fuzzy
+#~ msgid "Thanks for flagging"
+#~ msgstr "¡Gracias por usar nuestra página!"
+
+#, fuzzy
+#~ msgid "Thanks for commenting"
+#~ msgstr "¡Gracias por usar nuestra página!"
+
+#, fuzzy
+#~ msgid "Thank you for your comment"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "Preview your comment"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "Post your comment"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "or make changes"
+#~ msgstr "Cambio de contraseña"
+
+#, fuzzy
+#~ msgid "content types"
+#~ msgstr "Tipo de lugar"
+
+#, fuzzy
+#~ msgid "URL is missing a leading slash."
+#~ msgstr "Ruta (sin dominio ni slashes al final)"
+
+#, fuzzy
+#~ msgid "URL is missing a trailing slash."
+#~ msgstr "Ruta (sin dominio ni slashes al final)"
+
+#, fuzzy
+#~ msgid "enable comments"
+#~ msgstr "Aprobar invitaciones"
+
+#, fuzzy
+#~ msgid "template name"
+#~ msgstr "Nombre del lugar"
+
+#, fuzzy
+#~ msgid "registration required"
+#~ msgstr "Perfil de usuario"
+
+#, fuzzy
+#~ msgid "first step"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "prev step"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "submit"
+#~ msgstr "Enviar"
+
+#, fuzzy
+#~ msgid "No feeds are registered."
+#~ msgstr "Registro de lugar terminado"
+
+#, fuzzy
+#~ msgid "Geometry collection"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "yesterday"
+#~ msgstr "Registro"
+
+#, fuzzy
+#~ msgid "st"
+#~ msgstr "Nextstop"
+
+#, fuzzy
+#~ msgid "one"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "a minute ago"
+#~ msgid_plural "%(count)s minutes ago"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "an hour ago"
+#~ msgid_plural "%(count)s hours ago"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "a minute from now"
+#~ msgid_plural "%(count)s minutes from now"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "This field requires only numbers."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "This field requires 7 or 8 digits."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "Tyrol"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "This field requires at most 11 digits or 14 characters."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "This field requires at least 14 digits"
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "Uri"
+#~ msgstr "Usuario"
+
+#, fuzzy
+#~ msgid "Enter a valid Chilean RUT."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "The Chilean RUT is not valid."
+#~ msgstr "Esta dirección de email %(email)s es inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid phone number."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid cell number."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid birth number."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid IC number."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Basque Country"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "Enter a valid postcode."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "County Antrim"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "County Armagh"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "County Down"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "County Fermanagh"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "County Londonderry"
+#~ msgstr "Código de país"
+
+#, fuzzy
+#~ msgid "County Tyrone"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "Enter a valid 11 digit OIB"
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid location code"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid 5 digit postal code"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid phone number"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid area or mobile network code"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid post code"
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid NIK/KTP number"
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Banten"
+#~ msgstr "Contexto"
+
+#, fuzzy
+#~ msgid "Antrim"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "Armagh"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "Donegal"
+#~ msgstr "Hecho"
+
+#, fuzzy
+#~ msgid "Down"
+#~ msgstr "Voto negativo"
+
+#, fuzzy
+#~ msgid "Fermanagh"
+#~ msgstr "País"
+
+#, fuzzy
+#~ msgid "Leitrim"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "Roscommon"
+#~ msgstr "Recomendaciones"
+
+#, fuzzy
+#~ msgid "Tyrone"
+#~ msgstr "Paises"
+
+#, fuzzy
+#~ msgid "Enter a valid ID number."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid zip code."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid Social Security number."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid VAT number."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Mie"
+#~ msgstr "Mis Rutas"
+
+#, fuzzy
+#~ msgid "This field should contain exactly 13 digits."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "The UMCN is not valid."
+#~ msgstr "La dirección de email es inválida"
+
+#, fuzzy
+#~ msgid "Kratovo"
+#~ msgstr "Nombre"
+
+#, fuzzy
+#~ msgid "Rosoman"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Tetovo"
+#~ msgstr "Nombre"
+
+#, fuzzy
+#~ msgid "Enter a valid RFC."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid CURP."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Morelos"
+#~ msgstr "Mas rutas"
+
+#, fuzzy
+#~ msgid "Enter a valid postal code"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid SoFi number"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Drenthe"
+#~ msgstr "Padre"
+
+#, fuzzy
+#~ msgid "This field requires 8 digits."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "This field requires 11 digits."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "Kuyavia-Pomerania"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Pomerania"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "West Pomerania"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Enter a valid CIF."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid CNP."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "The EMSO is not valid."
+#~ msgstr "La dirección de email es inválida"
+
+#, fuzzy
+#~ msgid "Namestovo"
+#~ msgstr "Nombre"
+
+#, fuzzy
+#~ msgid "Sobrance"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Zlate Moravce"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "Enter a valid CI number."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Free State"
+#~ msgstr "Estado"
+
+#, fuzzy
+#~ msgid "lazy message"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "redirect from"
+#~ msgstr "Redigir a"
+
+#, fuzzy
+#~ msgid "redirect to"
+#~ msgstr "Redigir a"
+
+#, fuzzy
+#~ msgid "redirect"
+#~ msgstr "Redigir a"
+
+#, fuzzy
+#~ msgid "redirects"
+#~ msgstr "Redirecciones"
+
+#, fuzzy
+#~ msgid "session"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "sessions"
+#~ msgstr "Ratings de la ruta"
+
+#, fuzzy
+#~ msgid "domain name"
+#~ msgstr "Nombre largo"
+
+#, fuzzy
+#~ msgid "display name"
+#~ msgstr "Nombre del lugar"
+
+#, fuzzy
+#~ msgid "site"
+#~ msgstr "Sitio web"
+
+#, fuzzy
+#~ msgid "sites"
+#~ msgstr "Sitio web"
+
+#, fuzzy
+#~ msgid "Enter a valid value."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid URL."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid IPv4 address."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid IPv6 address."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid IPv4 or IPv6 address."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Value %r is not a valid choice."
+#~ msgstr "La dirección de email es inválida"
+
+#, fuzzy
+#~ msgid "This field cannot be null."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "This field cannot be blank."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "Date (without time)"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "E-mail address"
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "File path"
+#~ msgstr "Templates"
+
+#, fuzzy
+#~ msgid "IPv4 address"
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "One-to-one relationship"
+#~ msgstr "Relación con PlaceType"
+
+#, fuzzy
+#~ msgid "Many-to-many relationship"
+#~ msgstr "Relación con PlaceType"
+
+#~ msgid "This field is required."
+#~ msgstr "Este campo es obligatorio."
+
+#, fuzzy
+#~ msgid "Enter a valid date."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Enter a valid time."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a valid date/time."
+#~ msgstr "Dirección de email inválida"
+
+#, fuzzy
+#~ msgid "Enter a list of values."
+#~ msgstr "Dirección IP"
+
+#, fuzzy
+#~ msgid "Mon"
+#~ msgstr "en"
+
+#, fuzzy
+#~ msgid "Fri"
+#~ msgstr "Usuario"
+
+#, fuzzy
+#~ msgid "Sat"
+#~ msgstr "Estado"
+
+#, fuzzy
+#~ msgid "May"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "mar"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "may"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgctxt "abbrev. month"
+#~ msgid "May"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgctxt "alt. month"
+#~ msgid "May"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "or"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "year"
+#~ msgid_plural "years"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "month"
+#~ msgid_plural "months"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "week"
+#~ msgid_plural "weeks"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "day"
+#~ msgid_plural "days"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "hour"
+#~ msgid_plural "hours"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "minute"
+#~ msgid_plural "minutes"
+#~ msgstr[0] ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ msgstr[1] "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "minutes"
+#~ msgstr "Rutas"
+
+#, fuzzy
+#~ msgid "\"%(path)s\" does not exist"
+#~ msgstr "El usuario no existe"
+
+#, fuzzy
+#~ msgid "The %(verbose_name)s was created successfully."
+#~ msgstr "El equipo de %(site_name)s"
+
+#, fuzzy
+#~ msgid "The %(verbose_name)s was updated successfully."
+#~ msgstr "El equipo de %(site_name)s"
+
+#, fuzzy
+#~ msgid "The %(verbose_name)s was deleted."
+#~ msgstr "El equipo de %(site_name)s"
+
+#, fuzzy
+#~ msgid "No %(verbose_name_plural)s available"
+#~ msgstr "El equipo de %(site_name)s"
+
+#, fuzzy
+#~ msgid "Albania"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Djibouti"
+#~ msgstr "Acerca de"
+
+#, fuzzy
+#~ msgid "Estonia"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "France"
+#~ msgstr "Cancelar"
+
+#, fuzzy
+#~ msgid "Qatar"
+#~ msgstr "Imagen de perfil"
+
+#, fuzzy
+#~ msgid "Romania"
+#~ msgstr "Romance"
+
+#, fuzzy
+#~ msgid "Russian Federation"
+#~ msgstr "Duracion de la visita"
+
+#, fuzzy
+#~ msgid "Senegal"
+#~ msgstr "Hecho"
+
+#, fuzzy
+#~ msgid "Suriname"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "United Arab Emirates"
+#~ msgstr "Estados"
+
+#, fuzzy
+#~ msgid "United States"
+#~ msgstr "Estados"
+
+#, fuzzy
+#~ msgid "Viet Nam"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "modified"
+#~ msgstr "Modificado"
+
+#, fuzzy
+#~ msgid "description"
+#~ msgstr "Descripción"
+
+#, fuzzy
+#~ msgid "Inactive"
+#~ msgstr "Actividad"
+
+#, fuzzy
+#~ msgid "Active"
+#~ msgstr "Actividad"
+
+#, fuzzy
+#~ msgid "status"
+#~ msgstr "Estado"
+
+#, fuzzy
+#~ msgid "state"
+#~ msgstr "Estado"
+
+#, fuzzy
+#~ msgid "Task detail"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "Revoke selected tasks"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "Terminate selected tasks"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "Kill selected tasks"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "Rate limit selected tasks"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "Rate limit selection"
+#~ msgstr "Colección de rutas"
+
+#, fuzzy
+#~ msgid "task id"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "task status"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "task meta"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "taskset meta"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "Minutes"
+#~ msgstr "Mis Rutas"
+
+#, fuzzy
+#~ msgid "Useful description"
+#~ msgstr "Descripción de ruta"
+
+#, fuzzy
+#~ msgid "task name"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "exchange"
+#~ msgstr "Cambiar"
+
+#, fuzzy
+#~ msgid "hostname"
+#~ msgstr "Nombre corto"
+
+#, fuzzy
+#~ msgid "last heartbeat"
+#~ msgstr "Nombre del lugar"
+
+#, fuzzy
+#~ msgid "execution time"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "task"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "tasks"
+#~ msgstr "Nombre de ruta"
+
+#, fuzzy
+#~ msgid "%(minutes)d minute ago"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "%(minutes)d minutes ago"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "yesterday at %(time)s"
+#~ msgstr "Registro"
+
+#, fuzzy
+#~ msgid "years"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "months"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "weeks"
+#~ msgstr ""
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+#~ "#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#, fuzzy
+#~ msgid "Rate limit"
+#~ msgstr "No me gusta"
+
+#, fuzzy
+#~ msgid "message"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "messages"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "Activate users"
+#~ msgstr "Actividad"
+
+#, fuzzy
+#~ msgid "Re-send activation emails"
+#~ msgstr "¿Se envió el correo de activación?"
+
+#, fuzzy
+#~ msgid "activation key"
+#~ msgstr "Configuración de cuenta"
+
+#, fuzzy
+#~ msgid "registration profile"
+#~ msgstr "Perfil de usuario"
+
+#, fuzzy
+#~ msgid "registration profiles"
+#~ msgstr "Perfiles de usuario"
+
+#, fuzzy
+#~ msgid "Language selection"
+#~ msgstr "Idioma"
+
+#, fuzzy
+#~ msgid "Project"
+#~ msgstr "Mostrar mas"
+
+#, fuzzy
+#~ msgid "Application"
+#~ msgstr "Locación"
+
+#, fuzzy
+#~ msgid "Messages"
+#~ msgstr "Mensajes de registro"
+
+#, fuzzy
+#~ msgid "Translated"
+#~ msgstr "Interesado en"
+
+#, fuzzy
+#~ msgid "Display:"
+#~ msgstr "Nombre del lugar"
+
+#, fuzzy
+#~ msgid "Untranslated only"
+#~ msgstr "Interesado en"
+
+#, fuzzy
+#~ msgid "Translated only"
+#~ msgstr "Interesado en"
+
+#, fuzzy
+#~ msgid "Original"
+#~ msgstr "Ruta original"
+
+#, fuzzy
+#~ msgid "Context hint"
+#~ msgstr "Contexto"
+
+#, fuzzy
+#~ msgid "Displaying:"
+#~ msgstr "Nombre del lugar"
+
+#~ msgid ""
+#~ "<p>Sorry rat, still no <strong>%(category.name)s</strong> routes in here."
+#~ "</p>"
+#~ msgstr ""
+#~ "Lo sentimos, rata, aún no hay rutas <strong>{% trans category.name %}</"
+#~ "strong> aquí."

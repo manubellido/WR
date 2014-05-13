@@ -1,0 +1,52 @@
+{% load i18n %}
+
+<article id="r-{{ stop.id }}" class="flow-item">
+<div class="flow-item-content">
+  <span class="stop-type flow-item-cat">{{ stop.place.get_place_type.shortName }}</span>
+  {% load thumbnail %}
+  <figure class="stop">
+    <a href="{% url stop_detail stop_id=stop.id %}">
+    {% if stop.picture %}
+    {% thumbnail stop.picture "300" crop="center" as img %}
+    <img class="stop-thumbnail flow-item-pic" src="{{ img.url }}" alt="{{ stop.place.name }}" data-ratio-hw="{% widthratio img.height img.width 100 %}" width="{{ img.width }}" height="{{ img.height }}" />
+    {% endthumbnail %}
+    {% else %}
+    <img class="flow-item-pic" src="{{ STATIC_MAPS_ROOT }}?size=300x300&amp;sensor=true&amp;zoom=17&amp;markers=size:large%7C{{ stop.place.lat|stringformat:"f" }},{{ stop.place.lng|stringformat:"f" }}&amp;key={{ GOOGLE_API_KEY }}" data-ratio-hw="100" width="300" height="300" />
+    {% endif %}
+    </a>
+  </figure>
+
+  <div class="infobox stop-info">
+  	<h2><a href="{% url stop_detail stop_id=stop.id %}">{{ stop.place.name }}</a></h2>
+  	<p class="stop-distance" data-coords="{{ stop.place.lat|stringformat:"f" }},{{ stop.place.lng|stringformat:"f" }}"><i class="icon-map-marker"></i> 	<span></span></p>
+  {% if stop.place.address %}
+  <div class="address">
+  <p>{{ stop.place.address }}</p>
+  </div>
+  {% endif %}
+
+  <div class="description">
+  <p>{% if stop.description %}{% load html_extras %}{{ stop.description|urlize|twitterize }}{% else %}{% endif %}</p>
+  </div>
+  {% if user.is_authenticated %}
+  <div class="stop-actions">
+    {% if stop.place_id in done_places %}
+    <span class="btn been-there done"
+	  data-url-off="{% url remove_done_controller_resource place_id=stop.place_id %}"
+	  data-url-on="{% url add_done_controller_resource place_id=stop.place_id %}"
+	  data-text-on="{% trans "Check!" %}"
+	  data-text-off="{% trans "Been there, done that" %}"
+	  data-toggle-class="done"><i class="icon-flag"></i> <span>{% trans "Check!" %}</span></span>
+    {% else %}
+    <span class="btn been-there"
+	  data-url-off="{% url remove_done_controller_resource place_id=stop.place_id %}"
+	  data-url-on="{% url add_done_controller_resource place_id=stop.place_id %}"
+	  data-text-on="{% trans "Check!" %}"
+	  data-text-off="{% trans "Been there, done that" %}"
+	  data-toggle-class="done"><i class="icon-flag"></i> <span>{% trans "Been there, done that" %}</span></span>
+    {% endif %}
+  </div>
+  {% endif %}
+  </div><!-- .infobox stop-info -->
+</div><!-- .flow-item-content -->
+</article>

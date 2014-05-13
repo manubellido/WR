@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}Worldrat, {% trans "Urban Exploration" %} | {{ wr_user.get_full_name }}{% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ wr_user.get_full_name }}'s circuits about {% for category in wr_user.categories.all %}{{ category.get_category_object.name }}{% if forloop.last %}.{% else %},{% endif %}{% endfor %}">
+  <meta name="keywords" content="{{ wr_user.get_full_name }}, {% for category in wr_user.categories.all %}{{ category.get_category_object.name }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}">
+{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %}
+<div>
+<h1 class="title user-title"><strong>{{ wr_user.first_name}}</strong> {{ wr_user.last_name}}</h1>
+<h2 class="user-route-list">{% trans "Routes" %}</h2>
+<div class="route-info-single route-actions">
+<!------ EMBED <span class="btn btn-tooltip" title="{% trans "Embed this user's routes" %}" data-embed><i class="icon-pushpin"></i></span> ------>
+</div>
+{% if circuits %}
+  <section data-columns="200,300" class="columns">
+  {% for circuit in circuits %}
+    {% include "circuits/circuit_list_item.html" %}
+  {% endfor %}
+  </section>
+  {% elif request.user == wr_user %}
+  <div class="alert alert-info">
+    <p>{% trans "No routes? <strong>Rat, come on!</strong>" %}  </p>
+    {% include "widgets/new_route_button.html" %}
+  </div>
+  {% else %}
+  <div class="alert alert-info">
+  <p>{% trans "No routes by this worldrat yet." %}</p>
+  </div>
+{% endif %}
+
+{% if circuits  %}
+  <a class="btn btn-primary" id="load-more" data-target-href="{% url user_circuit_list user_id=wr_user.id %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+</div><!-- .span9 -->
+{% endblock %}

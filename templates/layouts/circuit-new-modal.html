@@ -1,0 +1,102 @@
+{% load i18n %}
+<form id="circuit-new" class="modal hide fade _new_circuit_form" method="post"
+      action="{% url circuit_create %}">
+  <fieldset class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>{% trans "<strong>New</strong> route" %}</h3>
+  </fieldset>
+  <fieldset class="modal-body no-bottom">
+    <label>{% trans "Route" %}</label>
+    {{ CIRCUIT_CREATION_FORM.name }}
+    <label>{% trans "Category" %}</label>
+    {{ CIRCUIT_CREATION_FORM.category }}
+    <label>{% trans "About this route" %} <small class="opt">({% trans "optional" %})</small></label>
+    {{ CIRCUIT_CREATION_FORM.description }}
+    <!-- ADULT CONTENT CHECKBOX -->
+    <div class="adult-input">
+	<span>{{ CIRCUIT_CREATION_FORM.adult_content }}</span>
+	<label
+	   class="adult-checkbox-label"
+	   for="adult_content"
+	   clickable>
+	  {% trans "This route has adult content" %}
+	</label>
+    </div>
+    <!-- END OF ADUL CONTENT CHECKBOX -->
+  </fieldset>
+  <fieldset class="modal-footer">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">{% trans "Start adding places" %}</button>
+  </fieldset>
+</form>
+
+<form id="circuit-remix" class="modal hide fade _new_circuit_form" method="post"
+      action="">
+  <fieldset class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3><strong>{% trans "Remix" %}</strong>  <span id="remix-route-name"></span></h3>
+
+  </fieldset>
+  <fieldset class="modal-body no-bottom">
+    {% comment %}
+    <div class="model-info-box">
+      {% trans "Remixing a route is taking a previous one and creating a new one! " %}<br />
+    </div>
+    {% endcomment %}
+    <label>{% trans "Route" %}</label>
+    {{ CIRCUIT_CREATION_FORM.name }}
+    <label>{% trans "Category" %}</label>
+    {{ CIRCUIT_CREATION_FORM.category }}
+    <label>{% trans "About this route" %} <small class="opt">({% trans "optional" %})</small></label>
+    {{ CIRCUIT_CREATION_FORM.description }}
+    <!-- ADULT CONTENT CHECKBOX -->
+    <div class="adult-input">
+	<span>{{ CIRCUIT_CREATION_FORM.adult_content }}</span>
+	<label
+	   class="adult-checkbox-label"
+	   for="adult_content"
+	   clickable>
+	  {% trans "This route has adult content" %}
+	</label>
+    </div>
+    <!-- END OF ADUL CONTENT CHECKBOX -->
+  </fieldset>
+  <fieldset class="modal-footer">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">{% trans "Remix!" %}</button>
+  </fieldset>
+</form>
+
+<script>
+$(document).ready(function(){
+  $('._new_circuit_form').each(function(){
+    var $form = $(this);
+    var $nameInput = $form.find('input[name=name]');
+    var $catSelect = $form.find('select[name=category]');
+
+    if ($catSelect.find('option[value=0]').length == 0){
+      $('<option value="0"></option>').text('---').prependTo($catSelect);
+    }
+
+    $form.on('hidden', function() {
+      $nameInput.val('');
+      $catSelect.val('0');
+    });
+
+    $form.on('submit', function(e){
+      if (! $.trim($nameInput.val())){
+        e.stopPropagation();
+        e.preventDefault();
+        $nameInput.focus().shakeIt();
+        return false;
+      }
+      if ($catSelect.val() == 0){
+        e.stopPropagation();
+        e.preventDefault();
+        $catSelect.focus().shakeIt();
+        return false;
+      }
+    });
+  });
+});
+</script>

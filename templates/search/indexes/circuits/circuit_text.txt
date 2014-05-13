@@ -1,0 +1,8 @@
+{{ object.name }}
+{{ object.author.get_full_name }}
+{{ object.description }}
+{{ object.author }}
+{{ object.author_username }}
+{{ object.placetitle }}
+{{ object.placedescription }}
+{{ object.placeaddress }}

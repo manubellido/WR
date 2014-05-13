@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %} Worldrat | {% trans "Password restored" %} {% endblock %}
+{% block content %}
+<div>
+
+  <h1 class="title">{% trans "Password reset" %}</h1>
+	<div class="alert alert-info">
+    <p>{% trans "We've sent you an email with instructions to change your password to the address you provided. You'll receive it shortly." %}</p>
+	</div>
+
+</div>
+{% endblock %}

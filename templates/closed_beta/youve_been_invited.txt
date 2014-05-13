@@ -1,0 +1,19 @@
+Welcome to Worldrat!
+
+{{ sender }} thinks you've got what it takes to become a worldrat and has invited you to be a part
+of our beta.
+
+Click on the following link to create your new account and become one of the select few that can
+create routes in our web:
+
+{{ destination_url }}
+
+
+We'll be waiting for you!
+
+
+
+-- 
+The Worldrat Team
+
+

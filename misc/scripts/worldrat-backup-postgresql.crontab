@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+0 0,18 * * * /usr/bin/worldrat-backup-postgresql

@@ -1,0 +1,31 @@
+{% load i18n %}
+
+<form id="new-place-modal" class="modal big hide fade form-horizontal">
+<fieldset class="modal-header">
+<button class="close" data-dismiss="modal">×</button>
+<h3>{% blocktrans %} "<strong>New</strong> stop" {%endblocktrans%}</h3>
+<p class="small help-inline">{% trans "<strong>click</strong> on the map to add a marker" %}</p>
+</fieldset>
+<fieldset class="modal-body">
+
+<div class="control-group">
+<input type="text" placeholder="Stop name" id="new-place-name">
+<select name="place_type_id" id="new-place-type">
+  {% for pt in place_types %}<option value="{{ pt.place_type_id }}" data-icon="{{ pt.icon_prefix }}bg_{{ pt.icon_sizes }}{{ pt.icon_name }}">{{ pt.name }}</option>{% endfor %}
+</select>
+</div>
+
+<div class="map-wrapper">
+<div class="control-group">
+<input type="text" placeholder="Find the address on the map" id="new-place-search">
+<button id="new-place-search-btn" class="btn"><i class="icon-search"></i></button>
+</div>
+
+<div id="new-place-map"></div>
+</div><!-- .map-wrapper -->
+</fieldset>
+<fieldset class="modal-footer actions">
+<a class="cancel" data-dismiss="modal">{% trans "Cancel" %}</a>
+<button type="submit" class="save btn btn-primary">{% trans "Create" %}</button>
+</fieldset>
+</form>

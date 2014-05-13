@@ -1,0 +1,19 @@
+<article class="comment-item">
+  <div>
+
+    <figure> <!--- PICTURE NOT WORKING FOR SOME REASON --->
+      {% load thumbnail %}
+      {% if comment.user.userprofile.picture %}
+      {% thumbnail comment.user.userprofile.picture "150x150" crop="center" as img %}
+      <a href="{% url show_user_profile user_id=comment.user.id %}" src="{{ comment.user.userprofile.picture }}">ajsdkja
+	<img src="{{ img.url }}" alt="{{ comment.user.get_full_name }}">
+      </a>
+      {% endthumbnail %}
+      {% endif %}
+    </figure><!--- picture --->
+
+      <a href="{% url show_user_profile user_id=comment.user.id %}">{{ comment.user.get_full_name }}</a>
+      <p>{{ comment.comment }}</p>
+      <p>{{ comment.submit_date.date }}</p>
+  </div><!-- .flow-item-content -->
+</article>

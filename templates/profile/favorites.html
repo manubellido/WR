@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ wr_user.get_full_name }}'s Favorite Routes | Worldrat, Urban Exploration{% endblock %}
+
+{% block head %}
+  <meta name="description" content="{{ wr_user.get_full_name }} favorite circuits about {% for category in wr_user.categories.all %}{{ category.get_category_object.name }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}">
+  <meta name="keywords" content="{{ wr_user.get_full_name }}, {% for category in wr_user.categories.all %}{{ category.get_category_object.name }}{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}">
+{% endblock %}
+
+{% block content %}
+{% include "profile/sidebar_profile.html" %}
+<div>
+<h1 class="title user-title"><strong>{{ wr_user.first_name}}</strong> {{ wr_user.last_name}}</h1>
+<h2 class="user-route-list">{% trans "Favs" %}</h2>
+{% if circuits %}
+  <section data-columns="200,300" class="columns">
+  {% for circuit in circuits %}
+    {% include "circuits/circuit_list_item.html" %}
+  {% endfor %}
+  </section>
+{% elif request.user == wr_user %}
+  <div class="alert alert-info">
+    <p>{% trans "Rat, you have <strong>no favorite routes</strong>... sigh" %}</p>
+  </div>
+  {% else %}
+  <div class="alert alert-info">
+    {% blocktrans %}
+    <p>This worldrat has <strong>no favorite routes</strong></p>
+    {% endblocktrans %}
+  </div>
+{% endif %}
+
+{% if circuits  %}
+  <a class="btn btn-primary" id="load-more" data-target-href="{% url user_favorite_routes user_id=wr_user.id %}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+</div><!-- .span9 -->
+{% endblock %}

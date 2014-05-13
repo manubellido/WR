@@ -1,0 +1,46 @@
+{% load sidebar %}
+{% get_cats as categories %}
+<h3>Filter by</h3>
+<hr />
+<div class="filter-cat-list">
+
+{% if user.is_authenticated %}
+<ul class="nav nav-pills nav-stacked unstyled">
+<li {% if in_recommended %}class="active"{% endif %}><a class="recommended" href="{% url home %}">Recommended routes</a></li>
+</ul>
+{% else %}
+<ul class="nav nav-pills nav-stacked unstyled">
+<li {% if in_recommended %}class="active"{% endif %}><a class="recommended" href="{% url home %}">Recommended routes</a></li>
+</ul>
+{% endif %}
+
+{% for category in categories.favorites %}
+
+{% if forloop.first %}
+<ul class="nav nav-pills nav-stacked unstyled">
+{% endif %}
+
+<li {% if category.id == selected_category %}class="active"{% endif %}><a class="favorite-cat" href="{{ category.get_absolute_url }}">{{ category }}</a></li>
+
+{% if forloop.last %}
+</ul>
+{% endif %}
+
+{% endfor %}
+
+{% comment %}
+{% if user.is_authenticated %}
+<div id="more-cats-controller">
+<a class="btn btn-small{% if is_preferred_category %} show {% endif %} " data-toggle="collapse" data-target="#more-cats"> More categories <i class="icon-chevron-down"></i></a>
+<a class="btn btn-small{% if not is_preferred_category %} show {% endif %}" data-toggle="collapse" data-target="#more-cats"> Less categories <i class="icon-chevron-up"></i></a>
+</div>
+{% endif %}
+{% endcomment %}
+
+<ul id="more-cats" class="nav nav-list nav-stacked unstyled collapse{% if not is_preferred_category %} in {% endif %}">
+{% for category in categories.non_favorites %}
+<li {% if category.id == selected_category %}class="active"{% endif %}><a href="{{ category.get_absolute_url }}">{{ category }}</a></li>
+{% endfor %}
+</ul>
+
+</div>

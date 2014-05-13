@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% load i18n %}
+
+{% block title %} Search results for {% if query %}{{ form.q.value }}{% endif %}{% endblock %}
+
+{% block head %}
+<meta name="description" content="Routes about {% if query %}{{ form.q.value }}{% endif %}">
+<meta name="keywords" content="{% if query %}{{ form.q.value }}{% endif %}">
+{% endblock %}
+{% block content %}
+
+        {% if query %}
+        <h1>{% trans "Results for" %} <strong>{{ form.q.value }}</strong></h1>
+
+{% if not page.object_list %}
+	<div class="alert alert-info"><p>{% trans "Whoops! We found <strong>no routes</strong> for this search (and we really tried!)" %}</p></div>
+{% endif %}
+<section data-columns="{{ CIRCUIT_COLUMN_SIZES }}" class="columns">
+{% for result in page.object_list %}
+	{% with result.object as circuit %}
+	{% include "circuits/circuit_list_item.html" %}
+	{% endwith %}
+{% endfor %}
+</section>
+{% if page.has_next %}
+<a class="btn btn-primary" id="load-more" data-target-href="{% url search_more %}" data-page-type="{{ page_type }}" data-category="{{ form.q.value }}" data-page="1" data-nomore="{% trans "No more" %}">{% trans "More routes" %}</a>
+{% endif %}
+
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+    </form>
+{% endblock %}

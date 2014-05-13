@@ -1,0 +1,62 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Worldrat, Urban Exploration | Explore{% endblock %}
+
+{% block content %}
+<aside class="span3">
+{% include "widgets/new_route_button.html" %}
+{# <input type="search" placeholder="Buscar" /> #}
+{% include "circuits/filter.html" %}
+</aside>
+
+<div class="span9">
+{% if not user.is_authenticated %}
+<div class="hero-unit">
+<h1>Únete a Worldrat</h1>
+<p>Register to: <span class="caps">Create</span> your own routes,
+<span class="caps">Remixer</span> other's routes,
+<span class="caps">Get</span> custom routes,
+<span class="caps">Love</span> your favorites.</p>
+
+<a class="btn btn-primary btn-large" href="{% url registration_register %}">Register today</a>
+</div>
+{% endif %}
+{# <h1>Rutas Recomendadas en <input class="explore-filter"  type="text" value="Lima, Peru"/></h1> #}
+<h1>Recommended routes in Lima, Perú</h1>
+<hr />
+{% for circuit in recommended_circuits %}
+  {% if forloop.first %}<ol class="listing routes-list">{% endif %}
+  {% include "circuits/circuit_list_item.html" %}
+  {% if forloop.last %}</ol>{% endif %}
+{% endfor %}
+{% if more_circuits %}<button id="load-more" href="{% url more_recommended_circuits %}" pagination="1" total_circuits="{{ total_circuits }}" class="btn btn-primary">Show more routes</button>{% endif %}
+</div><!-- .span9 -->
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(toggle_more_cats_sidebar);
+$(document).ready(function(){
+  $('#load-more').on('click', function(){
+    var pagination = $(this).attr('pagination');
+    var total_circuits = $(this).attr('total_circuits');
+    var href = $(this).attr('href');
+
+    $.ajax({
+      type: "POST",
+      url: href,
+      data: {
+        pagination: pagination,
+        total_circuits: total_circuits
+      }
+    }).done(function( data ){
+        $('ol.listing.routes-list').append(data.raw_html);
+        $('#load-more').attr('pagination', data.pagination);
+        if (!data.more_circuits) {
+          $('#load-more').hide()
+        };
+      });
+    });
+});
+</script>
+{% endblock %}
